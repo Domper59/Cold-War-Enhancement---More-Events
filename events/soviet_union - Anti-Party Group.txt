@@ -1,0 +1,1004 @@
+country_event = { # Start of the Preparations
+	id = 9001596
+	title = "Start of the Preparations"
+	desc = EVT_9001596_DESC
+	picture = "???"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Focus on Destalinization."
+		
+		set_country_flag = anti_party_destalinization
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		country_event = 9001597
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Focus on his Personality."
+		
+		set_country_flag = anti_party_personality
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		country_event = 9001597
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Focus on his Policy."
+		
+		set_country_flag = anti_party_policy
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		country_event = 9001597
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Securing our Position
+	id = 9001597
+	title = "Securing our Position"
+	desc = EVT_9001597_DESC
+	picture = "???"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Do nothing."
+		
+		set_country_flag = anti_party_no_action
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = 1.5
+		}
+		
+		country_event = 9001598
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Isolate Ivan Serov (KGB)."
+		
+		set_country_flag = anti_party_isolate_kgb
+		
+		any_pop = {
+			limit = { type = officers }
+			consciousness = 3
+		}
+		
+		country_event = 9001598
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Isolate Georgy Zhukov (Army)."
+		
+		set_country_flag = anti_party_isolate_army
+		
+		any_pop = {
+			limit = { type = soldiers }
+			consciousness = 3
+		}
+		
+		country_event = 9001598
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Weakening our enemy
+	id = 9001598
+	title = "Weakening our Enemy"
+	desc = EVT_9001598_DESC
+	picture = "???"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Do nothing."
+		
+		set_country_flag = anti_party_no_support
+		
+		any_pop = {
+			scaled_consciousness = {
+				factor = 2
+				ideology = communist
+			}
+			scaled_militancy = {
+				factor = 2
+				ideology = communist
+			}
+			scaled_consciousness = {
+				factor = 4
+				ideology = communist_social
+			}
+			scaled_militancy = {
+				factor = 4
+				ideology = communist_social
+			}
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Allying with the Conservatives (Brezhnev)."
+		
+		set_country_flag = anti_party_support_conservatives
+		
+		any_pop = {
+			scaled_consciousness = {
+				factor = 5
+				ideology = communist_social
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = communist_social
+			}
+		}
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Allying with the Moderates (Mukhitdinov)."
+		
+		set_country_flag = anti_party_support_moderates
+		
+		any_pop = {
+			scaled_consciousness = {
+				factor = 5
+				ideology = communist
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = communist
+			}
+		}
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # An Urgent Request
+	id = 9001599
+	title = "An Urgent Request"
+	desc = EVT_9001599_DESC
+	picture = "???"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		government = proletarian_dictatorship
+		
+		has_country_flag = anti_party_event_chain_fired
+		
+		OR = {
+			has_country_flag = anti_party_destalinization
+			has_country_flag = anti_party_personality
+			has_country_flag = anti_party_policy
+		}
+		has_country_flag = anti_party_isolate_kgb
+		NOT = {
+			has_country_flag = anti_party_no_action
+			has_country_flag = anti_party_isolate_army
+		}
+		OR = {
+			has_country_flag = anti_party_no_support
+			has_country_flag = anti_party_support_conservatives
+			has_country_flag = anti_party_support_moderates
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	option = {
+		name = "Allow to leave the room."
+		
+		set_country_flag = anti_party_army_rescue
+		
+		any_pop = {
+			limit = { type = soldiers }
+			consciousness = 3 militancy = 4
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Block to leave the room."
+		
+		set_country_flag = anti_party_army_not_rescue
+		
+		any_pop = {
+			limit = { type = soldiers }
+			consciousness = -3
+		}
+		
+		ai_chance = { factor = 0.2 }
+	}
+}
+
+country_event = { # An Urgent Call
+	id = 9001600
+	title = "An Urgent Call"
+	desc = EVT_9001600_DESC
+	picture = "???"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		government = proletarian_dictatorship
+		
+		has_country_flag = anti_party_event_chain_fired
+		
+		OR = {
+			has_country_flag = anti_party_destalinization
+			has_country_flag = anti_party_personality
+			has_country_flag = anti_party_policy
+		}
+		has_country_flag = anti_party_isolate_army
+		NOT = {
+			has_country_flag = anti_party_no_action
+			has_country_flag = anti_party_isolate_kgb
+		}
+		OR = {
+			has_country_flag = anti_party_no_support
+			has_country_flag = anti_party_support_conservatives
+			has_country_flag = anti_party_support_moderates
+		}
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	option = {
+		name = "Allow to leave the room."
+		
+		set_country_flag = anti_party_kgb_rescue
+		
+		any_pop = {
+			limit = { type = officers }
+			consciousness = 3 militancy = 4
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Block to leave the room."
+		
+		set_country_flag = anti_party_kgb_not_rescue
+		
+		any_pop = {
+			limit = { type = officers }
+			consciousness = -3
+		}
+		
+		ai_chance = { factor = 0.2 }
+	}
+}
+
+country_event = { # Home delivery
+	id = 9001601
+	title = "Home delivery"
+	desc = EVT_9001601_DESC
+	picture = "???"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		government = proletarian_dictatorship
+		
+		has_country_flag = anti_party_event_chain_fired
+		
+		OR = {
+			has_country_flag = anti_party_destalinization
+			has_country_flag = anti_party_personality
+			has_country_flag = anti_party_policy
+		}
+		has_country_flag = anti_party_isolate_army
+		NOT = {
+			has_country_flag = anti_party_no_action
+			has_country_flag = anti_party_isolate_kgb
+		}
+		OR = {
+			has_country_flag = anti_party_no_support
+			has_country_flag = anti_party_support_conservatives
+			has_country_flag = anti_party_support_moderates
+		}
+		has_country_flag = anti_party_kgb_rescue
+		NOT = { has_country_flag = anti_party_kgb_not_rescue }
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	option = {
+		name = "Limit the damage."
+		
+		set_country_flag = anti_party_kgb_damages
+		
+		any_pop = {
+			limit = { type = officers }
+			ideology = { factor = 0.1 value = communist_social }
+			consciousness = 2 militancy = 3
+		}
+		
+		ai_chance = { factor = 0.6 }
+	}
+	
+	option = {
+		name = "Try to compensate."
+		
+		set_country_flag = anti_party_kgb_versus_party
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			consciousness = 1 militancy = 2
+		}
+		any_pop = {
+			limit = { type = officers }
+			ideology = { factor = 0.05 value = communist_social }
+			consciousness = 1 militancy = 2
+		}
+		
+		ai_chance = { factor = 0.4 }
+	}
+}
+
+country_event = { # Surprise Guest
+	id = 9001602
+	title = "Surprise Guest"
+	desc = EVT_9001602_DESC
+	picture = "???"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		government = proletarian_dictatorship
+		
+		has_country_flag = anti_party_event_chain_fired
+		
+		OR = {
+			has_country_flag = anti_party_destalinization
+			has_country_flag = anti_party_personality
+			has_country_flag = anti_party_policy
+		}
+		has_country_flag = anti_party_isolate_kgb
+		NOT = {
+			has_country_flag = anti_party_no_action
+			has_country_flag = anti_party_isolate_army
+		}
+		OR = {
+			has_country_flag = anti_party_no_support
+			has_country_flag = anti_party_support_conservatives
+			has_country_flag = anti_party_support_moderates
+		}
+		has_country_flag = anti_party_army_rescue
+		NOT = { has_country_flag = anti_party_army_not_rescue }
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	option = {
+		name = "Limit his speaking time."
+		
+		set_country_flag = anti_party_army_limited
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			consciousness = 2 militancy = 3
+		}
+		any_pop = {
+			limit = { type = officers }
+			ideology = { factor = 0.05 value = nationalist }
+			consciousness = 4 militancy = 5
+		}
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Prevent his presence."
+		
+		set_country_flag = anti_party_army_not_available
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist_social }
+			consciousness = 1 militancy = 2
+		}
+		any_pop = {
+			limit = { type = officers }
+			ideology = { factor = 0.05 value = nationalist }
+			consciousness = 2 militancy = 3
+		}
+		
+		ai_chance = { factor = 0.2 }
+	}
+	
+	option = {
+		name = "Get out the old files."
+		
+		set_country_flag = anti_party_army_khrushchev_discredit
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			consciousness = 1 militancy = -2
+		}
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist_social }
+			consciousness = 1 militancy = -2
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Undesirable people
+	id = 9001603
+	title = "Undesirable people"
+	desc = EVT_9001603_DESC
+	picture = "???"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		government = proletarian_dictatorship
+		
+		has_country_flag = anti_party_event_chain_fired
+		
+		OR = {
+			has_country_flag = anti_party_destalinization
+			has_country_flag = anti_party_personality
+			has_country_flag = anti_party_policy
+		}
+		has_country_flag = anti_party_no_action
+		NOT = {
+			has_country_flag = anti_party_isolate_army
+			has_country_flag = anti_party_isolate_kgb
+		}
+		OR = {
+			has_country_flag = anti_party_no_support
+			has_country_flag = anti_party_support_conservatives
+			has_country_flag = anti_party_support_moderates
+		}
+		has_country_flag = anti_party_kgb_rescue
+		NOT = { has_country_flag = anti_party_kgb_not_rescue }
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	option = {
+		name = "Dealing with the blows."
+		
+		set_country_flag = anti_party_kgb_army_damages
+		
+		any_pop = {
+			limit = { type = officers }
+			ideology = { factor = 0.05 value = communist_social }
+			consciousness = 2 militancy = 3
+		}
+		any_pop = {
+			limit = { type = soldiers }
+			ideology = { factor = 0.05 value = communist_social }
+			consciousness = 2 militancy = 3
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Responding to accusations."
+		
+		set_country_flag = anti_party_kgb_army_versus_party
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			consciousness = 1 militancy = 2
+		}
+		any_pop = {
+			limit = { type = officers }
+			ideology = { factor = 0.05 value = communist_social }
+			consciousness = 1 militancy = 2
+		}
+		any_pop = {
+			limit = { type = soldiers }
+			ideology = { factor = 0.05 value = communist_social }
+			consciousness = 1 militancy = 2
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # The Stalinists regain power
+	id = 9001604
+	title = "The Stalinists regain power"
+	desc = EVT_9001604_DESC
+	picture = "???"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		government = proletarian_dictatorship
+		
+		has_country_flag = anti_party_event_chain_fired
+		
+		has_country_flag = anti_party_destalinization
+		has_country_flag = anti_party_support_conservatives
+		OR = {
+			AND = {
+				has_country_flag = anti_party_no_action
+				has_country_flag = anti_party_kgb_army_versus_party
+			}
+			AND = {
+				has_country_flag = anti_party_isolate_kgb
+				OR = {
+					has_country_flag = anti_party_army_khrushchev_discredit
+					has_country_flag = anti_party_army_not_available
+				}
+			}
+			AND = {
+				has_country_flag = anti_party_isolate_army
+				has_country_flag = anti_party_kgb_versus_party
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 4 }
+	
+	option = {
+		name = "Vyacheslav Molotov is the $MONARCHTITLE$."
+		
+		set_country_flag = anti_party_finished
+		set_country_flag = vyacheslav_molotov
+		clr_country_flag = nikita_khrushchev
+		clr_country_flag = anti_party_event_chain_fired
+		clr_country_flag = anti_party_destalinization
+		clr_country_flag = anti_party_personality
+		clr_country_flag = anti_party_policy
+		clr_country_flag = anti_party_no_action
+		clr_country_flag = anti_party_isolate_kgb
+		clr_country_flag = anti_party_isolate_army
+		clr_country_flag = anti_party_no_support
+		clr_country_flag = anti_party_support_conservatives
+		clr_country_flag = anti_party_support_moderates
+		clr_country_flag = anti_party_army_rescue
+		clr_country_flag = anti_party_army_not_rescue
+		clr_country_flag = anti_party_kgb_rescue
+		clr_country_flag = anti_party_kgb_not_rescue
+		clr_country_flag = anti_party_kgb_damages
+		clr_country_flag = anti_party_kgb_versus_party
+		clr_country_flag = anti_party_army_limited
+		clr_country_flag = anti_party_army_not_available
+		clr_country_flag = anti_party_army_khrushchev_discredit
+		clr_country_flag = anti_party_kgb_army_damages
+		clr_country_flag = anti_party_kgb_army_versus_party
+		
+		add_country_modifier = { name = ruling_party_scandal duration = 365 }
+		
+		add_country_modifier = { name = expert_diplomat duration = 3650 }
+		remove_country_modifier = man_of_the_people
+		
+		relation = { who = CHI value = 125 }
+		relation = { who = YUG value = 50 }
+		relation = { who = USA value = 75 }
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Lazar Kaganovitch is the $MONARCHTITLE$."
+		
+		set_country_flag = anti_party_finished
+		set_country_flag = lazar_kaganovitch
+		clr_country_flag = nikita_khrushchev
+		clr_country_flag = anti_party_event_chain_fired
+		clr_country_flag = anti_party_destalinization
+		clr_country_flag = anti_party_personality
+		clr_country_flag = anti_party_policy
+		clr_country_flag = anti_party_no_action
+		clr_country_flag = anti_party_isolate_kgb
+		clr_country_flag = anti_party_isolate_army
+		clr_country_flag = anti_party_no_support
+		clr_country_flag = anti_party_support_conservatives
+		clr_country_flag = anti_party_support_moderates
+		clr_country_flag = anti_party_army_rescue
+		clr_country_flag = anti_party_army_not_rescue
+		clr_country_flag = anti_party_kgb_rescue
+		clr_country_flag = anti_party_kgb_not_rescue
+		clr_country_flag = anti_party_kgb_damages
+		clr_country_flag = anti_party_kgb_versus_party
+		clr_country_flag = anti_party_army_limited
+		clr_country_flag = anti_party_army_not_available
+		clr_country_flag = anti_party_army_khrushchev_discredit
+		clr_country_flag = anti_party_kgb_army_damages
+		clr_country_flag = anti_party_kgb_army_versus_party
+		
+		add_country_modifier = { name = ruling_party_scandal duration = 365 }
+		
+		add_country_modifier = { name = prince_of_terror duration = 3650 }
+		remove_country_modifier = man_of_the_people
+		
+		relation = { who = CHI value = 125 }
+		relation = { who = YUG value = 50 }
+		relation = { who = USA value = 25 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Georgy Malenkov is the $MONARCHTITLE$."
+		
+		set_country_flag = anti_party_finished
+		set_country_flag = georgy_malenkov
+		clr_country_flag = nikita_khrushchev
+		clr_country_flag = anti_party_event_chain_fired
+		clr_country_flag = anti_party_destalinization
+		clr_country_flag = anti_party_personality
+		clr_country_flag = anti_party_policy
+		clr_country_flag = anti_party_no_action
+		clr_country_flag = anti_party_isolate_kgb
+		clr_country_flag = anti_party_isolate_army
+		clr_country_flag = anti_party_no_support
+		clr_country_flag = anti_party_support_conservatives
+		clr_country_flag = anti_party_support_moderates
+		clr_country_flag = anti_party_army_rescue
+		clr_country_flag = anti_party_army_not_rescue
+		clr_country_flag = anti_party_kgb_rescue
+		clr_country_flag = anti_party_kgb_not_rescue
+		clr_country_flag = anti_party_kgb_damages
+		clr_country_flag = anti_party_kgb_versus_party
+		clr_country_flag = anti_party_army_limited
+		clr_country_flag = anti_party_army_not_available
+		clr_country_flag = anti_party_army_khrushchev_discredit
+		clr_country_flag = anti_party_kgb_army_damages
+		clr_country_flag = anti_party_kgb_army_versus_party
+		
+		add_country_modifier = { name = ruling_party_scandal duration = 365 }
+		
+		add_country_modifier = { name = great_statesman duration = 3650 }
+		remove_country_modifier = man_of_the_people
+		
+		research_points = 600
+		relation = { who = CHI value = 75 }
+		relation = { who = YUG value = 125 }
+		relation = { who = USA value = 50 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Compromise Situation
+	id = 9001605
+	title = "Compromise Situation"
+	desc = EVT_9001605_DESC
+	picture = "???"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		government = proletarian_dictatorship
+		
+		has_country_flag = anti_party_event_chain_fired
+		
+		OR = {
+			has_country_flag = anti_party_personality
+			has_country_flag = anti_party_policy
+		}
+		OR = {
+			has_country_flag = anti_party_support_conservatives
+			has_country_flag = anti_party_support_moderates
+		}
+		OR = {
+			AND = {
+				has_country_flag = anti_party_isolate_kgb
+				OR = {
+					has_country_flag = anti_party_army_limited
+					has_country_flag = anti_party_army_not_available
+				}
+			}
+			AND = {
+				has_country_flag = anti_party_isolate_army
+				OR = {
+					has_country_flag = anti_party_kgb_damages
+					has_country_flag = anti_party_kgb_versus_party
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 4 }
+	
+	option = {
+		name = "Nikolai Bulganin is the $MONARCHTITLE$."
+		
+		set_country_flag = anti_party_finished
+		set_country_flag = nikolai_bulganin
+		clr_country_flag = nikita_khrushchev
+		clr_country_flag = anti_party_event_chain_fired
+		clr_country_flag = anti_party_destalinization
+		clr_country_flag = anti_party_personality
+		clr_country_flag = anti_party_policy
+		clr_country_flag = anti_party_no_action
+		clr_country_flag = anti_party_isolate_kgb
+		clr_country_flag = anti_party_isolate_army
+		clr_country_flag = anti_party_no_support
+		clr_country_flag = anti_party_support_conservatives
+		clr_country_flag = anti_party_support_moderates
+		clr_country_flag = anti_party_army_rescue
+		clr_country_flag = anti_party_army_not_rescue
+		clr_country_flag = anti_party_kgb_rescue
+		clr_country_flag = anti_party_kgb_not_rescue
+		clr_country_flag = anti_party_kgb_damages
+		clr_country_flag = anti_party_kgb_versus_party
+		clr_country_flag = anti_party_army_limited
+		clr_country_flag = anti_party_army_not_available
+		clr_country_flag = anti_party_army_khrushchev_discredit
+		clr_country_flag = anti_party_kgb_army_damages
+		clr_country_flag = anti_party_kgb_army_versus_party
+		
+		add_country_modifier = { name = ruling_party_scandal duration = 365 }
+		
+		add_country_modifier = { name = imperious_autocrat duration = 3650 }
+		remove_country_modifier = man_of_the_people
+		
+		relation = { who = CHI value = -25 }
+		relation = { who = YUG value = 125 }
+		relation = { who = USA value = 50 }
+	}
+}
+
+country_event = { # The Khrushchevists win... without Khrushchev
+	id = 9001606
+	title = "The Khrushchevists win... without Khrushchev"
+	desc = EVT_9001606_DESC
+	picture = "???"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		government = proletarian_dictatorship
+		
+		has_country_flag = anti_party_event_chain_fired
+		
+		has_country_flag = anti_party_personality
+		has_country_flag = anti_party_support_moderates
+		OR = {
+			AND = {
+				has_country_flag = anti_party_no_action
+				has_country_flag = anti_party_kgb_army_versus_party
+			}
+			AND = {
+				has_country_flag = anti_party_isolate_kgb
+				OR = {
+					has_country_flag = anti_party_army_khrushchev_discredit
+					has_country_flag = anti_party_army_not_available
+				}
+			}
+			AND = {
+				has_country_flag = anti_party_isolate_army
+				has_country_flag = anti_party_kgb_versus_party
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 4 }
+	
+	option = {
+		name = "Dmitri Shepilov is the $MONARCHTITLE$."
+		
+		set_country_flag = anti_party_finished
+		set_country_flag = dmitri_shepilov
+		clr_country_flag = nikita_khrushchev
+		clr_country_flag = anti_party_event_chain_fired
+		clr_country_flag = anti_party_destalinization
+		clr_country_flag = anti_party_personality
+		clr_country_flag = anti_party_policy
+		clr_country_flag = anti_party_no_action
+		clr_country_flag = anti_party_isolate_kgb
+		clr_country_flag = anti_party_isolate_army
+		clr_country_flag = anti_party_no_support
+		clr_country_flag = anti_party_support_conservatives
+		clr_country_flag = anti_party_support_moderates
+		clr_country_flag = anti_party_army_rescue
+		clr_country_flag = anti_party_army_not_rescue
+		clr_country_flag = anti_party_kgb_rescue
+		clr_country_flag = anti_party_kgb_not_rescue
+		clr_country_flag = anti_party_kgb_damages
+		clr_country_flag = anti_party_kgb_versus_party
+		clr_country_flag = anti_party_army_limited
+		clr_country_flag = anti_party_army_not_available
+		clr_country_flag = anti_party_army_khrushchev_discredit
+		clr_country_flag = anti_party_kgb_army_damages
+		clr_country_flag = anti_party_kgb_army_versus_party
+		
+		add_country_modifier = { name = ruling_party_scandal duration = 365 }
+		
+		add_country_modifier = { name = imperious_autocrat duration = 3650 }
+		remove_country_modifier = man_of_the_people
+		
+		relation = { who = CHI value = -50 }
+		relation = { who = YUG value = 125 }
+		relation = { who = USA value = 75 }
+		relation = { who = JAP value = 50 }
+	}
+}
+
+country_event = { # Anti Party Group's Defeat
+	id = 9001607
+	title = "Anti Party Group's Defeat"
+	desc = EVT_9001607_DESC
+	picture = "???"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		government = proletarian_dictatorship
+		
+		has_country_flag = anti_party_event_chain_fired
+		
+		NOT = {
+			OR = {
+				AND = {
+					has_country_flag = anti_party_destalinization
+					has_country_flag = anti_party_support_conservatives
+					OR = {
+						AND = {
+							has_country_flag = anti_party_no_action
+							has_country_flag = anti_party_kgb_army_versus_party
+						}
+						AND = {
+							has_country_flag = anti_party_isolate_kgb
+							OR = {
+								has_country_flag = anti_party_army_khrushchev_discredit
+								has_country_flag = anti_party_army_not_available
+							}
+						}
+						AND = {
+							has_country_flag = anti_party_isolate_army
+							has_country_flag = anti_party_kgb_versus_party
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_country_flag = anti_party_personality
+						has_country_flag = anti_party_policy
+					}
+					OR = {
+						has_country_flag = anti_party_support_conservatives
+						has_country_flag = anti_party_support_moderates
+					}
+					OR = {
+						AND = {
+							has_country_flag = anti_party_isolate_kgb
+							OR = {
+								has_country_flag = anti_party_army_limited
+								has_country_flag = anti_party_army_not_available
+							}
+						}
+						AND = {
+							has_country_flag = anti_party_isolate_army
+							OR = {
+								has_country_flag = anti_party_kgb_damages
+								has_country_flag = anti_party_kgb_versus_party
+							}
+						}
+					}
+				}
+				AND = {
+					has_country_flag = anti_party_personality
+					has_country_flag = anti_party_support_moderates
+					OR = {
+						AND = {
+							has_country_flag = anti_party_no_action
+							has_country_flag = anti_party_kgb_army_versus_party
+						}
+						AND = {
+							has_country_flag = anti_party_isolate_kgb
+							OR = {
+								has_country_flag = anti_party_army_khrushchev_discredit
+								has_country_flag = anti_party_army_not_available
+							}
+						}
+						AND = {
+							has_country_flag = anti_party_isolate_army
+							has_country_flag = anti_party_kgb_versus_party
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 4 }
+	
+	option = {
+		name = "And Shepilov, who joined them..."
+		
+		set_country_flag = anti_party_finished
+		set_country_flag = dmitri_shepilov
+		clr_country_flag = nikita_khrushchev
+		clr_country_flag = anti_party_event_chain_fired
+		clr_country_flag = anti_party_destalinization
+		clr_country_flag = anti_party_personality
+		clr_country_flag = anti_party_policy
+		clr_country_flag = anti_party_no_action
+		clr_country_flag = anti_party_isolate_kgb
+		clr_country_flag = anti_party_isolate_army
+		clr_country_flag = anti_party_no_support
+		clr_country_flag = anti_party_support_conservatives
+		clr_country_flag = anti_party_support_moderates
+		clr_country_flag = anti_party_army_rescue
+		clr_country_flag = anti_party_army_not_rescue
+		clr_country_flag = anti_party_kgb_rescue
+		clr_country_flag = anti_party_kgb_not_rescue
+		clr_country_flag = anti_party_kgb_damages
+		clr_country_flag = anti_party_kgb_versus_party
+		clr_country_flag = anti_party_army_limited
+		clr_country_flag = anti_party_army_not_available
+		clr_country_flag = anti_party_army_khrushchev_discredit
+		clr_country_flag = anti_party_kgb_army_damages
+		clr_country_flag = anti_party_kgb_army_versus_party
+		
+		add_country_modifier = { name = ruling_party_scandal duration = 365 }
+		
+		any_pop = { 
+			consciousness = 2 militancy = 1
+			ideology = { factor = 0.05 value = communist_social } 
+		}
+	}
+}
