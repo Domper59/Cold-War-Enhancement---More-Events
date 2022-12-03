@@ -1,7 +1,7 @@
 # Cold-War-Enhancement---More-Events
 
-I. Events for Soviet Union [25%]
-  * Anti-Party Group - WIP
+I. Events for Soviet Union
+  * Anti-Party Group [25%]
   Events around the Anti-Party Group and its consequences.
   Possible personalities: Vyacheslav Molotov, Lazar Kaganovitch, Georgy Malenkov, Nikolai Bulganin and Dmitri Shepilov.
   
