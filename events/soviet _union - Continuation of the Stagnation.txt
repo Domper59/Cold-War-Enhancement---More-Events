@@ -1,0 +1,170 @@
+country_event = { # The Inevitable Conclusion
+	id = 90014050
+	title = "The Inevitable Conclusion"
+	desc = EVT_9001405_DESC
+	picture = "leader_uss_shenin"
+
+	fire_only_once = yes
+
+	trigger = {
+    	tag = RUS
+		year = 2002
+		NOT = { year = 2006 }
+		government = proletarian_dictatorship
+		has_country_flag = oleg_shenin
+		has_country_flag = ussr_brezhnevism
+	}
+
+	mean_time_to_happen = { months = 5 }
+
+	option = {
+		name = "Appoint Viktor Tyulkin as Chairman of the Council of Ministers."
+		
+		set_country_flag = ussr_neo_brezhnevism
+		clr_country_flag = ussr_brezhnevism
+		
+		ruling_party_ideology = communist_social
+		
+		add_country_modifier = { name = collective_leadership duration = 1825 }
+		add_country_modifier = { name = yugoslaveia_economic_boom duration = 1825 }
+		remove_country_modifier = collective_leadership
+		
+		any_pop = {
+			consciousness = 3 militancy = 3
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		political_reform = 
+		political_reform = 
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "This is bullshit!"
+		
+		prestige = -250
+		
+		any_pop = {
+			consciousness = -2 militancy = -2
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = { factor = 0.3 }
+	}
+}
+
+country_event = { # Death of Shenin - Good Ending
+	id = 9001665
+	title = "Death of Shenin"
+	desc = EVT_9001665_DESC
+	picture = "communist_death"
+
+	fire_only_once = yes
+
+	trigger = {
+    	tag = RUS
+		year = 2009
+		NOT = { year = 2012 }
+		government = proletarian_dictatorship
+		has_country_flag = oleg_shenin
+		has_country_flag = ussr_neo_brezhnevism
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Viktor Tyulkin will be the new leader of the Soviet Union."
+		
+		clr_country_flag = ussr_neo_brezhnevism
+		clr_country_flag = oleg_shenin
+		
+		ruling_party_ideology = communist_social
+		
+		any_pop  ={
+			consciousness = 1 militancy = 1
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Gennady Zyuganov will be the new leader of the Soviet Union."
+		
+		set_country_flag = spez_country
+		clr_country_flag = ussr_neo_brezhnevism
+		clr_country_flag = oleg_shenin
+		
+		ruling_party_ideology = socialist
+		
+		any_pop  ={
+			consciousness = 2 militancy = 2
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		ai_chance = { factor = 0.25 }
+	}
+	
+	option = {
+		name = "Sergey Alexandrov will be the new leader of the Soviet Union."
+		
+		set_country_flag = begin_reforms_of_ussr
+		clr_country_flag = ussr_neo_brezhnevism
+		clr_country_flag = oleg_shenin
+		clr_country_flag = ussr_no_historical_reforms
+		clr_country_flag = democratisation_intention
+		clr_country_flag = perestroika_intention
+		clr_country_flag = glasnost_intention
+		
+		any_pop  ={
+			consciousness = 3 militancy = 3
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+country_event = { # Death of Shenin - Bad Ending
+	id = 9001666
+	title = "Death of Shenin"
+	desc = EVT_9001666_DESC
+	picture = "communist_death"
+
+	fire_only_once = yes
+
+	trigger = {
+    	tag = RUS
+		year = 2009
+		NOT = { year = 2012 }
+		government = proletarian_dictatorship
+		has_country_flag = oleg_shenin
+		has_country_flag = ussr_brezhnevism
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "The continuity will be in Sergey Alexandrov."
+		
+		set_country_flag = begin_reforms_of_ussr
+		clr_country_flag = ussr_brezhnevism
+		clr_country_flag = oleg_shenin
+		clr_country_flag = ussr_no_historical_reforms
+		clr_country_flag = democratisation_intention
+		clr_country_flag = perestroika_intention
+		clr_country_flag = glasnost_intention
+		
+		add_country_modifier = { name = soviet_stability duration = 1825 }
+		add_country_modifier = { name = ruling_party_scandal duration = 365 }
+		
+		any_pop  ={
+			consciousness = 3 militancy = 3
+			ideology = { factor = 0.05 value = communist }
+		}
+	}
+}
+
