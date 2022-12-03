@@ -23,6 +23,10 @@ I. Events for Soviet Union
     * After Viktor Grishin : Oleg Shenin, Sergey Alexandrov, Viktor Tyulkin and Gennady Zyuganov.
     * After Dinmukhamed Kunaev : Pyotr Demichev and Oleg Shenin
   
+  * Gorbachev's assassination in 1990
+  Event that could cause the death of Gorbachev via his assassination attempt during the parade of the October Revolution in 1990.
+  Possible personalities: Viktor Alksnis, Vitaly Vorotnikov and Alexander Yakovlev.
+  
   * Enhanced events on Egor Ligachev [100%]
   Add more events about Egor Ligachev with three different endings.
   
@@ -31,3 +35,29 @@ I. Events for Soviet Union
   Possible personalities: Nikolai Egorychev, Alexander Yakovlev
   
   * Improved the Military path
+  
+  
+II. Events for Communist China
+  * Events before the Proclamation of the PRC
+  A few events before the proclamation of the PRC, which can have big consequences later.
+  
+  * Mao dies during the Civil War
+  Ideally, a random event that could trigger Mao's death during the Civil War.
+  
+  * Early Period of the People's Republic of China
+  What events on the first years of the People's Republic of China.
+  Four different endings:
+	- Pro-Soviet people are arrested or do not have enough influence.
+	- Gao Gang is in the government
+	- Wang Ming is in government
+	- The Pro-Soviets take power
+  
+  * Big Step Forward
+  Event on the policy of Big Step Forward and its consequences.
+  Possible personalities: Mao Zedong, Liu Shaoqi, Zhou Enlai, Chen Yun and Peng Dehuai.
+  
+  * The Liu Shaoqi Period
+  Event on Liu Shaoqi's rise to power in China. Risk of triggering the Cultural Revolution.
+  
+  * Cultural Revolution
+  
