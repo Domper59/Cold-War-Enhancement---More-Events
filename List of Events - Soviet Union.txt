@@ -1,5 +1,5 @@
 #BERIA
-9001002 = Liberalization under Béria
+9001002 = Liberalization under Beria
 9001003 = East German Uprising of 1953 - DDR
 9001004 = East German Uprising of 1953 - RUS
 9001005 = Liquidation of Beria
@@ -100,6 +100,20 @@
 9001307 = Death of Sokolov - Conservators Ending
 9001308 = Death of Sokolov - Reformist Ending
 9001309 = Death of Sokolov - Dictator Ending
+
+#ANTI-PARTY GROUP - PLOT
+9001596 = Start of the Preparations
+9001597 = Securing our Position
+9001598 = Weakening our enemy
+9001599 = An Urgent Request
+9001600 = An Urgent Call
+9001601 = Home delivery
+9001602 = Surprise Guest
+9001603 = Undesirable people
+9001604 = The Stalinists regain power
+9001605 = Compromise Situation
+9001606 = The Khrushchevists win... without Khrushchev
+9001607 = Anti Party Group's Defeat
 
 #AFTER KHRUSHCHEV
 8014233 = The Fall of Nikita Khrushchev
