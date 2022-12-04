@@ -186,9 +186,9 @@
 9001484 = Made in USSR
 9001485 = Request for Political Reforms
 9001486 = Death of Dinmukhamed - Bad Ending
-??? = Death of Dinmukhamed - Moderate Ending
+9001680 = Death of Dinmukhamed - Moderate Ending
 9001487 = Death of Dinmukhamed - Conservative Ending
-??? = Death of Dinmukhamed - Automation Ending
+9001681 = Death of Dinmukhamed - Automation Ending
 9001488 = Anti-Corruption Campaign
 9001489 = Launch of economic reform
 9001490 = Promotion of Gorbachev?

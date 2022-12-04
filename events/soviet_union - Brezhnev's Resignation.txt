@@ -782,6 +782,51 @@ country_event = { # Death of Dinmukhamed - Bad Ending
 		clr_country_flag = dinmukhamed_kunaev
 		clr_country_flag = ussr_no_historical_reforms
 		
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = soviet_stagnation_3 }
+			}
+			owner = {
+				remove_country_modifier = soviet_stagnation_3
+				add_country_modifier = { name = soviet_stagnation_4 duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = soviet_stagnation_2 }
+			}
+			owner = {
+				remove_country_modifier = soviet_stagnation_2
+				add_country_modifier = { name = soviet_stagnation_3 duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = soviet_stagnation_1 }
+			}
+			owner = {
+				remove_country_modifier = soviet_stagnation_1
+				add_country_modifier = { name = soviet_stagnation_2 duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						OR = {
+							has_country_modifier = soviet_stagnation_1
+							has_country_modifier = soviet_stagnation_2
+							has_country_modifier = soviet_stagnation_3
+							has_country_modifier = soviet_stagnation_4
+						}
+					}
+				}
+			}
+			owner = {
+				add_country_modifier = { name = soviet_stagnation_1 duration = -1 }
+			}
+		}
+		
 		any_pop = {
 			consciousness = 4 militancy = 5
 			ideology = { factor = 0.05 value = liberal }
@@ -791,9 +836,9 @@ country_event = { # Death of Dinmukhamed - Bad Ending
 }
 
 country_event = { # Death of Dinmukhamed - Moderate Ending
-	id = ???
+	id = 9001680
 	title = "Death of Dinmukhamed"
-	desc = EVT_???_DESC
+	desc = EVT_9001680_DESC
 	picture = "communist_death"
   
 	fire_only_once = yes
@@ -817,10 +862,12 @@ country_event = { # Death of Dinmukhamed - Moderate Ending
 	option = {
 		name = "Viktor Tyulkin is the new $MONARCHTITLE$."
 		
-		set_country_flag = pyotr_demichev
+		set_country_flag = viktor_tyulkin
 		clr_country_flag = dinmukhamed_kunaev
 		clr_country_flag = ussr_reform_dinmukhamed
 		clr_country_flag = ussr_dinmukhamed_science
+		
+		ruling_party_ideology = communist_social
 		
 		any_pop = {
 			consciousness = -4 militancy = -3
@@ -833,10 +880,12 @@ country_event = { # Death of Dinmukhamed - Moderate Ending
 	option = {
 		name = "Gennady Zyuganov is the new $MONARCHTITLE$."
 		
-		set_country_flag = oleg_shenin
+		set_country_flag = gennady_zyuganov
 		clr_country_flag = dinmukhamed_kunaev
 		clr_country_flag = ussr_reform_dinmukhamed
 		clr_country_flag = ussr_dinmukhamed_science
+		
+		ruling_party_ideology = socialist
 		
 		any_pop = {
 			consciousness = -3 militancy = -2
@@ -908,9 +957,9 @@ country_event = { # Death of Dinmukhamed - Conservative Ending
 }
 
 country_event = { # Death of Dinmukhamed - Automation Ending
-	id = 9001487
+	id = 9001681
 	title = "Death of Dinmukhamed"
-	desc = EVT_9001487_DESC
+	desc = EVT_9001681_DESC
 	picture = "communist_death"
   
 	fire_only_once = yes
