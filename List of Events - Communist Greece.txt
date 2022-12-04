@@ -1,0 +1,157 @@
+#MAIN PATH
+9001512 = South Macedonia - Communist
+9001513 = Economical Model
+9001514 = The Discontented Peasantry
+9001515 = What kind of change?
+9001516 = The Secret Report of Khrushchev
+9001517 = Change our political position
+9001518 = The Fall of Zachariadis
+9001519 = New Economic Reforms?
+9001520 = Cultural Thaw
+9001521 = Anti-Stalinism Purge
+9001522 = Reopening to Yugoslavia?
+9001523 = Tension with the Macedonians
+9001524 = The Rise of the Eurocommunists
+9001525 = The Communists strike back
+9001526 = Koligiannis calls for help
+9001527 = The Death of Koligiannis
+9001528 = The Fall of Koligiannis
+9001529 = Start of Reconciliation with the Soviet Union
+9001530 = Success of the Reconciliation
+9001531 = Failure of the Reconciliation
+9001532 = What to retain of Koligiannis?
+9001533 = Purge and Alliance
+9001534 = Continue the Cultural Thaw?
+9001535 = Staying close to Yugoslavia?
+9001536 = Which economic model to choose?
+9001537 = Back to Stalinism?
+9001538 = Rehabilitation of Stalin
+
+#MAIN PATH - TITO
+9001571 = South Macedonia - Titoist
+9001572 = The Macedonian Question
+9001573 = The Head of the Greek Titoists
+9001574 = Economic Convergence
+9001575 = The Titoist Coup of $YEAR$
+9001576 = The Cult of Tito
+9001577 = Anti-Yugoslav Opposition
+9001578 = Agitation in the Party
+9001579 = The Reformists take power
+9001580 = The Communists take power
+9001581 = The Homecoming of Andreas Tzimas
+9001588 = The Macedonia Question
+9001590 = Macedonian Crisis
+9001591 = Macedonian Crisis - Army
+9001592 = Macedonian Crisis - Independence
+9001593 = Also for Bulgaria?
+9001594 = The Retirement of Markos Vafeiadis
+9001595 = Civil War in Yugoslavia
+9001608 = Greek constitution of $YEAR$
+9001609 = Organization of Purge
+9001610 = Cult of Vafeiadis?
+9001611 = Ban the Macedonian Communist Party?
+
+#COLLAPSE
+
+9001539 = Unrest in Greece
+9001540 = Declaration of Independence of South Macedonia
+9001541 = Abandon our principles?
+9001566 = Beginning of protests
+9001567 = $YEAR$ Greek Revolution
+9001568 = Agitation at the Capital
+9001569 = The Greek Spring
+9001570 = The Reformers' Coup
+
+#MARXIST-LENINIST
+9001542 = Father of all Peoples
+9001543 = Reforming the Stalinist Model?
+9001544 = Echoes of Cybernetics
+9001545 = Reconciliation with Albania?
+9001547 = Death of Zachariadis - Automation
+9001548 = Death of Zachariadis - Conservatives
+9001549 = Death of Zachariadis - Reformists
+
+# MAOIST
+9001550 = Joining China?
+9001551 = Spreading Mao's thought
+9001552 = Greek Cultural Revolution?
+9001554 = The Red Guards
+9001555 = Fight against Beliefs - South Macedonia not independent
+9001556 = Fight against Beliefs - South Macedonia independent
+9001557 = The Paleochristian Monument of Thessaloniki has been sacked!
+9001558 = The Olympia has been sacked!
+9001559 = The Acropolis of Athens has been sacked!
+9001560 = Ideological Purification
+9001561 = Death of Zachariadis - Maoist
+9001562 = Death of Zachariadis - Maoist Reformist
+9001563 = Continue the Cultural Revolution?
+9001564 = Economic Committee
+9001565 = Victory of the Cultural Revolution
+
+#EUROCOMMUNIST - MAIN & ALTERNATIVE
+9001627 = Beginning of reforms
+9001628 = Rizospastis
+9001629 = The 10th Congress of the KKE
+9001630 = Economic Reform
+9001631 = Political Liberalization
+9001632 = The Role of the Party
+9001633 = Structure of the country
+9001634 = Foreign Policy
+9001635 = Babis Drakopoulos is eliminated
+9001636 = Babis Drakopoulos remains in power
+9001637 = The Athens Spring - Partsalidis (USSR)
+9001638 = The Athens Spring - Koligiannis (USSR)
+9001639 = The Soviet Union tolerates the reforms
+9001640 = End of the Spring of Athens - Fail
+9001641 = End of the Spring of Athens - Success
+9001642 = The Athens Spring - USA
+9001643 = The Announcement of Great Reforms
+9001644 = Bringing Back Andreas Tzimas
+9001645 = The Greek Reforms - Alternative Hard
+9001646 = The Greek Reforms - Alternative Moderate
+
+#EUROCOMMUNIST - AFTER REFORMS
+9001647 = Agricultural Reform
+9001648 = Opening to the world?
+9001649 = Miners' strike
+9001650 = Greek Revival Party
+9001651 = Risk of Split in the MCP
+9001652 = More Religious Freedom
+9001653 = Hellenic Workers' Union
+9001654 = Division among the Eurocommunists - Partsalidis
+9001655 = Death of Partsalidis
+9001656 = Greek General Election of $YEAR$
+9001657 = Rise of Greek Nationalism
+9001658 = Conflicts between Greeks and Macedonians
+9001659 = The Rise of Konstantinos Karamanlis
+9001660 = Democratic Union
+9001662 = Macedonian War
+9001664 = The Unionist Coup of $YEAR$
+
+# NEIGHBORS RELATIONSHIP
+* Yugoslavia
+9001582 = Border Incident
+9001583 = Diplomatic Incident
+9001584 = Trade Agreement - YUG
+9001585 = Cancellation of Agreements
+9001586 = Military Agreement
+9001587 = Alliance
+
+* Bulgaria
+9001612 = Border Incident
+9001613 = Diplomatic Incident
+9001614 = Cancellation of Agreements
+9001615 = Common Market - BUL
+9001616 = Trade Agreement - BUL
+9001617 = Support Todorov-Gorunya
+9001618 = Cybernetic Congress - BUL
+9001619 = Alliance
+
+* Romania
+9001620 = Diplomatic Incident
+9001621 = Cancellation of Agreements
+9001622 = Common Market - ROM
+9001623 = Trade Agreement - ROM
+9001624 = Rebuilding Romania
+9001625 = Cybernetic Congress- ROM
+9001626 = Alliance
