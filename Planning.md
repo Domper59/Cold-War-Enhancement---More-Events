@@ -35,6 +35,16 @@ I. Events for Soviet Union
   Possible personalities: Nikolai Egorychev, Alexander Yakovlev
   
   * Improved the Military path
+  Add some events and possibilities for the military.
+  Possible personalities: Vasily Sokolovsky, Rodion Malinovsky, Sergey Biryuzov, Andrei Grechko, Vladislav Achalov, Alexander Lebed, Dmitry Yazov, Yevgeny Shaposhnikov, Mikhail Moiseyev.
+  
+  * Beria's reforms
+  Give more events for Beria if he wins the Civil War and its consequences.
+  Possible personalities: Vsevolod Merkulov, Bogdan Kobulov, Sergo Goglidze, Pavlo Meshyk, Vladimir Dekanozov and Lev Vlodzimirsky.
+  
+  * Beria-Malenkov
+  Give the player the possibility to make a Baria-Malenkov alliance and its consequences.
+  Possible personalities: Vsevolod Merkulov, Sergei Kruglov, WIP
   
   
 II. Events for Communist China
