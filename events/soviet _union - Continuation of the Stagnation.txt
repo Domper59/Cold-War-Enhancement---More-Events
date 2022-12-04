@@ -34,8 +34,9 @@ country_event = { # The Inevitable Conclusion
 			ideology = { factor = 0.05 value = communist_social }
 		}
 		
-		political_reform = 
-		political_reform = 
+		political_reform = limited_meetings
+		political_reform = firewall_publishing
+		political_reform = quota_immigration
 		
 		ai_chance = { factor = 0.7 }
 	}
