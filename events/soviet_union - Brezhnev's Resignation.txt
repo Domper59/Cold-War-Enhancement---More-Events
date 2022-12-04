@@ -1719,11 +1719,11 @@ country_event = { # Death of Andropov - Gorbatchev Ending
 	
 }
 
-country_event = { # Death of Andropov - Tyazhelnikov Ending
+country_event = { # Death of Andropov - Normal Ending
 	id = 9001499
 	title = "Death of Andropov"
 	desc = EVT_9001499_DESC
-	picture = "leader_ussr_tyazhelnikov"
+	picture = "yuri_andropov_death"
   
 	fire_only_once = yes
 
@@ -1745,17 +1745,121 @@ country_event = { # Death of Andropov - Tyazhelnikov Ending
 	}
 
 	mean_time_to_happen = { months = 3 }
-
+	
 	option = {
-		name = "A worthy successor, for the party and Andropov."
+		name = "Select Vitaly Vorotnikov."
 		
-		#The party becomes more Social Communist
-		any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = communist_social } }
+		ruling_party_ideology = communist_social
 		
+		#The population becomes more Social Communist
+		any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = communist_social } }
+		
+		set_country_flag = vitaly_vorotnikov
 		clr_country_flag = yuri_andropov
 		clr_country_flag = brezhnev_resignation
 		clr_country_flag = andropov_launch_reforms
 		clr_country_flag = andropov_succession_tyazhelnikov
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Select Viktor Chebrikov."
+		
+		ruling_party_ideology = communist_social
+		
+		#The party becomes more Social Communist
+		any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = communist_social } }
+		
+		set_country_flag = viktor_chebrikov
+		clr_country_flag = yuri_andropov
+		clr_country_flag = brezhnev_resignation
+		clr_country_flag = andropov_launch_reforms
+		clr_country_flag = andropov_succession_tyazhelnikov
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Select Heydar Aliyev."
+		
+		ruling_party_ideology = communist_social
+		
+		#The party becomes more Social Communist
+		any_pop = { limit = { strata = rich } ideology = { factor = 0.05 value = communist_social } }
+		
+		#The population becomes more Nationalist
+		any_pop = { limit = { strata = poor } ideology = { factor = 0.05 value = nationalist } }
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = soviet_stagnation_3 }
+			}
+			owner = {
+				remove_country_modifier = soviet_stagnation_3
+				add_country_modifier = { name = soviet_stagnation_4 duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = soviet_stagnation_2 }
+			}
+			owner = {
+				remove_country_modifier = soviet_stagnation_2
+				add_country_modifier = { name = soviet_stagnation_3 duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = soviet_stagnation_1 }
+			}
+			owner = {
+				remove_country_modifier = soviet_stagnation_1
+				add_country_modifier = { name = soviet_stagnation_2 duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						OR = {
+							has_country_modifier = soviet_stagnation_1
+							has_country_modifier = soviet_stagnation_2
+							has_country_modifier = soviet_stagnation_3
+							has_country_modifier = soviet_stagnation_4
+						}
+					}
+				}
+			}
+			owner = {
+				add_country_modifier = { name = soviet_stagnation_1 duration = -1 }
+			}
+		}
+		
+		set_country_flag = heydar_aliyev
+		clr_country_flag = yuri_andropov
+		clr_country_flag = brezhnev_resignation
+		clr_country_flag = andropov_launch_reforms
+		clr_country_flag = andropov_succession_tyazhelnikov
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+	option = {
+		name = "Select Yevgeny Tyazhelnikov."
+		
+		ruling_party_ideology = communist_social
+		
+		#The party becomes more Social Communist
+		any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = communist_social } }
+		
+		set_country_flag = yevgeny_tyazhelnikov
+		clr_country_flag = yuri_andropov
+		clr_country_flag = brezhnev_resignation
+		clr_country_flag = andropov_launch_reforms
+		clr_country_flag = andropov_succession_tyazhelnikov
+		
+		ai_chance = { factor = 0.1 }
 	}
 	
 }

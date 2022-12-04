@@ -291,6 +291,10 @@ country_event = { # The Problem of Alcohol
 			has_country_flag = grigori_romanov
 			has_country_flag = andrei_gromyko
 			has_country_flag = mikhail_gorbachev
+			has_country_flag = vitaly_vorotnikov
+			has_country_flag = viktor_chebrikov
+			has_country_flag = heydar_aliyev
+			has_country_flag = yevgeny_tyazhelnikov
 		}
 		NOT = {
 			OR = {
@@ -332,6 +336,10 @@ country_event = { # The Problem of Alcohol
 					has_country_flag = dinmukhamed_kunaev
 					has_country_flag = andrei_gromyko
 					has_country_flag = mikhail_gorbachev
+					has_country_flag = vitaly_vorotnikov
+					has_country_flag = viktor_chebrikov
+					has_country_flag = heydar_aliyev
+					has_country_flag = yevgeny_tyazhelnikov
 				}
 			}
 		}
@@ -357,6 +365,10 @@ country_event = { # The Problem of Alcohol
 					has_country_flag = grigori_romanov
 					has_country_flag = andrei_gromyko
 					has_country_flag = mikhail_gorbachev
+					has_country_flag = vitaly_vorotnikov
+					has_country_flag = viktor_chebrikov
+					has_country_flag = heydar_aliyev
+					has_country_flag = yevgeny_tyazhelnikov
 				}
 			}
 		}
@@ -380,7 +392,8 @@ country_event = { # The Problem of Alcohol
 					has_country_flag = dinmukhamed_kunaev
 					has_country_flag = grigori_romanov
 					has_country_flag = andrei_gromyko
-					
+					has_country_flag = viktor_chebrikov
+					has_country_flag = heydar_aliyev
 				}
 			}
 		}
@@ -403,6 +416,8 @@ country_event = { # The Problem of Alcohol
 					has_country_flag = viktor_grishin
 					has_country_flag = grigori_romanov
 					has_country_flag = mikhail_gorbachev
+					has_country_flag = vitaly_vorotnikov
+					has_country_flag = yevgeny_tyazhelnikov
 				}
 			}
 		}
