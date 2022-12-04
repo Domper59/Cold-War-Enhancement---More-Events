@@ -1,0 +1,488 @@
+#BERIA
+9001002 = Liberalization under Béria
+9001003 = East German Uprising of 1953 - DDR
+9001004 = East German Uprising of 1953 - RUS
+9001005 = Liquidation of Beria
+9001006 = Beria is Eliminated
+9001007 = Unification of Germany
+1512102 = Fragmentation of CCCP Control
+9001008 = The Conservatives are organizing
+9001009 = New Civil War
+9001010 = Who to support?
+9001011 = End of the Civil War - Beria
+9001012 = End of the Civil War - Conservators
+9001014 = New Constitution of $YEAR$
+9001015 = Beria's Trial
+
+#KHRUSHCHEV
+9001212 = Anti-Party Group - Khrushchev
+9001213 = Introduction of Sovnarkhoze
+9001214 = A General too dangerous
+9001215 = Cultural Opening
+9001216 = Khrushchev's Corn
+9001218 = Khrushchyovka
+9001219 = Stalin's Body
+
+#STALINISTS
+9001220 = Elimination of Beria
+9001221 = Elimination of Khrushchev - Stalinist
+9001222 = The Stalinist Pretenders
+9001223 = Tentative Coup
+9001224 = Zhukov's Trial
+9001260 = Zhukov and his Dacha
+9001261 = The death of a Great General
+9001262 = Zhukov exiled to the USA
+9001225 = The Great Purge
+9001226 = Lyssenko's Legacy
+
+#MALENKOV
+9001228 = Stalin's Legacy
+9001229 = Reorientation of the Planned Economy
+9001230 = Agricultural Problem - Malenkov
+9001231 = More Autonomous Farms?
+9001232 = Effective Reorientation of the Economy
+9001233 = Bureaucratic Reforms
+9001234 = Resignation of Malenkov
+
+#MOLOTOV
+9001235 = Worship of Stalin
+9001236 = Malenkov's Advice
+9001237 = Agricultural Problem - Molotov
+9001238 = Politicizing our Army
+9001239 = Tension with China
+9001240 = How to deal with Mao?
+9001263 = The Soviet Union demands our submission
+9001264 = The Soviet Union accuses us of revisionism
+9001241 = Rupture of the Friendship Pact
+9001257 = Reintroduction of Cybernetics?
+9001258 = Death of Molotov - Good Ending
+9001259 = Death of Molotov - Bad Ending
+
+#ZHUKOV
+9001228 = Stalin's Legacy
+9001244 = Rewarded
+9001245 = Anti-Party Group - Zhukov
+9001343 = Opening Speech of the XXIst Congress
+9001344 = Marshal Zhukov assassinated!
+9001345 = Assassination attempt on Zhukov!
+9001247 = Great Military Reform
+9001248 = Reducing the Importance of the Navy?
+9001249 = The Role of the Political Officer
+9001250 = The Quality of the Army
+9001251 = The Militsiya
+9001346 = Revival of the Russian Nationalist
+9001252 = Elimination of Khrushchev - Zhukov
+9001253 = The Future of the Soviet Economy
+9001254 = Agricultural Problem - Zhukov
+9001255 = Comrade Secretary-Marshal
+9001256 = Resignation of Zhukov
+
+#USTINOV
+9001289 = Budget Allocation of $YEAR$
+9001290 = The Zhukov Economy Model
+9001291 = Which Branch of the Army Favored?
+9001293 = The Army in Space
+9001294 = Death of Ustinov
+
+#SOKOLOV
+9001295 = Political reform?
+9001296 = Legislative Policy
+9001297 = Conscription
+9001298 = State Structure
+9001299 = Trade Union
+9001300 = Determining our Economic Model - Zhukov Reform
+9001301 = Determining our Economic Model - Not Zhukov Reform
+9001302 = Militarization of the Soviet Union
+9001303 = A Preserved Soviet Union
+9001304 = A Modernized Soviet Union
+9001305 = Proclamation of the Union of Sovereign Soviet Respublics
+9001306 = Death of Sokolov - Military Ending
+9001307 = Death of Sokolov - Conservators Ending
+9001308 = Death of Sokolov - Reformist Ending
+9001309 = Death of Sokolov - Dictator Ending
+
+#AFTER KHRUSHCHEV
+8014233 = The Fall of Nikita Khrushchev
+9001146 = Collective Leadership
+9001147 = The Arrival of Nikolai Podgorny
+9001148 = The Siniavski-Daniel Trial
+9001150 = Attempted Assassination
+9001197 = Brezhnev assassinated!
+9001198 = Brezhnev survived!
+9001196 = The Death of Khrushchev
+
+#LEONID BREZHNEV
+9001151 = Economic Reform of 1973 - Brezhnev
+9001152 = Gerontocracy
+9001153 = Expulsion of Solzhenitsyn?
+9001154 = Andrei Sakharov
+9001155 = Elimination of Podgorny
+9001157 = Soviet Constitution of 1977
+9001158 = Economic Reform of 1979
+9001159 = The Fall of Kosygin
+
+#ALEXENDER SHELEPIN
+9001160 = Countering Brezhnev
+9001161 = Plan Seduction for the Army
+9001162 = Plan Seduction for the Party
+9001163 = Shelepin stays in power
+9001164 = Shelepin fails to stay in power
+9001165 = XXIIIrd Congress of the CPUS - Alternative
+9001166 = Shelepin's Reform passes!
+9001167 = Kosygin's Reform passes!
+9001168 = Putting the brakes on Reforms
+9001169 = Recentralization
+9001201 = The Case of the Katyn Massacre
+9001170 = Administration Reform
+9001171 = Disciplinary Committee
+9001172 = Worker Discipline
+9001173 = The Fate of Brezhnev
+9001174 = The Death of Shelepin
+
+#ALEXEI KOSYGIN
+9001200 = Alexei Kosygin is the uncontested leader
+9001175 = Opening to the West?
+9001177 = Economic Reform of 1973 - Kosygin
+9001178 = Youthfulness VS Elders
+9001179 = Reduce Censorship?
+9001181 = The Type of Army
+9001182 = Great Political Reform
+9001183 = The Conservatives are discontent
+9001184 = Dispute between Reformers
+9001185 = Soviet Constitution of $YEAR$ - Kosygin
+9001187 = Request for Independance in the Baltic States
+9001188 = Agricultural Reform
+9001190 = The Belarusian Model
+9001192 = The Death of Kosygin
+
+#NIKOLAI PODGORNY
+9001186 = Soviet Constitution of $YEAR$ - Podgorny
+9001195 = The Death of Podgorny
+
+#BREZHNEV'S RESIGNATION
+9001475 = Resignation of Leonid Brezhnev?
+9001476 = An alarming report
+9001477 = How to reform the Soviet Union?
+9001478 = Budget for the Academy of Sciences
+9001479 = The advice of the Scientists
+9001480 = Restart of the Virgin Lands Campaign
+9001481 = New Agricultural Reforms
+9001482 = New Indutrialization
+9001483 = Selling our oil?
+9001484 = Made in USSR
+9001485 = Request for Political Reforms
+9001486 = Death of Dinmukhamed - Bad Ending
+??? = Death of Dinmukhamed - Moderate Ending
+9001487 = Death of Dinmukhamed - Conservative Ending
+??? = Death of Dinmukhamed - Automation Ending
+9001488 = Anti-Corruption Campaign
+9001489 = Launch of economic reform
+9001490 = Promotion of Gorbachev?
+9001491 = Diminish the Fight Against Dissenters?
+9001492 = Agricultural reform
+9001493 = Perestroika
+9001494 = Glasnost?
+9001495 = Andropov and Xiaoping
+9001496 = $YEAR$ Student Demonstration
+9001497 = The Post-Student Demonstration
+9001498 = Death of Andropov - Gorbatchev Ending
+9001499 = Death of Andropov - Normal Ending
+9001500 = Death of Andropov - Grishin Ending
+
+#KIRILL MAZUROV
+9001202 = Soviet Agricultural Program
+9001203 = Food Program of $YEAR$
+9001204 = New Virgin Lands Campaign
+9001205 = New Branch in the Academy of Sciences
+9001206 = The Return of Michurin
+9001207 = Generalisation of GMO
+9001208 = Political "Amnesty"
+9001209 = Soviet Alcoholism
+9001210 = Soviet Infrastructure and Cars
+9001211 = Death of Mazurov
+
+#YURI ANDROPOV & KONSTANTIN CHERMENKO
+9001035 = A new head of the KGB
+9001036 = Elimination of Fyodor Kulakov
+9001037 = Elimination of Pyotr Masherov
+9001038 = Elimination of Dinmoukhammed Kunaev
+9001039 = Elimination of Yuri Andropov
+8014235 = Brezhnev's successor - Yuri Andropov
+9001040 = Brezhnev's successor - Vladimir Scherbitsky
+9001041 = Attempt at Reform
+8014236 = Andropov's successor
+8014237 = Chermenko's successor
+
+#VLADIMIR SCHERBITSKY
+9001043 = Expose Corruption
+9001044 = Replaced Administration
+9001045 = Youthfulness
+9001046 = Suppress the Last Reformist ?
+9001048 = Beginning of Economic Reorganization
+9001049 = Automating of Economy ?
+9001050 = Unification of the Eastern Bloc Economy
+9001064 = Legislative Policy
+9001065 = Press Supervision
+9001066 = Trade Union
+9001067 = The Question of Nationalities
+9001068 = A New Soviet Union
+9001069 = Death of Scherbitsky
+
+#GRIGORI ROMANOV
+9001092 = Elimination of Reformists
+9001045 = Youthfulness
+9001094 = Ideological Checking
+9001095 = New Administrative Method
+9001096 = Rise of Nationalism
+9001097 = The Jewish Question
+9001098 = Automating the Economy ?
+9001106 = Scientific Complex
+9001107 = Cultural Development
+9001099 = The Fate of the COMECON
+9001102 = Death of Romanov - Good Ending
+9001103 = Death of Romanov - Bad Ending
+
+#VIKTOR GRISHIN
+9001403 = Brezhnev's legacy
+9001404 = Death of Grishin - Good Ending
+9001090 = Death of Grishin - Bad Ending
+9001405 = The Inevitable Conclusion
+9001665 = Death of Shenin - Good Ending
+9001666 = Death of Shenin - Bad Ending
+
+#ANDREI GROMYKO
+9001104 = Gromyko in hospital
+9001105 = Death of Gromyko - Bad Ending
+9001108 = Planned Economy with Market Elements
+9001109 = Small Business
+9001110 = Price Policy
+9001111 = Labour Policy
+9001112 = Trade Policy
+9001113 = New Immigration Policy in the Eastern Bloc
+9001114 = Socialist Banking Institution
+9001115 = Unification of the Economy
+9001116 = Modernization of the Soviet Union - Gromyko
+9001117 = Legislative Policy
+9001118 = Elections ?
+9001119 = Press Supervision
+9001120 = Conscription
+9001121 = Trade Union
+9001122 = The Question of Nationalities
+9001123 = New Constitution of $YEAR$
+9001124 = Death of Gromyko - Good Ending
+
+#EGOR LIGATCHEV
+9001125 = A New Chairman of the Council of Ministers
+9001126 = State Commission for Economic Reform
+9001127 = Ryzhkov Liberalization Project
+9001128 = Continue the Anti-Alcohol Campaign?
+9001667 = Beginning of Oligarchy (Si NEP ou Titoism)
+9001668 = Alliance with Oligachy?
+9001669 = Modernization of the Soviet Union - Ligatchev
+9001670 = The Proposal of Anatoly Sobchak
+9001671 = Expand the Special Economic Zones
+9001672 = The Komsomolskaya Pravda Controversy
+9001673 = Ligachev, you're wrong!
+9001674 = Legalization or Opposition
+9001675 = The 1st Mcdonald
+9001676 = The Sugar Purchase Scandal
+9001677 = Ligachev's retreat - Good Ending
+9001678 = Ligachev's retreat - Normal Ending
+9001679 = Ligachev's retreat - Bad Ending
+
+#DISSOLUTION OF THE EASTERN BLOC
+9001396 = The Sinatra Doctrine
+9001397 = The New Minister of Foreign Affairs
+9001399 = Modernise the Brezhnev Doctrine?
+9001400 = A New Soviet Foreign Policy in Europe?
+9001401 = Diverge from Soviet Marxism?
+9001402 = New Interpretation of Marxism
+
+#AUGUST COUP
+9001129 = Application of the Army
+9001130 = The Fate of Yeltsin
+9001131 = Using the Media
+9001132 = The Commitee's Position
+9001133 = The House of Soviets
+9001134 = The Fate of Gorbatchev
+9001135 = Gorbachev backs the Coup
+9001136 = Gorbachev opposes the Coup
+9001138 = The August Coup Fails
+9001139 = Pyrrhic Victory for the Hardliners!
+9001140 = Victory for the Hardliners!
+9001141 = Vladimir Kryuchkov
+9001142 = Gennady Yanayev
+9001143 = Boris Pugo
+9001144 = Valentin Pavlov
+9001145 = Return of the Great Purges
+
+#AFTER AUGUST COUP
+9001347 = Condemnation of Gobachev's legacy - Kryuchkov
+9001348 = Condemnation of Gobachev's legacy - Yanayev
+9001349 = Condemnation of Gobachev's legacy - Pugo & Pavlov
+9001350 = Independence of the Caucasian States
+9001351 = Independence of Turkmenistan
+9001352 = Independence of Ukraine
+9001353 = Independence of Belarus
+9001354 = Independence of other Central Asian Republics
+9001355 = The Soviet Economy - Kryuchkov
+9001356 = The Soviet Economy - Yanayev
+9001357 = The Soviet Economy - Pugo & Pavlov
+9001358 = Reconquering the Baltic States
+9001359 = A New Chairman of the KGB
+9001360 = $YEAR$ Red Square Protest
+9001361 = The Vozhd Ideology - Kryuchkov
+9001362 = Death of Kryuchkov
+9001363 = Death of Yanayev
+9001364 = Death of Pugo
+9001365 = Death of Pavlov
+
+#POST 1990
+9001265 = Yemen Reunification Project?
+9001266 = Investment and Soviet Concession - RUS
+9001267 = Investment and Soviet Concession - SYE
+9001268 = Investment and Soviet Concession - Refused
+9001269 = The Friendship Pipeline?
+9001310 = 100 years of the October Revolution
+9001311 = 100 years of the Soviet Union
+9001369 = 100 years of the Great Patriotic War
+9001366 = Referendum on the Sovereignty of Tartistan
+9001367 = Tartisan becomes independent
+9001368 = Tartisan does not become independent
+9001384 = More equality?
+9001385 = Protecting our interests
+9001386 = Access to the Chinese economy - RUS
+9001387 = Access to the Chinese economy - CHI
+9001388 = China denies access to its market
+9001389 = Opening to the world?
+9001390 = Religious Policy in the USS
+9001395 = New Anthem for the Union?
+9001394 = Spreading socialism?
+9001427 = The right and the wrong nationalism...
+9001459 = The Alaska Purchase
+9001460 = The Alaska Purchase - USA
+9001461 = Washing the boots of our soldiers
+9001462 = The crazy claim of the Russians
+
+#CHECHNYA CRISIS - ALTERNATIVE
+9001312 = The Chechnya Question
+9001315 = Martial Law in Chechnya - 1st Year
+9001316 = Martial Law in Chechnya - Good
+9001317 = Martial Law in Chechnya - Meh
+9001318 = Martial Law in Chechnya - Bad
+9001319 = Restoration of Order in Chechnya
+9001320 = Insurgency in Chechnya
+
+#INDEPENDENCE OF KYRGYZSTAN AND TAJIKISTAN
+9001270 = Independence of Kurgystan and Tajikistan?
+9001271 = People vote Yes!
+9001272 = People vote No!
+9001273 = Stayed close to Moscow?
+9001321 = Send our Warriors to the North?
+9001274 = The Mujahideen take power! - KYR & TAJ
+9001275 = The Mujahideen take power! - RUS
+
+#AFGHANISTAN WAR OF 2001 - ALTERNATIVE
+9001276 = The Afghan Threat
+9001322 = The Afghan Threat - USA
+9001323 = International Anti-Terrorism Coalition - RUS
+9001324 = International Anti-Terrorism Coalition - USA
+9001326 = The Future of Afghanistan
+9001327 = The Aftermath of the Afghan War - USA
+9001333 = Creation of Southern Afghanistan?
+9001336 = The Democratic Republic of Afghanistan
+
+#USS ELECTIONS
+9001371 = Presidential Election of $YEAR$
+9001372 = President Viktor Alksnis (Communist)
+9001373 = President Oleg Shenin (Communist)
+9001374 = President Maxim Suraykin (Communist)
+9001375 = President Aleksandr Vlasov (Communist Social)
+9001376 = President Viktor Tyulkin (Communist Social)
+9001377 = President Vladimir Putin (Communist Social) - Forced
+9001378 = President Vladimir Putin (Communist Social) - Succession
+9001379 = President Gennady Zyuganov (Socialist)
+9001406 = President Vladimir Zhirinovsky (Populist)
+9001407 = President Grigori Yavlinsky (Liberal)
+9001408 = President Alexander Lebed (Nationalist)
+9001409 = President Aman Tuleyev (Progressive)
+9001456 = President Boris Yeltsin (Big Tent)
+9001457 = President Alexander Yakovlev (Conservative)
+9001458 = President Dmitri Vasilyev (Traditionalist)
+
+#YELLOW REVOLUTION
+9001277 = Role of the Holodomor
+9001278 = The Crimean Question
+9001279 = Crimea voted to join the RSFSR
+9001280 = Crimea voted to join the Ukraine
+9001283 = Creation of the Crimean SSR
+9001284 = Rise of Ukrainian Nationalism
+9001285 = Demonstrations in Ukraine
+9001286 = The Ukrainian SSR asks for Independence
+9001287 = The Ukrainian SSR remains faithful
+9001288 = The Yellow Revolution
+
+#SECOND CUBAN MISSILE CRISIS
+9001410 = Continuing our Solidarity?
+9001411 = Risky Offer from the Soviets
+9001413 = Cuba refuses our proposal
+9001414 = Second Cuban Missile Crisis
+9001415 = Major Blockade on Cuba
+9001416 = The Americans will attack Cuba
+9001417 = Tough negotiation
+9001418 = The Soviets Demand : Stop the Blockade on Cuba
+9001419 = Aftermath of the Second Cuban Missile Crisis - RUS
+9001420 = Aftermath of the Second Cuban Missile Crisis - CUB
+
+#500 DAYS PROGRAM
+9001421 = Starting the 500 Day Program?
+9001422 = 500 Days Program - Mass Privatization
+9001423 = 500 Days Program - Reform of the Gosbank
+9001424 = 500 Days Program - Rapid Decentralization of the Union
+9001425 = 500 Days Program - End of the Reform
+9001426 = Unhappy local manager
+
+#SOVIET GOVERNMENT CRISIS
+9001428 = Compromise with the CPSU?
+9001429 = $YEAR$ Soviet Government Crisis
+9001430 = Alliance with which Far-Right?
+9001431 = Assault on the House of Soviets
+9001432 = The opposition is holding its ground!
+9001433 = The House of Soviets falls!
+9001434 = The Opposition attacks the Kremlin
+9001435 = The Opposition remains in place
+9001436 = Zhirinovsky goes into exile
+9001437 = Zhirinovsky kills himself
+9001438 = The Kremlin falls!
+9001439 = The Kremlin is holding its ground!
+9001440 = Zhirinovsky is killed!
+9001441 = Attempted Negotiation
+9001442 = Remain loyal to the Soviet regime?
+9001443 = Establishing a Presidential Dictatorship?
+9001444 = Restore the Russian Empire?
+
+#RISE OF LEBED
+9001445 = Progressive Coup?
+9001446 = Make Republics Loyal Again
+9001447 = Explosion of Separatist Sentiments
+9001448 = Restore order in the streets
+9001449 = Inauguration of a ski resort
+9001450 = Death of Lebed - Bad Ending
+9001451 = Fate of the Economy
+9001453 = Hard Recentralization
+9001454 = Soviet or Russian Nationalism?
+9001455 = Lebed is retiring - Good Ending
+
+#RECONSTRUCTION OF MOSCOW
+9001463 = Continuing the reconstruction?
+9001464 = Palace of Congresses
+9001465 = The fate of the Palace of Soviets site
+9001466 = Rebuild the Cathedral?
+9001467 = Restart work on the Palace of Soviets?
+9001468 = Stalinka
+9001469 = Expanding our streets
+9001470 = Which building to choose?
+9001471 = Honouring our dead
+9001472 = New home for Lenin?
+9001473 = Restrict access to the city?
+9001474 = Rename the city?
