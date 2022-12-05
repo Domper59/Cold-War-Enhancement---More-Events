@@ -115,6 +115,36 @@
 9001606 = The Khrushchevists win... without Khrushchev
 9001607 = Anti Party Group's Defeat
 
+#LAZAR KAGANOVICH
+9001682 = The Personality Cult
+9001683 = Reinstatement of military pensions
+9001684 = Protecting the Jews?
+9001685 = The Great Purge of Kaganovich
+9001686 = Make the Party more presentable
+9001687 = Creation of the People's Labour Commission
+9001688 = Creation of the Internal Affairs Committee
+9001689 = Agricultural Reform
+9001690 = How can we improbe our agriculture?
+9001691 = Red Book Project
+9001692 = Strenghten State Atheism
+9001693 = Deportations of peoples
+9001694 = Retirement of Lazar Kaganovich - Automating
+9001695 = Retirement of Lazar Kaganovich - Normal
+
+#STALINIST MODEL
+??? = The Stalinist Model has reached its limits
+??? = Reform of the Komsomol
+??? = Make Militsiya even stronger?
+??? = Renewal of Stalinists Projects
+??? = 
+
+#KURIL ISLANDS CRISIS
+??? = Protecting the Kuril Islands?
+??? = The development of Sakhalin
+??? = Modernization of the Kamchatka Naval Base?
+??? = Fortify the Kuril Islands?
+??? = 
+
 #AFTER KHRUSHCHEV
 8014233 = The Fall of Nikita Khrushchev
 9001146 = Collective Leadership
@@ -339,6 +369,8 @@
 9001352 = Independence of Ukraine
 9001353 = Independence of Belarus
 9001354 = Independence of other Central Asian Republics
+90016645 = Independence of Moldova
+90016646 = The Soviet-Transnistrian Alliance
 9001355 = The Soviet Economy - Kryuchkov
 9001356 = The Soviet Economy - Yanayev
 9001357 = The Soviet Economy - Pugo & Pavlov
