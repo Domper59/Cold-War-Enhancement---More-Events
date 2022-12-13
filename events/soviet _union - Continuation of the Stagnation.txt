@@ -1,3 +1,5 @@
+#AFTER VIKTOR GRISHIN
+
 country_event = { # The Inevitable Conclusion
 	id = 90014050
 	title = "The Inevitable Conclusion"
@@ -168,4 +170,6 @@ country_event = { # Death of Shenin - Bad Ending
 		}
 	}
 }
+
+#AFTER DINMUKHAMED KUNAEV
 

@@ -127,12 +127,12 @@
 9001690 = How can we improbe our agriculture?
 9001691 = Red Book Project
 9001692 = Strenghten State Atheism
-9001693 = Deportations of peoples
-9001694 = Retirement of Lazar Kaganovich - Automating
-9001695 = Retirement of Lazar Kaganovich - Normal
+9001693 = Retirement of Lazar Kaganovich - Automating
+9001694 = Retirement of Lazar Kaganovich - Normal
 
 #STALINIST MODEL
 ??? = The Stalinist Model has reached its limits
+??? = The Return of the Gulag
 ??? = Reform of the Komsomol
 ??? = Make Militsiya even stronger?
 ??? = Renewal of Stalinists Projects

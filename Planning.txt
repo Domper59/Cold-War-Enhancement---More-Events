@@ -13,7 +13,7 @@ I. Events for Soviet Union
   Give the player the possibility to make a Baria-Malenkov alliance and its consequences.
   Possible personalities: Vsevolod Merkulov, Sergei Kruglov, WIP
   
-  * Anti-Party Group [25%]
+  * Anti-Party Group
   Events around the Anti-Party Group and its consequences.
   Possible personalities: Vyacheslav Molotov, Lazar Kaganovitch, Georgy Malenkov, Nikolai Bulganin and Dmitri Shepilov.
   
@@ -21,15 +21,14 @@ I. Events for Soviet Union
   Events on the succession of the different personalities from the Anti-Party Group.
   Possible personalities: Arvid Pelshe, Nuritdin Mukhitdinov and Andrei Kirilenko
   
-  * Soviet Civil War
-  Add the possibility of starting a Civil War if the August Coup fails but the Belovezh Accords are prevented from being signed.
-  Possible personalities: Viktor Alksnis, Vladislav Achalov, Alexander Lebed, and Anatoly Lukyanov.
+  * Brezhnev's Resignation
+  Add Fyodor Kulakov and his events
   
-  * Andropov's Legacy [3%]
+  * Andropov's Legacy
   Events on Andropov's succession, in case Brezhnev resigns and Andropov's reforms do not degenerate into a political crisis.
   Possible personalities: Vitaly Vorotnikov, Viktor Chebrikov, Heydar Aliyev and Yevgeny Tyazhelnikov.
   
-  * Continuation of the Stagnation [50%]
+  * Continuation of the Stagnation
   Events in which the Brezhnevists continue to reign.
   Possible personalities:
     * After Viktor Grishin : Oleg Shenin, Sergey Alexandrov, Viktor Tyulkin and Gennady Zyuganov.
@@ -39,10 +38,14 @@ I. Events for Soviet Union
   Event that could cause the death of Gorbachev via his assassination attempt during the parade of the October Revolution in 1990.
   Possible personalities: Viktor Alksnis, Vitaly Vorotnikov and Alexander Yakovlev.
   
+  * Soviet Civil War
+  Add the possibility of starting a Civil War if the August Coup fails but the Belovezh Accords are prevented from being signed.
+  Possible personalities: Viktor Alksnis, Vladislav Achalov, Alexander Lebed, and Anatoly Lukyanov.
+  
   * Enhanced events on Egor Ligachev [100%]
   Add more events about Egor Ligachev with three different endings.
   
-  * Enhanced events on Alexander Shelepin
+  * Enhanced events on Alexander Shelepin [WIP]
   Add more events about Alexander Shelepin.
   Possible personalities: Nikolai Egorychev, Alexander Yakovlev
   

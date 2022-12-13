@@ -1878,7 +1878,10 @@ country_event = { # Malenkov's Advice
 		year = 1956
 		NOT = { year = 1962 }
 		government = proletarian_dictatorship
-		has_country_flag = vyacheslav_molotov
+		OR = {
+			has_country_flag = vyacheslav_molotov
+			has_country_flag = lazar_kaganovitch
+		}
 		
 		NOT = { has_country_flag = spcmedium }
 	}
@@ -1890,7 +1893,13 @@ country_event = { # Malenkov's Advice
 		
 		poor_strata = { consciousness = 1.5 militancy = 1.5 }
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+				has_country_flag = lazar_kaganovitch
+			}
+		}
 	}
 
 	option = {

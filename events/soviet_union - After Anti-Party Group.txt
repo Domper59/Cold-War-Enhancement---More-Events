@@ -1,0 +1,988 @@
+#LAZAR KAGANOVICH
+
+country_event = { # The Personality Cult
+	id = 9001682
+	title = "The Personality Cult"
+	desc = EVT_9001682_DESC
+	picture = "???"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1956
+		NOT = { year = 1960 }
+		government = proletarian_dictatorship
+		has_country_flag = lazar_kaganovitch
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Focus on the Cult of Lenin."
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			consciousness = -4 militancy = -4
+		}
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = 4 militancy = 4
+		}
+		
+		ai_chance = { factor = 0.5 }
+	}
+	
+	option = {
+		name = "Restore Stalin and Create the Cult of Kaganovich."
+		
+		badboy = 4
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			consciousness = -2 militancy = -2
+		}
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = 2 militancy = 2
+		}
+		
+		ai_chance = { factor = 0.4 }
+	}
+	
+	option = {
+		name = "Progressive restoration of Stalin."
+		
+		badboy = 2
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			ideology = { factor = 0.10 value = communist }
+		}
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			consciousness = 3 militancy = 3
+		}
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = -3 militancy = -3
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Reinstatement of military pensions
+	id = 9001683
+	title = "Reinstatement of military pensions"
+	desc = EVT_9001683_DESC
+	picture = "???"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1957
+		NOT = { year = 1962 }
+		government = proletarian_dictatorship
+		has_country_flag = lazar_kaganovitch
+		
+		money = 3000000
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = "Restoring war pensions."
+		
+		money = -2000000
+		
+		any_pop = {
+			limit = { type = soldiers }
+			consciousness = -2 militancy = -2
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = { factor = 0.6 }
+	}
+	
+	option = {
+		name = "Reinstate war pensions and amnesty."
+		
+		money = -2000000
+		
+		prestige = 200
+		
+		any_pop = {
+			limit = { type = soldiers }
+			consciousness = -4 militancy = -4
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = socialist }
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		ai_chance = { factor = 0.3 }
+	}
+	
+	option = {
+		name = "Do nothing."
+		
+		prestige = -200
+		
+		any_pop = {
+			limit = { type = soldiers }
+			consciousness = 3 militancy = 3
+			ideology = { factor = 0.05 value = nationalist }
+			ideology = { factor = 0.05 value = populist }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Protecting the Jews?
+	id = 9001684
+	title = "Protecting the Jews?"
+	desc = EVT_9001684_DESC
+	picture = "???"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1956
+		NOT = { year = 1962 }
+		government = proletarian_dictatorship
+		has_country_flag = lazar_kaganovitch
+		
+		exists = ISR
+	}
+
+	mean_time_to_happen = { months = 9 }
+
+	option = {
+		name = "Improve their condition."
+		
+		jewish = { money = 150 }
+		
+		any_pop = {
+			scaled_consciousness = {
+				factor = 6
+				ideology = populist
+			}
+			scaled_militancy = {
+				factor = 6
+				ideology = populist
+			}
+		}
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Protect them."
+		
+		add_accepted_culture = jewish
+		
+		any_pop = {
+			limit = { has_pop_culture = jewish }
+			ideology = { factor = 0.10 value = communist }
+		}
+		
+		ai_chance = { factor = 0.2 }
+	}
+	
+	option = {
+		name = "Allow them ro join Israel."
+		
+		prestige = 400
+		
+		relation = { who = ISR value = 300 }
+		
+		any_pop = { limit = { type = farmers religion = jewish location = { province_id = 2618 } culture = jewish } move_pop = 916 }
+		any_pop = { limit = { type = farmers religion = secularism location = { province_id = 2618 } culture = jewish } move_pop = 916 }
+		any_pop = { limit = { type = officers religion = jewish location = { province_id = 952 } culture = jewish } move_pop = 917 }
+		any_pop = { limit = { type = officers religion = secularism location = { province_id = 952 } culture = jewish } move_pop = 917 }
+		any_pop = { limit = { type = soldiers religion = jewish location = { province_id = 952 } culture = jewish } move_pop = 917 }
+		any_pop = { limit = { type = soldiers religion = secularism location = { province_id = 952 } culture = jewish } move_pop = 917 }
+		any_pop = { limit = { type = bureaucrats religion = jewish location = { province_id = 952 } culture = jewish } move_pop = 917 }
+		any_pop = { limit = { type = bureaucrats religion = secularism location = { province_id = 952 } culture = jewish } move_pop = 917 }
+		any_pop = { limit = { type = craftsmen religion = jewish location = { province_id = 958 } culture = jewish } move_pop = 921 }
+		any_pop = { limit = { type = craftsmen religion = secularism location = { province_id = 958 } culture = jewish } move_pop = 921 }
+		any_pop = { limit = { type = farmers religion = jewish location = { province_id = 994 } culture = jewish } move_pop = 3346 }
+		any_pop = { limit = { type = farmers religion = secularism location = { province_id = 994 } culture = jewish } move_pop = 3346 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # The Great Purge of Kaganovich
+	id = 9001685
+	title = "The Great Purge of Kaganovich"
+	desc = EVT_9001685_DESC
+	picture = "???"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1956
+		NOT = { year = 1961 }
+		government = proletarian_dictatorship
+		has_country_flag = lazar_kaganovitch
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Only partisans of Khrushchev."
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.10 value = communist }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "All reformists in the party."
+		
+		prestige = -300
+		
+		any_pop = {
+			limit = { NOT = { strata = poor } }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Stalin-style purge!"
+		
+		prestige = -600
+		
+		any_pop = {
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		add_country_modifier = { name = ruling_party_scandal duration = 730 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Make the Party more presentable
+	id = 9001686
+	title = "Make the Party more presentable"
+	desc = EVT_9001686_DESC
+	picture = "???"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1958
+		NOT = { year = 1964 }
+		government = proletarian_dictatorship
+		has_country_flag = lazar_kaganovitch
+		
+		money = 3000000
+	}
+
+	mean_time_to_happen = { months = 8 }
+
+	option = {
+		name = "Create a control body over the Nomenklatura."
+		
+		set_country_flag = ussr_nomenklatura_check
+		
+		money = -1500000
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = 4
+		}
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = low_government_corruption }
+			}
+			owner = {
+				remove_country_modifier = low_government_corruption
+				add_country_modifier = { name = minimal_government_corruption duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = medium_government_corruption }
+			}
+			owner = {
+				remove_country_modifier = medium_government_corruption
+				add_country_modifier = { name = low_government_corruption duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = large_government_corruption }
+			}
+			owner = {
+				remove_country_modifier = large_government_corruption
+				add_country_modifier = { name = medium_government_corruption duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = massive_government_corruption }
+			}
+			owner = {
+				remove_country_modifier = massive_government_corruption
+				add_country_modifier = { name = large_government_corruption duration = -1 }
+			}
+		}
+	}
+	
+	option = {
+		name = "Party privileges will have to be earned now."
+		
+		set_country_flag = ussr_party_check
+		
+		money = -1500000
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = 4
+		}
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			ideology = { factor = 0.05 value = socialist }
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = low_government_corruption }
+			}
+			owner = {
+				remove_country_modifier = low_government_corruption
+				add_country_modifier = { name = minimal_government_corruption duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = medium_government_corruption }
+			}
+			owner = {
+				remove_country_modifier = medium_government_corruption
+				add_country_modifier = { name = low_government_corruption duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = large_government_corruption }
+			}
+			owner = {
+				remove_country_modifier = large_government_corruption
+				add_country_modifier = { name = medium_government_corruption duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = massive_government_corruption }
+			}
+			owner = {
+				remove_country_modifier = massive_government_corruption
+				add_country_modifier = { name = large_government_corruption duration = -1 }
+			}
+		}
+	}
+}
+
+country_event = { # Creation of the People's Labour Commission
+	id = 9001687
+	title = "Creation of the People's Labour Commission"
+	desc = EVT_9001687_DESC
+	picture = "???"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1959
+		NOT = { year = 1966 }
+		government = proletarian_dictatorship
+		has_country_flag = lazar_kaganovitch
+		
+		has_country_flag = ussr_nomenklatura_check
+	}
+
+	mean_time_to_happen = { months = 8 }
+
+	option = {
+		name = "."
+		
+		clr_country_flag = ussr_nomenklatura_check
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			consciousness = 3
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = low_societal_corruption }
+			}
+			owner = {
+				remove_country_modifier = low_societal_corruption
+				add_country_modifier = { name = minimal_societal_corruption duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = medium_societal_corruption }
+			}
+			owner = {
+				remove_country_modifier = medium_societal_corruption
+				add_country_modifier = { name = low_societal_corruption duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = large_societal_corruption }
+			}
+			owner = {
+				remove_country_modifier = large_societal_corruption
+				add_country_modifier = { name = medium_societal_corruption duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = massive_societal_corruption }
+			}
+			owner = {
+				remove_country_modifier = massive_societal_corruption
+				add_country_modifier = { name = large_societal_corruption duration = -1 }
+			}
+		}
+	}
+}
+
+country_event = { # Creation of the Internal Affairs Committee
+	id = 9001688
+	title = "Creation of the Internal Affairs Committee"
+	desc = EVT_9001688_DESC
+	picture = "???"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1959
+		NOT = { year = 1966 }
+		government = proletarian_dictatorship
+		has_country_flag = lazar_kaganovitch
+		
+		has_country_flag = ussr_party_check
+	}
+
+	mean_time_to_happen = { months = 8 }
+
+	option = {
+		name = "."
+		
+		clr_country_flag = ussr_party_check
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			consciousness = 3
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = low_societal_corruption }
+			}
+			owner = {
+				remove_country_modifier = low_societal_corruption
+				add_country_modifier = { name = minimal_societal_corruption duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = medium_societal_corruption }
+			}
+			owner = {
+				remove_country_modifier = medium_societal_corruption
+				add_country_modifier = { name = low_societal_corruption duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = large_societal_corruption }
+			}
+			owner = {
+				remove_country_modifier = large_societal_corruption
+				add_country_modifier = { name = medium_societal_corruption duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = massive_societal_corruption }
+			}
+			owner = {
+				remove_country_modifier = massive_societal_corruption
+				add_country_modifier = { name = large_societal_corruption duration = -1 }
+			}
+		}
+	}
+}
+
+country_event = { # Agricultural Reform
+	id = 9001689
+	title = "Agricultural Reform"
+	desc = EVT_9001689_DESC
+	picture = "???"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1959
+		NOT = { year = 1966 }
+		government = proletarian_dictatorship
+		has_country_flag = lazar_kaganovitch
+		
+		money = 2000000
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Improving the model."
+		
+		country_event = 9001690
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Maintain the model."
+		
+		any_pop = {
+			limit = { type = farmers }
+			consciousness = 6 militancy = 6
+		}
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Let's create Agricultural Cooperations."
+		
+		prestige = 200
+		
+		money = -1500000
+		grain = 2000
+		cattle = 2000
+		wool = 2000
+		
+		any_pop = { consciousness = -2 militancy = -1 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # How can we improbe our agriculture?
+	id = 9001690
+	title = "How can we improbe our agriculture?"
+	desc = EVT_9001690_DESC
+	picture = "???"
+  
+	is_triggered_only = yes
+	
+	option = {
+		name = "Mechanizing our agriculture."
+		
+		prestige = 250
+		
+		money = -1500000
+		
+		grain = 1500
+		cattle = 1500
+		fruit = 1500
+		wool = 1500
+		
+		any_pop = {
+			consciousness = -4
+		}
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Giving more freedom in the Kolkhozes."
+		
+		prestige = 250
+		
+		farmers = { money = 120 }
+		
+		any_pop = {
+			militancy = -4
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Making both."
+		
+		prestige = 500
+		
+		money = -1500000
+		
+		farmers = { money = 60 }
+		
+		grain = 1000
+		cattle = 1000
+		fruit = 1000
+		wool = 1000
+		
+		any_pop = {
+			consciousness = -2 militancy = -2
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Listen to Malenkov's advice."
+		
+		set_country_flag = spcmedium
+		add_country_modifier = { name = spcmedium duration = -1 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Red Book Project
+	id = 9001691
+	title = "Red Book Project"
+	desc = EVT_9001691_DESC
+	picture = "???"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1958
+		NOT = { year = 1968 }
+		government = proletarian_dictatorship
+		has_country_flag = lazar_kaganovitch
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Adopt the proposals of the Red Book."
+		
+		money = -2000000
+		
+		set_country_flag = ogas_project
+		
+		any_pop = {
+			consciousness = -3
+			literacy = 0.02
+		}
+		
+		any_country = {
+			limit = {
+				exists = yes
+				government = proletarian_dictatorship
+				ruling_party_ideology = communist
+				capital_scope = { continent = europe }
+			}
+			any_pop = {
+				consciousness = -2 militancy = -2
+			}
+		}
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Refuse categorically!"
+		
+		any_pop = {
+			consciousness = 3
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = soviet_stagnation_3 }
+			}
+			owner = {
+				remove_country_modifier = soviet_stagnation_3
+				add_country_modifier = { name = soviet_stagnation_4 duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = soviet_stagnation_2 }
+			}
+			owner = {
+				remove_country_modifier = soviet_stagnation_2
+				add_country_modifier = { name = soviet_stagnation_3 duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = soviet_stagnation_1 }
+			}
+			owner = {
+				remove_country_modifier = soviet_stagnation_1
+				add_country_modifier = { name = soviet_stagnation_2 duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						OR = {
+							has_country_modifier = soviet_stagnation_1
+							has_country_modifier = soviet_stagnation_2
+							has_country_modifier = soviet_stagnation_3
+							has_country_modifier = soviet_stagnation_4
+						}
+					}
+				}
+			}
+			owner = { add_country_modifier = { name = soviet_stagnation_1 duration = -1 } }
+		}
+		
+		ai_chance = { factor = 0.3 }
+	}
+}
+
+country_event = { # Strenghten State Atheism
+	id = 9001692
+	title = "Strenghten State Atheism"
+	desc = EVT_9001692_DESC
+	picture = "???"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1966
+		NOT = { year = 1972 }
+		government = proletarian_dictatorship
+		has_country_flag = lazar_kaganovitch
+	}
+
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = "Fight against all religions."
+		
+		prestige = -1000
+		
+		any_pop = {
+			limit = {
+				OR = {
+					has_pop_religion = orthodox
+					has_pop_religion = sunni
+				}
+			}
+			ideology = { factor = 0.10 value = traditionalist }
+		}
+		
+		any_pop = {
+			limit = {
+				has_pop_religion = secularism
+			}
+			ideology = { factor = 0.10 value = communist }
+		}
+		
+		any_pop = {
+			limit = { type = clergymen } }
+			consciousness = 6
+		}
+		
+		any_pop = {
+			scaled_consciousness = {
+				factor = 8
+				ideology = traditionalist
+			}
+			scaled_militancy = {
+				factor = 8
+				ideology = traditionalist
+			}
+		}
+		
+		any_pop = {
+			dominant_issue = { value = pro_atheism factor = 0.10 }
+		}
+		
+		research_points = 1000
+		
+		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Strenghten the policy of State Atheism."
+		
+		prestige = -500
+		
+		any_pop = {
+			limit = {
+				OR = {
+					has_pop_religion = orthodox
+					has_pop_religion = sunni
+				}
+			}
+			ideology = { factor = 0.05 value = traditionalist }
+		}
+		
+		any_pop = {
+			limit = {
+				has_pop_religion = secularism
+			}
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = {
+			limit = { type = clergymen } }
+			consciousness = 5
+		}
+		
+		any_pop = {
+			scaled_consciousness = {
+				factor = 4
+				ideology = traditionalist
+			}
+			scaled_militancy = {
+				factor = 4
+				ideology = traditionalist
+			}
+		}
+		
+		any_pop = {
+			dominant_issue = { value = pro_atheism factor = 0.10 }
+		}
+		
+		research_points = 500
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Leave it like that."
+		
+		any_pop = {
+			ideology = { factor = 0.05 value = socialist }
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		ai_chance = { factor = 0.15 }
+	}
+}
+
+country_event = { # Retirement of Lazar Kaganovich - Automating
+	id = 9001693
+	title = "Retirement of Lazar Kaganovich"
+	desc = EVT_9001693_DESC
+	picture = "???"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1973
+		NOT = { year = 1976 }
+		government = proletarian_dictatorship
+		has_country_flag = lazar_kaganovitch
+		has_country_flag = ogas_project
+	}
+
+	mean_time_to_happen = { months = 5 }
+
+	option = {
+		name = "Alexander Shelepin becomes Secretary General."
+		
+		set_country_flag = alexender_shelepin
+		clr_country_flag = lazar_kaganovitch
+		
+		add_country_modifier = { name = prince_of_terror duration = 3650 }
+	}
+}
+
+country_event = { # Retirement of Lazar Kaganovich - Normal
+	id = 9001694
+	title = "Retirement of Lazar Kaganovich"
+	desc = EVT_9001694_DESC
+	picture = "???"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1973
+		NOT = { year = 1976 }
+		government = proletarian_dictatorship
+		has_country_flag = lazar_kaganovitch
+		
+		NOT = { has_country_flag = ogas_project }
+	}
+
+	mean_time_to_happen = { months = 5 }
+
+	option = {
+		name = "Select Alexander Shelepin (Stalinist)."
+		
+		set_country_flag = alexender_shelepin
+		clr_country_flag = lazar_kaganovitch
+		
+		add_country_modifier = { name = prince_of_terror duration = 3650 }
+	}
+	
+	option = {
+		name = "Select Arvid Pelshe (Hardline Conservative)."
+		
+		set_country_flag = arvid_pelshe
+		clr_country_flag = lazar_kaganovitch
+		add_country_modifier = { name = imperious_autocrat duration = 3650 }
+	}
+}
