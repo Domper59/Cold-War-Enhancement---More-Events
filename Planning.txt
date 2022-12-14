@@ -21,6 +21,13 @@ I. Events for Soviet Union
   Events on the succession of the different personalities from the Anti-Party Group.
   Possible personalities: Arvid Pelshe, Nuritdin Mukhitdinov and Andrei Kirilenko
   
+  * Khrushchev between 1964 and 1971
+  Add events in case Khrushchev remains in power after the 1964 coup.
+  
+  * The Reformists took power in 1969
+  Improve events in case Brezhnev is assassinated 1969.
+  Possible personalities: Alexei Kosygin, Nikolai Podgorny, Andrei Kirilenko and Vasily Tolstikov
+  
   * Brezhnev's Resignation
   Add Fyodor Kulakov and his events
   

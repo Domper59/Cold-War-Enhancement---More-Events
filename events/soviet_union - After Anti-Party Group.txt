@@ -4,7 +4,7 @@ country_event = { # The Personality Cult
 	id = 9001682
 	title = "The Personality Cult"
 	desc = EVT_9001682_DESC
-	picture = "???"
+	picture = "ussr_100_soviet_union"
   
 	fire_only_once = yes
 
@@ -91,7 +91,7 @@ country_event = { # Reinstatement of military pensions
 	id = 9001683
 	title = "Reinstatement of military pensions"
 	desc = EVT_9001683_DESC
-	picture = "???"
+	picture = "ww2_war_debt"
   
 	fire_only_once = yes
 
@@ -163,7 +163,7 @@ country_event = { # Protecting the Jews?
 	id = 9001684
 	title = "Protecting the Jews?"
 	desc = EVT_9001684_DESC
-	picture = "???"
+	picture = "ussr_jewish"
   
 	fire_only_once = yes
 
@@ -239,7 +239,7 @@ country_event = { # The Great Purge of Kaganovich
 	id = 9001685
 	title = "The Great Purge of Kaganovich"
 	desc = EVT_9001685_DESC
-	picture = "???"
+	picture = "mgl_purge_generic"
   
 	fire_only_once = yes
 
@@ -296,13 +296,13 @@ country_event = { # Make the Party more presentable
 	id = 9001686
 	title = "Make the Party more presentable"
 	desc = EVT_9001686_DESC
-	picture = "???"
+	picture = "liberman_reform"
   
 	fire_only_once = yes
 
 	trigger = {
 		tag = RUS
-		year = 1958
+		year = 1959
 		NOT = { year = 1964 }
 		government = proletarian_dictatorship
 		has_country_flag = lazar_kaganovitch
@@ -427,7 +427,7 @@ country_event = { # Creation of the People's Labour Commission
 	id = 9001687
 	title = "Creation of the People's Labour Commission"
 	desc = EVT_9001687_DESC
-	picture = "???"
+	picture = "ussr_kgb"
   
 	fire_only_once = yes
 
@@ -497,7 +497,7 @@ country_event = { # Creation of the Internal Affairs Committee
 	id = 9001688
 	title = "Creation of the Internal Affairs Committee"
 	desc = EVT_9001688_DESC
-	picture = "???"
+	picture = "ussr_kgb"
   
 	fire_only_once = yes
 
@@ -567,7 +567,7 @@ country_event = { # Agricultural Reform
 	id = 9001689
 	title = "Agricultural Reform"
 	desc = EVT_9001689_DESC
-	picture = "???"
+	picture = "ussr_collective_farms"
   
 	fire_only_once = yes
 
@@ -627,7 +627,7 @@ country_event = { # How can we improbe our agriculture?
 	id = 9001690
 	title = "How can we improbe our agriculture?"
 	desc = EVT_9001690_DESC
-	picture = "???"
+	picture = "ussr_collective_farms"
   
 	is_triggered_only = yes
 	
@@ -701,7 +701,7 @@ country_event = { # Red Book Project
 	id = 9001691
 	title = "Red Book Project"
 	desc = EVT_9001691_DESC
-	picture = "???"
+	picture = "ussr_red_book_project"
   
 	fire_only_once = yes
 
@@ -800,7 +800,7 @@ country_event = { # Strenghten State Atheism
 	id = 9001692
 	title = "Strenghten State Atheism"
 	desc = EVT_9001692_DESC
-	picture = "???"
+	picture = "ussr_brezhnev_orthodox"
   
 	fire_only_once = yes
 
@@ -924,7 +924,7 @@ country_event = { # Retirement of Lazar Kaganovich - Automating
 	id = 9001693
 	title = "Retirement of Lazar Kaganovich"
 	desc = EVT_9001693_DESC
-	picture = "???"
+	picture = "leader_ussr_kaganovich"
   
 	fire_only_once = yes
 
@@ -953,7 +953,7 @@ country_event = { # Retirement of Lazar Kaganovich - Normal
 	id = 9001694
 	title = "Retirement of Lazar Kaganovich"
 	desc = EVT_9001694_DESC
-	picture = "???"
+	picture = "leader_ussr_kaganovich"
   
 	fire_only_once = yes
 
