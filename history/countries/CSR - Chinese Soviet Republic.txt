@@ -34,6 +34,7 @@ upper_house = {
 	socialist = 0
 	communist = 100
 	}
+
 # Political Reforms
 political_opinions = ruling_party_opinion
 minorities_reform = minorities_oppression
@@ -45,7 +46,9 @@ publishing_rights = censored_publishing
 union_rights = no_trade_unions
 voting_system = proportional_representation
 vote_franschise = none_voting
-public_meetings = no_meetings penal_system = capital_punishment
+public_meetings = no_meetings
+penal_system = capital_punishment
+
 # Social Reforms
 safety_regulations = some_regulations
 pensions = no_pensions
@@ -57,12 +60,14 @@ unemployment_subsidies = no_subsidies
 pollution = no_controls
 wage_and_work_hours = unregulated_hours
 public_housing = no_public_housing
+
 # Technologies
 cold_war_doctrine = 1
 heavy_tanks = 1
 infantry = 1
 decolonization = 1
 proxy_war = 1
+
 # Starting Consciousness
 consciousness = 2
 nonstate_consciousness = 2
