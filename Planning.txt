@@ -49,6 +49,10 @@ I. Events for Soviet Union
   Add the possibility of starting a Civil War if the August Coup fails but the Belovezh Accords are prevented from being signed.
   Possible personalities: Viktor Alksnis, Vladislav Achalov, Alexander Lebed, and Anatoly Lukyanov.
   
+  * New Red October
+  Add the possibility of having the Stalinists take over via a new option in a pre-existing event during the August Coup.
+  If the Coup succeeds, an event will appear to signal the Stalinist takeover during the Leningrad area.
+  
   * Enhanced events on Egor Ligachev [100%]
   Add more events about Egor Ligachev with three different endings.
   
