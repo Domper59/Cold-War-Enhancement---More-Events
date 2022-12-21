@@ -37,7 +37,7 @@ country_event = { # The Personality Cult
 			consciousness = 4 militancy = 4
 		}
 		
-		ai_chance = { factor = 0.5 }
+		ai_chance = { factor = 0.2 }
 	}
 	
 	option = {
@@ -60,7 +60,7 @@ country_event = { # The Personality Cult
 			consciousness = 2 militancy = 2
 		}
 		
-		ai_chance = { factor = 0.4 }
+		ai_chance = { factor = 0.7 }
 	}
 	
 	option = {
@@ -87,9 +87,9 @@ country_event = { # The Personality Cult
 	}
 }
 
-country_event = { # Reinstatement of military pensions
+country_event = { # Kaganovitch Pension Reform of $YEAR$
 	id = 9001683
-	title = "Reinstatement of military pensions"
+	title = "Kaganovitch Pension Reform of $YEAR$"
 	desc = EVT_9001683_DESC
 	picture = "ww2_war_debt"
   
@@ -102,31 +102,46 @@ country_event = { # Reinstatement of military pensions
 		government = proletarian_dictatorship
 		has_country_flag = lazar_kaganovitch
 		
+		OR = {
+			pensions = acceptable_pensions
+			pensions = good_pensions
+		}
+		
 		money = 3000000
 	}
 
 	mean_time_to_happen = { months = 4 }
 
 	option = {
-		name = "Restoring war pensions."
+		name = "Launching the Kaganovitch Pension Reform."
 		
 		money = -2000000
 		
 		any_pop = {
-			limit = { type = soldiers }
+			limit = { strata = poor }
 			consciousness = -2 militancy = -2
-			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.05 value = socialist }
 		}
+		
+		political_reform = acceptable_pensions
 		
 		ai_chance = { factor = 0.6 }
 	}
 	
 	option = {
-		name = "Reinstate war pensions and amnesty."
+		name = "Launch the Kaganovich Pension Reform and introduce war pensions."
 		
 		money = -2000000
 		
 		prestige = 200
+		
+		any_pop = {
+			limit = { strata = poor }
+			consciousness = -2 militancy = -2
+			ideology = { factor = 0.05 value = socialist }
+			ideology = { factor = 0.05 value = liberal }
+		}
 		
 		any_pop = {
 			limit = { type = soldiers }
@@ -134,11 +149,9 @@ country_event = { # Reinstatement of military pensions
 			ideology = { factor = 0.05 value = communist }
 		}
 		
-		any_pop = {
-			limit = { strata = poor }
-			ideology = { factor = 0.05 value = socialist }
-			ideology = { factor = 0.05 value = liberal }
-		}
+		soldiers = { money = 300 }
+		
+		political_reform = acceptable_pensions
 		
 		ai_chance = { factor = 0.3 }
 	}
@@ -444,7 +457,7 @@ country_event = { # Creation of the People's Labour Commission
 	mean_time_to_happen = { months = 8 }
 
 	option = {
-		name = "."
+		name = "The 'parasites' will not corrupt the Union!"
 		
 		clr_country_flag = ussr_nomenklatura_check
 		
@@ -514,7 +527,7 @@ country_event = { # Creation of the Internal Affairs Committee
 	mean_time_to_happen = { months = 8 }
 
 	option = {
-		name = "."
+		name = "We fight corruption better now."
 		
 		clr_country_flag = ussr_party_check
 		
@@ -567,7 +580,7 @@ country_event = { # Agricultural Reform
 	id = 9001689
 	title = "Agricultural Reform"
 	desc = EVT_9001689_DESC
-	picture = "ussr_collective_farms"
+	picture = "collectivisation"
   
 	fire_only_once = yes
 
@@ -690,8 +703,8 @@ country_event = { # How can we improbe our agriculture?
 	option = {
 		name = "Listen to Malenkov's advice."
 		
-		set_country_flag = spcmedium
-		add_country_modifier = { name = spcmedium duration = -1 }
+		money = -2000000
+		any_pop = { consciousness = -1.5 militancy = -1 }
 		
 		ai_chance = { factor = 0.1 }
 	}
@@ -716,7 +729,7 @@ country_event = { # Red Book Project
 	mean_time_to_happen = { months = 3 }
 
 	option = {
-		name = "Adopt the proposals of the Red Book."
+		name = "Adopt the proposals of the Red Book Project."
 		
 		money = -2000000
 		

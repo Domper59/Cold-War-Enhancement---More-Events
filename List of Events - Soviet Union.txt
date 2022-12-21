@@ -117,7 +117,7 @@
 
 #LAZAR KAGANOVICH
 9001682 = The Personality Cult
-9001683 = Reinstatement of military pensions
+9001683 = Kaganovitch Pension Reform of $YEAR$
 9001684 = Protecting the Jews?
 9001685 = The Great Purge of Kaganovich
 9001686 = Make the Party more presentable
@@ -136,7 +136,12 @@
 ??? = Reform of the Komsomol
 ??? = Make Militsiya even stronger?
 ??? = Renewal of Stalinists Projects
-??? = 
+??? = Improve the White Sea-Baltic Canal
+??? = The Track of Courage
+??? = Baikal–Amur Mainline
+??? = Salekhard–Igarka Railway
+??? = The Siberian Rivers Tour
+??? = Construction of Hydroelectric Power Plants
 
 #KURIL ISLANDS CRISIS
 ??? = Protecting the Kuril Islands?
