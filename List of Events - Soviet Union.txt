@@ -1,3 +1,31 @@
+#ANTI-SOVIET PARTISAN WARS
+8014270 = The Forest Brothers
+??? = Ukrainian Insurgent Army
+??? = Operation Priboi
+??? = The Black Army
+??? = Insurection of $PROVINCENAME$
+??? = Partisans attack $PROVINCENAME$
+??? = Military Operation in $PROVINCENAME$
+??? = The Population of $PROVINCENAME$ collaborates
+12210
+
+#STALINISM ERA
+??? = Preparation for Succession
+??? = The Alcohol Problem
+??? = The Famine of 1946-1947
+??? = The Case of the Trophies
+??? = The Fate of Soviet Veterans
+??? = Monetary Reform of $YEAR$
+??? = Zhdanov and the Yugoslavia
+??? = Death of Zhdanov
+??? = August session of VASKhNIL
+??? = Case of the Jewish AntiFascist Committee
+??? = Fight against Cosmopolitanism
+8014221 = Doctors' plot
+??? = Members of the JAC are unhappy
+??? = The Leningrad Affair
+??? = The Beginnings of Cybernetics
+
 #BERIA
 9001002 = Liberalization under Beria
 9001003 = East German Uprising of 1953 - DDR
@@ -130,24 +158,46 @@
 9001693 = Retirement of Lazar Kaganovich - Automating
 9001694 = Retirement of Lazar Kaganovich - Normal
 
+#NIKOLAI BULGANIN
+9001706 = The Fate of Khrushchev
+9001707 = Economic Reform of $YEAR$
+9001708 = Fixing Sovnarkhozes
+9001709 = Bulganin Economic Reform
+9001710 = Replacement of Zhukov
+9001711 = Reconciliation Policy
+9001712 = Cultural Thraw
+9001713 = Creation of Soviet Market
+9001714 = More Self-Management?
+9001715 = New Virgin Lands Campaign
+9001716 = The Fall of Nikolai Bulganin - Communists
+9001717 = The Fall of Nikolai Bulganin - Reformists
+9001718 = Continue the De-Stalinization
+9001719 = Housing Problem
+9001720 = Liberalization of the Economy
+9001721 = More Liberalization
+9001722 = The Death of Nikolai Bulganin
+
 #STALINIST MODEL
-??? = The Stalinist Model has reached its limits
-??? = The Return of the Gulag
-??? = Reform of the Komsomol
-??? = Make Militsiya even stronger?
-??? = Renewal of Stalinists Projects
-??? = Improve the White Sea-Baltic Canal
-??? = The Track of Courage
-??? = Baikal–Amur Mainline
-??? = Salekhard–Igarka Railway
-??? = The Siberian Rivers Tour
-??? = Construction of Hydroelectric Power Plants
+9001695 = The Stalinist Model has reached its limits
+9001696 = The Return of the Gulag
+9001697 = Reform of the Komsomol
+9001698 = Make Militsiya even stronger?
+9001699 = Renewal of Stalinists Projects
+9001700 = Improve the White Sea-Baltic Canal
+9001701 = The Great Northern Railway
+9001702 = Baikal–Amur Mainline
+9001703 = Salekhard–Igarka Railway
+9001704 = The Siberian Rivers Tour
+9001705 = Construction of Hydroelectric Power Plants
 
 #KURIL ISLANDS CRISIS
 ??? = Protecting the Kuril Islands?
 ??? = The development of Sakhalin
 ??? = Modernization of the Kamchatka Naval Base?
 ??? = Fortify the Kuril Islands?
+??? = The Soviet Union threatens us - JAP Fortification
+??? = The Soviet Union threatens us - JAP Missiles
+??? = The Return of the Empire of Japan
 ??? = 
 
 #AFTER KHRUSHCHEV
