@@ -2666,7 +2666,7 @@ country_event = { # Legalization or Opposition
 		badboy = -2
 		
 		any_pop = {
-			limit = { type = { poor } }
+			limit = { strata = { poor } }
 			consciousness = 3
 			ideology = { factor = 0.05 value = liberal }
 			ideology = { factor = 0.05 value = nationalist }	
@@ -2710,7 +2710,7 @@ country_event = { # Legalization or Opposition
 		prestige = 150
 		
 		any_pop = {
-			limit = { type = { poor } }
+			limit = { strata = { poor } }
 			militancy = 3
 			ideology = { factor = 0.05 value = nationalist }
 			ideology = { factor = 0.05 value = big_tent }
@@ -2729,7 +2729,7 @@ country_event = { # Legalization or Opposition
 		badboy = 2
 		
 		any_pop = {
-			limit = { type = { poor } }
+			limit = { strata = { poor } }
 			militancy = 3
 			ideology = { factor = 0.05 value = nationalist }
 			ideology = { factor = 0.05 value = big_tent }
