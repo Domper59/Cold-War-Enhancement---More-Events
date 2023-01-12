@@ -7,7 +7,7 @@ I. Events for Soviet Union
   
     * Beria's reforms
   Give more events for Beria if he wins the Civil War and its consequences.
-  Possible personalities: Vsevolod Merkulov, Bogdan Kobulov, Sergo Goglidze, Pavlo Meshyk, Vladimir Dekanozov and Lev Vlodzimirsky.
+  Possible personalities (WIP): Vsevolod Merkulov, Bogdan Kobulov, Sergo Goglidze, Pavlo Meshyk, Vladimir Dekanozov and Lev Vlodzimirsky.
   
   * Beria-Malenkov
   Give the player the possibility to make a Baria-Malenkov alliance and its consequences.
@@ -23,6 +23,7 @@ I. Events for Soviet Union
   
   * Khrushchev between 1964 and 1971
   Add events in case Khrushchev remains in power after the 1964 coup.
+  Possible personalities: Frol Kozlov, Nuritdin Mukhitdinov, Alexei Kosygin and Anastas Mikoyan
   
   * The Reformists took power in 1969
   Improve events in case Brezhnev is assassinated 1969.
@@ -39,7 +40,7 @@ I. Events for Soviet Union
   Events in which the Brezhnevists continue to reign.
   Possible personalities:
     * After Viktor Grishin : Oleg Shenin, Sergey Alexandrov, Viktor Tyulkin and Gennady Zyuganov.
-    * After Dinmukhamed Kunaev : Pyotr Demichev and Oleg Shenin
+    * After Dinmukhamed Kunaev : Pyotr Demichev, Oleg Shenin and Viktor Tyulkin
   
   * Gorbachev's assassination in 1990
   Event that could cause the death of Gorbachev via his assassination attempt during the parade of the October Revolution in 1990.
@@ -51,7 +52,7 @@ I. Events for Soviet Union
   
   * New Red October
   Add the possibility of having the Stalinists take over via a new option in a pre-existing event during the August Coup.
-  If the Coup succeeds, an event will appear to signal the Stalinist takeover during the Leningrad area.
+  If the Coup succeeds, an event will appear to signal the Stalinist are taking control of the Leningrad area.
   
   * Enhanced events on Egor Ligachev [100%]
   Add more events about Egor Ligachev with three different endings.
