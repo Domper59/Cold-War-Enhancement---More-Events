@@ -187,7 +187,7 @@
 9001701 = The Great Northern Railway
 9001702 = Baikal–Amur Mainline
 9001703 = Salekhard–Igarka Railway
-9001704 = The Siberian Rivers Tour
+9001704 = The Northern River Reversal
 9001705 = Construction of Hydroelectric Power Plants
 
 #KURIL ISLANDS CRISIS

@@ -758,6 +758,8 @@ country_event = { # Red Book Project
 	option = {
 		name = "Refuse categorically!"
 		
+		set_country_flag = ussr_stalinist_project
+		
 		any_pop = {
 			consciousness = 3
 		}

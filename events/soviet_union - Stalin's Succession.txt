@@ -2200,6 +2200,50 @@ country_event = { # Reintroduction of Cybernetics?
 		name = "Do not reverse Stalin's decision."
 		
 		set_country_flag = ussr_bad_molotov
+		set_country_flag = ussr_stalinist_project
+		
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = soviet_stagnation_3 }
+			}
+			owner = {
+				remove_country_modifier = soviet_stagnation_3
+				add_country_modifier = { name = soviet_stagnation_4 duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = soviet_stagnation_2 }
+			}
+			owner = {
+				remove_country_modifier = soviet_stagnation_2
+				add_country_modifier = { name = soviet_stagnation_3 duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_modifier = soviet_stagnation_1 }
+			}
+			owner = {
+				remove_country_modifier = soviet_stagnation_1
+				add_country_modifier = { name = soviet_stagnation_2 duration = -1 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						OR = {
+							has_country_modifier = soviet_stagnation_1
+							has_country_modifier = soviet_stagnation_2
+							has_country_modifier = soviet_stagnation_3
+							has_country_modifier = soviet_stagnation_4
+						}
+					}
+				}
+			}
+			owner = { add_country_modifier = { name = soviet_stagnation_1 duration = -1 } }
+		}
 		
 		ai_chance = { factor = 0.8 }
 	}
