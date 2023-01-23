@@ -61,6 +61,9 @@ I. Events for Soviet Union
   Add more events about Alexander Shelepin.
   Possible personalities: Nikolai Egorychev, Alexander Yakovlev
   
+  * Enhancing the Soviet Elections
+  Enhancing election events if the Soviet Union becomes a Social Democracy
+  
   * Improved the Military path
   Add some events and possibilities for the military.
   Possible personalities: Vasily Sokolovsky, Rodion Malinovsky, Sergey Biryuzov, Andrei Grechko, Vladislav Achalov, Alexander Lebed, Dmitry Yazov, Yevgeny Shaposhnikov, Mikhail Moiseyev.
