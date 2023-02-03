@@ -852,7 +852,7 @@ country_event = { # Strenghten State Atheism
 		}
 		
 		any_pop = {
-			limit = { type = clergymen } }
+			limit = { type = clergymen }
 			consciousness = 6
 		}
 		
@@ -899,7 +899,7 @@ country_event = { # Strenghten State Atheism
 		}
 		
 		any_pop = {
-			limit = { type = clergymen } }
+			limit = { type = clergymen }
 			consciousness = 5
 		}
 		

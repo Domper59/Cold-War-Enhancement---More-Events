@@ -404,10 +404,10 @@ country_event = { # Improve the White Sea-Baltic Canal
 		
 		money = -500000
 		
-		984 = add_province_modifier = { name = white_sea_baltic_canal duration = -1 }
-		994 = add_province_modifier = { name = white_sea_baltic_canal duration = -1 }
-		995 = add_province_modifier = { name = white_sea_baltic_canal duration = -1 }
-		998 = add_province_modifier = { name = white_sea_baltic_canal duration = -1 }
+		984 = { add_province_modifier = { name = white_sea_baltic_canal duration = -1 } }
+		994 = { add_province_modifier = { name = white_sea_baltic_canal duration = -1 } }
+		995 = { add_province_modifier = { name = white_sea_baltic_canal duration = -1 } }
+		998 = { add_province_modifier = { name = white_sea_baltic_canal duration = -1 } }
 		
 		any_pop = {
 			limit = { strata = poor }
@@ -552,30 +552,30 @@ country_event = { # The Great Northern Railway
 		1083 = { infrastructure = 1 }
 		1082 = { infrastructure = 1 }
 		
-		2587 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		983 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		984 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		988 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		993 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		981 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		990 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1028 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1029 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1026 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1058 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1061 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		2686 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1064 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1063 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1077 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		2677 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		2676 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1078 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		2696 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1080 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		2617 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1083 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1082 = add_province_modifier = { name = great_northern_railway duration = 3650 }
+		2587 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		983 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		984 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		988 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		993 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		981 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		990 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1028 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1029 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1026 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1058 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1061 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		2686 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1064 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1063 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1077 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		2677 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		2676 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1078 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		2696 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1080 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		2617 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1083 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1082 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
 		
 		ai_chance = {
 			factor = 0.5
@@ -635,12 +635,12 @@ country_event = { # Baikal–Amur Mainline
 		1084 = { infrastructure = 1 }
 		2617 = { infrastructure = 1 }
 		
-		2677 = add_province_modifier = { name = baikal_amur_mainline duration = 3650 }
-		2676 = add_province_modifier = { name = baikal_amur_mainline duration = 3650 }
-		1078 = add_province_modifier = { name = baikal_amur_mainline duration = 3650 }
-		2696 = add_province_modifier = { name = baikal_amur_mainline duration = 3650 }
-		1084 = add_province_modifier = { name = baikal_amur_mainline duration = 3650 }
-		2617 = add_province_modifier = { name = baikal_amur_mainline duration = 3650 }
+		2677 = { add_province_modifier = { name = baikal_amur_mainline duration = 3650 } }
+		2676 = { add_province_modifier = { name = baikal_amur_mainline duration = 3650 } }
+		1078 = { add_province_modifier = { name = baikal_amur_mainline duration = 3650 } }
+		2696 = { add_province_modifier = { name = baikal_amur_mainline duration = 3650 } }
+		1084 = { add_province_modifier = { name = baikal_amur_mainline duration = 3650 } }
+		2617 = { add_province_modifier = { name = baikal_amur_mainline duration = 3650 } }
 		
 		ai_chance = {
 			factor = 0.9
@@ -696,9 +696,9 @@ country_event = { # Salekhard–Igarka Railway
 		3251 = { infrastructure = 1 }
 		3252 = { infrastructure = 1 }
 		
-		2659 = add_province_modifier = { name = salekhard_igarka_railway duration = 3650 }
-		3251 = add_province_modifier = { name = salekhard_igarka_railway duration = 3650 }
-		3252 = add_province_modifier = { name = salekhard_igarka_railway duration = 3650 }
+		2659 = { add_province_modifier = { name = salekhard_igarka_railway duration = 3650 } }
+		3251 = { add_province_modifier = { name = salekhard_igarka_railway duration = 3650 } }
+		3252 = { add_province_modifier = { name = salekhard_igarka_railway duration = 3650 } }
 		
 		any_pop = {
 			ideology = { factor = 0.05 value = communist }
@@ -767,18 +767,18 @@ country_event = { # The Northern River Reversal
 		money = -2500000
 		
 		#More Forest
-		1193 = add_province_modifier = { name = stalinist_transformation duration = -1 }
-		2611 = add_province_modifier = { name = stalinist_transformation duration = -1 }
-		2612 = add_province_modifier = { name = stalinist_transformation duration = -1 }
-		1181 = add_province_modifier = { name = stalinist_transformation duration = -1 }
-		1184 = add_province_modifier = { name = stalinist_transformation duration = -1 }
-		2686 = add_province_modifier = { name = stalinist_transformation duration = -1 }
-		1066 = add_province_modifier = { name = stalinist_transformation duration = -1 }
-		2698 = add_province_modifier = { name = stalinist_transformation duration = -1 }
-		1064 = add_province_modifier = { name = stalinist_transformation duration = -1 }
-		1067 = add_province_modifier = { name = stalinist_transformation duration = -1 }
-		1063 = add_province_modifier = { name = stalinist_transformation duration = -1 }
-		2615 = add_province_modifier = { name = stalinist_transformation duration = -1 }
+		1193 = { add_province_modifier = { name = stalinist_transformation duration = -1 } }
+		2611 = { add_province_modifier = { name = stalinist_transformation duration = -1 } }
+		2612 = { add_province_modifier = { name = stalinist_transformation duration = -1 } }
+		1181 = { add_province_modifier = { name = stalinist_transformation duration = -1 } }
+		1184 = { add_province_modifier = { name = stalinist_transformation duration = -1 } }
+		2686 = { add_province_modifier = { name = stalinist_transformation duration = -1 } }
+		1066 = { add_province_modifier = { name = stalinist_transformation duration = -1 } }
+		2698 = { add_province_modifier = { name = stalinist_transformation duration = -1 } }
+		1064 = { add_province_modifier = { name = stalinist_transformation duration = -1 } }
+		1067 = { add_province_modifier = { name = stalinist_transformation duration = -1 } }
+		1063 = { add_province_modifier = { name = stalinist_transformation duration = -1 } }
+		2615 = { add_province_modifier = { name = stalinist_transformation duration = -1 } }
 		
 		ai_chance = {
 			factor = 0.9
@@ -842,18 +842,18 @@ country_event = { # Construction of Hydroelectric Power Plants
 		money = -1000000
 		
 		#More Energy
-		1193 = add_province_modifier = { name = development_aid_modifier duration = 1825 }
-		2611 = add_province_modifier = { name = development_aid_modifier duration = 1825 }
-		2612 = add_province_modifier = { name = development_aid_modifier duration = 1825 }
-		1181 = add_province_modifier = { name = development_aid_modifier duration = 1825 }
-		1184 = add_province_modifier = { name = development_aid_modifier duration = 1825 }
-		2686 = add_province_modifier = { name = development_aid_modifier duration = 1825 }
-		1066 = add_province_modifier = { name = development_aid_modifier duration = 1825 }
-		2698 = add_province_modifier = { name = development_aid_modifier duration = 1825 }
-		1064 = add_province_modifier = { name = development_aid_modifier duration = 1825 }
-		1067 = add_province_modifier = { name = development_aid_modifier duration = 1825 }
-		1063 = add_province_modifier = { name = development_aid_modifier duration = 1825 }
-		2615 = add_province_modifier = { name = development_aid_modifier duration = 1825 }
+		1193 = { add_province_modifier = { name = development_aid_modifier duration = 1825 } }
+		2611 = { add_province_modifier = { name = development_aid_modifier duration = 1825 } }
+		2612 = { add_province_modifier = { name = development_aid_modifier duration = 1825 } }
+		1181 = { add_province_modifier = { name = development_aid_modifier duration = 1825 } }
+		1184 = { add_province_modifier = { name = development_aid_modifier duration = 1825 } }
+		2686 = { add_province_modifier = { name = development_aid_modifier duration = 1825 } }
+		1066 = { add_province_modifier = { name = development_aid_modifier duration = 1825 } }
+		2698 = { add_province_modifier = { name = development_aid_modifier duration = 1825 } }
+		1064 = { add_province_modifier = { name = development_aid_modifier duration = 1825 } }
+		1067 = { add_province_modifier = { name = development_aid_modifier duration = 1825 } }
+		1063 = { add_province_modifier = { name = development_aid_modifier duration = 1825 } }
+		2615 = { add_province_modifier = { name = development_aid_modifier duration = 1825 } }
 		
 		electric_gear = 300
 		heating_electricity = 150

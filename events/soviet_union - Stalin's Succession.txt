@@ -750,7 +750,7 @@ country_event = { # Anti-Party Group - Khrushchev
 		}
 		
 		#Coup begins
-		country_event = 9001592
+		country_event = 9001596
 	}
 }
 
