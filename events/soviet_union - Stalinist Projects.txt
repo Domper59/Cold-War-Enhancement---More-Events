@@ -498,18 +498,18 @@ country_event = { # The Great Northern Railway
 		1058 = { infrastructure = 1 }
 		1061 = { infrastructure = 1 }
 		
-		2587 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		983 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		984 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		988 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		993 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		981 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		990 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1028 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1029 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1026 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1058 = add_province_modifier = { name = great_northern_railway duration = 3650 }
-		1061 = add_province_modifier = { name = great_northern_railway duration = 3650 }
+		2587 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		983 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		984 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		988 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		993 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		981 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		990 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1028 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1029 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1026 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1058 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
+		1061 = { add_province_modifier = { name = great_northern_railway duration = 3650 } }
 		
 		ai_chance = {
 			factor = 0.4
