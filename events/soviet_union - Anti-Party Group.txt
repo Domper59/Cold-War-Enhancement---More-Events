@@ -2,7 +2,7 @@ country_event = { # Start of the Preparations
 	id = 9001596
 	title = "Start of the Preparations"
 	desc = EVT_9001596_DESC
-	picture = "???"
+	picture = "politburo_plot"
 	
 	is_triggered_only = yes
 	
@@ -64,7 +64,7 @@ country_event = { # Weakening our enemy
 	id = 9001597
 	title = "Weakening our Enemy"
 	desc = EVT_9001597_DESC
-	picture = "???"
+	picture = "politburo_plot"
 	
 	is_triggered_only = yes
 	
@@ -154,7 +154,7 @@ country_event = { # An Urgent Request
 	id = 9001598
 	title = "An Urgent Request"
 	desc = EVT_9001598_DESC
-	picture = "???"
+	picture = "bul_reformist_coup"
 	
 	is_triggered_only = yes
 	
@@ -189,7 +189,7 @@ country_event = { # The Opposition reorganizes
 	id = 9001599
 	title = "The Opposition reorganizes"
 	desc = EVT_9001599_DESC
-	picture = "???"
+	picture = "soviet_coup_no_reformists"
 	
 	is_triggered_only = yes
 	
@@ -251,11 +251,11 @@ country_event = { # The Opposition reorganizes
 	}
 }
 
-country_event = { # Surprise Guest
+country_event = { # The last support of Khrushchev
 	id = 9001600
-	title = "Surprise Guest"
+	title = "The last support of Khrushchev"
 	desc = EVT_9001600_DESC
-	picture = "???"
+	picture = "soviet_coup_no_reformists"
 	
 	is_triggered_only = yes
 	
@@ -321,7 +321,7 @@ country_event = { # The Stalinists regain power
 	id = 9001601
 	title = "The Stalinists regain power"
 	desc = EVT_9001601_DESC
-	picture = "???"
+	picture = "ussr_stalinist_coup_1957"
 	
 	fire_only_once = yes
 	
@@ -449,7 +449,7 @@ country_event = { # Compromise Situation
 	id = 9001602
 	title = "Compromise Situation"
 	desc = EVT_9001602_DESC
-	picture = "???"
+	picture = "leader_ussr_bulganin"
 	
 	fire_only_once = yes
 	
@@ -516,7 +516,7 @@ country_event = { # The Khrushchevists win... without Khrushchev
 	id = 9001603
 	title = "The Khrushchevists win... without Khrushchev"
 	desc = EVT_9001603_DESC
-	picture = "???"
+	picture = "leader_ussr_shepilov"
 	
 	fire_only_once = yes
 	
@@ -578,7 +578,7 @@ country_event = { # Anti Party Group's Defeat
 	id = 9001604
 	title = "Anti Party Group's Defeat"
 	desc = EVT_9001604_DESC
-	picture = "???"
+	picture = "ussr_anti_party_group"
 	
 	fire_only_once = yes
 	
