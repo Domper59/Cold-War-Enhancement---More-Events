@@ -1,30 +1,76 @@
 #ANTI-SOVIET PARTISAN WARS
 8014270 = The Forest Brothers
-??? = Ukrainian Insurgent Army
 ??? = Operation Priboi
-??? = The Black Army
+??? = Baltic governments more inclusive
+??? = More autonomy for Baltic SSRs?
+??? = Collectivization of the Baltic Lands
+??? = Abandon the Stalinist Model?
+??? = Signature of the Special Treaty of the Baltic States Parties
+??? = Failed Negotiations with rebels
+??? = Amnesty for the Brothers of the Forest
+??? = Gathering of the Brothers of the Forest
+??? = The Brothers of the Forest win - Union
+??? = The Brothers of the Forest win - Separate
+9001706 = Ukrainian Insurgent Army
+??? = Operation "West"
+??? = Amnesty for UIR - 1st
+??? = Amnesty for UIR
+??? = Collectivization of Ukraine
+??? = Restore Order and Stability
+??? = The Ukrainian Insurgent Army win
+9001707 = The Black Army
+??? = Operation South
+??? = Leader of the Black Army killed in gunfight
+??? = Capture of the Leaders of the Black Army
+??? = Amnesty for the Black Army
+??? = The Black Army win
+??? = The Partisans move towards $PROVINCENAME$
 ??? = Insurection of $PROVINCENAME$
 ??? = Partisans attack $PROVINCENAME$
+??? = Take back $PROVINCENAME$
 ??? = Military Operation in $PROVINCENAME$
 ??? = The Population of $PROVINCENAME$ collaborates
 12210
 
 #STALINISM ERA
-??? = Preparation for Succession
-??? = The Alcohol Problem
-??? = The Famine of 1946-1947
-??? = The Case of the Trophies
-??? = The Fate of Soviet Veterans
-??? = Monetary Reform of $YEAR$
-??? = Zhdanov and the Yugoslavia
-??? = Death of Zhdanov
-??? = August session of VASKhNIL
-??? = Case of the Jewish AntiFascist Committee
-??? = Fight against Cosmopolitanism
+9001708 = Preparation for Succession
+9001709 = The Alcohol Problem
+9001710 = The Famine of 1946-1947
+9001711 = The Case of the Trophies
+9001712 = The Fate of Soviet Veterans
+9001713 = Monetary Reform of $YEAR$
+9001714 = Zhdanov and the Yugoslavia
+9001715 = The Death of Zhdanov
+9001716 = August session of VASKhNIL
+9001717 = Case of the Jewish AntiFascist Committee
+9001718 = Fight against Cosmopolitanism
 8014221 = Doctors' plot
-??? = Members of the JAC are unhappy
-??? = The Leningrad Affair
-??? = The Beginnings of Cybernetics
+9001719 = Members of the JAC are unhappy
+9001720 = The Leningrad Affair
+9001721 = The Beginnings of Cybernetics
+9001722 = The Malenkov-Beria Alliance
+9001723 = The Moscow Affair
+9001724 = the Judgement of Beria
+9001725 = the Judgement of Khrushchev
+9001726 = Vasily's New Formation
+9001727 = Vasily Stalin doesn't stop drinking
+9001728 = The Progress of Vasily Stalin - Bad
+9001729 = Vasily Stalin appointed new head of the BSSR
+9001730 = The Policy of Vasily Stalin - Stalinist
+9001731 = The Policy of Vasily Stalin - Conservative
+9001732 = The Policy of Vasily Stalin - Moderate
+9001733 = Vasily Stalin goes to the Korean War
+9001734 = Vasily Stalin is dead!
+9001735 = Vasily Stalin and Mao Anying
+9001736 = Vasily Stalin's Operations
+9001737 = Vasily Stalin becomes War Hero!
+9001738 = Stalin's Successor - Vasily Politician
+9001739 = Stalin's Successor - Vasily Military/Agent
+9001740 = Stalin's Successor - Zhdanov
+9001741 = Stalin's Successor - Zhdanovists
+9001742 = Stalin's Successor - Zhdanov and Malenkov
+9001743 = Stalin's Successor - Malenkov and Beria
+9001744 = Stalin's Successor - Not Zhdanov and Malenkov
 
 #BERIA
 9001002 = Liberalization under Beria
@@ -131,17 +177,14 @@
 
 #ANTI-PARTY GROUP - PLOT
 9001596 = Start of the Preparations
-9001597 = Securing our Position
-9001598 = Weakening our enemy
-9001599 = An Urgent Request
-9001600 = An Urgent Call
-9001601 = Home delivery
-9001602 = Surprise Guest
-9001603 = Undesirable people
-9001604 = The Stalinists regain power
-9001605 = Compromise Situation
-9001606 = The Khrushchevists win... without Khrushchev
-9001607 = Anti Party Group's Defeat
+9001597 = Weakening our enemy
+9001598 = An Urgent Request
+9001599 = The Opposition reorganizes
+9001600 = The last support of Khrushchev
+9001601 = The Stalinists regain power
+9001602 = Compromise Situation
+9001603 = The Khrushchevists win... without Khrushchev
+9001604 = Anti Party Group's Defeat
 
 #LAZAR KAGANOVICH
 9001682 = The Personality Cult

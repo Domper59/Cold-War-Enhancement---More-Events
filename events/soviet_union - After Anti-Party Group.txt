@@ -195,7 +195,7 @@ country_event = { # Protecting the Jews?
 	option = {
 		name = "Improve their condition."
 		
-		jewish = { money = 150 }
+		jewish = { money = 50 }
 		
 		any_pop = {
 			scaled_consciousness = {
