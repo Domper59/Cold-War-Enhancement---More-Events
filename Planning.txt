@@ -1,7 +1,7 @@
 # Cold-War-Enhancement---More-Events
 
 I. Events for Soviet Union
-  * Era of Stalin
+  * Era of Stalin [100%]
   Event including the period when Stalin is still alive. Can have big consequences depending on certain choices.
   Possible personalities: Andrei Zhdanov, Georgy Malenkov and Vasily Stalin
   
@@ -13,7 +13,7 @@ I. Events for Soviet Union
   Give the player the possibility to make a Baria-Malenkov alliance and its consequences.
   Possible personalities: Vsevolod Merkulov, Sergei Kruglov, WIP
   
-  * Anti-Party Group
+  * Anti-Party Group [~33%]
   Events around the Anti-Party Group and its consequences.
   Possible personalities: Vyacheslav Molotov, Lazar Kaganovitch, Georgy Malenkov, Nikolai Bulganin and Dmitri Shepilov.
   
@@ -36,7 +36,7 @@ I. Events for Soviet Union
   Events on Andropov's succession, in case Brezhnev resigns and Andropov's reforms do not degenerate into a political crisis.
   Possible personalities: Vitaly Vorotnikov, Viktor Chebrikov, Heydar Aliyev and Yevgeny Tyazhelnikov.
   
-  * Continuation of the Stagnation
+  * Continuation of the Stagnation [WIP]
   Events in which the Brezhnevists continue to reign.
   Possible personalities:
     * After Viktor Grishin : Oleg Shenin, Sergey Alexandrov, Viktor Tyulkin and Gennady Zyuganov.
@@ -57,7 +57,7 @@ I. Events for Soviet Union
   * Enhanced events on Egor Ligachev [100%]
   Add more events about Egor Ligachev with three different endings.
   
-  * Enhanced events on Alexander Shelepin [WIP]
+  * Enhanced events on Alexander Shelepin
   Add more events about Alexander Shelepin, possibility of becoming a Maoist under certain conditions.
   Possible personalities: Nikolai Egorychev, Pyotr Demichev, Aleksandra Biryukova and Alexander Yakovlev
   
