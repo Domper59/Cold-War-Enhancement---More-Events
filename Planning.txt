@@ -58,8 +58,8 @@ I. Events for Soviet Union
   Add more events about Egor Ligachev with three different endings.
   
   * Enhanced events on Alexander Shelepin [WIP]
-  Add more events about Alexander Shelepin.
-  Possible personalities: Nikolai Egorychev, Alexander Yakovlev
+  Add more events about Alexander Shelepin, possibility of becoming a Maoist under certain conditions.
+  Possible personalities: Nikolai Egorychev, Pyotr Demichev, Aleksandra Biryukova and Alexander Yakovlev
   
   * Enhancing the Soviet Elections
   Enhancing election events if the Soviet Union becomes a Social Democracy

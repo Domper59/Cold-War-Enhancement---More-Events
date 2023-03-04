@@ -315,7 +315,7 @@ country_event = {
 #The Death of Zhdanov
 country_event = {
 	id = 8020705
-	title = "Honouring Zhdanov"
+	title = "The Death of Zhdanov"
 	desc = EVTDESC8020705
 	picture = "RUS_SOV_Zhdanov"
 	
@@ -336,17 +336,38 @@ country_event = {
 		ruling_party_ideology = communist
 		
 		owns = 976 #Mariupol, Ukraine
+		
+		AND = {
+			OR = {
+				has_country_flag = ussr_zhdanov_successor
+				has_country_flag = ussr_zhdanov_vs_malenkov
+			}
+			has_country_flag = successor_more_alcohol
+		}
+		NOT = { has_country_flag = death_of_stalin_flag }
 	}
 
 	mean_time_to_happen = { days = 31 }
 	
 	option = {
 		name = "Farewell comrade Zhdanov!"
+		
+		set_country_flag = ussr_malenkov_successor
+		set_country_flag = ussr_zhdanov_dead
+		clr_country_flag = ussr_zhdanov_successor
+		clr_country_flag = ussr_zhdanov_vs_malenkov
+		clr_country_flag = successor_more_alcohol
+		
 		prestige = 5
 		
 		#Mariupol to Zhdanov
 		976 = { change_province_name = "Zhdanov" }
 		
+		any_pop = {
+			limit = { strata = rich } }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
 	}
 
 }

@@ -40,7 +40,6 @@
 9001712 = The Fate of Soviet Veterans
 9001713 = Monetary Reform of $YEAR$
 9001714 = Zhdanov and the Yugoslavia
-9001715 = The Death of Zhdanov
 9001716 = August session of VASKhNIL
 9001717 = Case of the Jewish AntiFascist Committee
 9001718 = Fight against Cosmopolitanism
@@ -48,10 +47,7 @@
 9001719 = Members of the JAC are unhappy
 9001720 = The Leningrad Affair
 9001721 = The Beginnings of Cybernetics
-9001722 = The Malenkov-Beria Alliance
 9001723 = The Moscow Affair
-9001724 = the Judgement of Beria
-9001725 = the Judgement of Khrushchev
 9001726 = Vasily's New Formation
 9001727 = Vasily Stalin doesn't stop drinking
 9001728 = The Progress of Vasily Stalin - Bad
@@ -64,13 +60,11 @@
 9001735 = Vasily Stalin and Mao Anying
 9001736 = Vasily Stalin's Operations
 9001737 = Vasily Stalin becomes War Hero!
-9001738 = Stalin's Successor - Vasily Politician
-9001739 = Stalin's Successor - Vasily Military/Agent
-9001740 = Stalin's Successor - Zhdanov
-9001741 = Stalin's Successor - Zhdanovists
-9001742 = Stalin's Successor - Zhdanov and Malenkov
-9001743 = Stalin's Successor - Malenkov and Beria
-9001744 = Stalin's Successor - Not Zhdanov and Malenkov
+9001738 = Stalin's Successor - Vasily Stalin
+9001739 = Stalin's Successor - Zhdanov
+9001740 = Stalin's Successor - Zhdanovists
+9001741 = Stalin's Successor - Zhdanovists and Malenkov
+9001742 = Stalin's Successor - Malenkov and Beria
 
 #BERIA
 9001002 = Liberalization under Beria

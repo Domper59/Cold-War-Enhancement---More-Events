@@ -1,0 +1,2430 @@
+### NATIONAL EVENTS ###
+
+country_event = { # The Famine of 1946-1947
+	id = 9001710
+	title = "The Famine of 1946-1947"
+	desc = EVT_9001710_DESC
+	picture = "soviet_famine"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1946
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { days = 2 }
+	
+	option = {
+		name = "Maintain the export of grain."
+		
+		set_country_flag = ussr_famine_1946
+		
+		grain = -400
+		
+		money = 1500000
+		
+		any_owned = {
+			limit = {
+				NOT = {
+					#Desert
+					terrain = desert
+					terrain = coastal_desert
+					terrain = semi_desert
+					terrain = semi_desert_hills
+					terrain = semi_desert_mountains
+					terrain = desert_hills
+					terrain = desert_mountains
+					terrain = cold_desert
+					terrain = cold_desert_hills
+					terrain = cold_desert_mountains
+				
+					#Tundra
+					terrain = tundra
+					terrain = tundra_hills
+					terrain = tundra_mountains
+				
+					#Arctic
+					terrain = arctic
+				}
+			}
+			add_province_modifier = { name = homeland_drought duration = 1095 }
+		}
+		
+		any_pop = {
+			limit = { type = farmers }
+			consciousness = 3
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = conservative }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = liberal }
+		}
+		any_pop = { 
+			limit = { culture = russian }
+			ideology = { factor = 0.05 value = nationalist }
+		}
+		
+		relation = { who = FRA value = 15 }
+		relation = { who = BUL value = 15 }
+		relation = { who = ROM value = 15 }
+		relation = { who = CZH value = 15 }
+		relation = { who = YUG value = 15 }
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Abandon the export of grain to give it to the population affected by the previous war."
+		
+		set_country_flag = ussr_famine_1946
+		
+		any_owned = {
+			limit = {
+				NOT = {
+					#Desert
+					terrain = desert
+					terrain = coastal_desert
+					terrain = semi_desert
+					terrain = semi_desert_hills
+					terrain = semi_desert_mountains
+					terrain = desert_hills
+					terrain = desert_mountains
+					terrain = cold_desert
+					terrain = cold_desert_hills
+					terrain = cold_desert_mountains
+				
+					#Tundra
+					terrain = tundra
+					terrain = tundra_hills
+					terrain = tundra_mountains
+				
+					#Arctic
+					terrain = arctic
+				}
+			}
+			add_province_modifier = { name = homeland_drought duration = 730 }
+		}
+		
+		any_pop = {
+			limit = { type = farmers }
+			consciousness = 2
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		any_pop = { 
+			limit = { culture = russian }
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		relation = { who = FRA value = -15 }
+		relation = { who = BUL value = -15 }
+		relation = { who = ROM value = -15 }
+		relation = { who = CZH value = -15 }
+		relation = { who = YUG value = -15 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Abandon the export of grain and give it to the general population."
+		
+		set_country_flag = ussr_famine_1946
+		
+		prestige = -500
+		
+		any_owned = {
+			limit = {
+				NOT = {
+					#Desert
+					terrain = desert
+					terrain = coastal_desert
+					terrain = semi_desert
+					terrain = semi_desert_hills
+					terrain = semi_desert_mountains
+					terrain = desert_hills
+					terrain = desert_mountains
+					terrain = cold_desert
+					terrain = cold_desert_hills
+					terrain = cold_desert_mountains
+				
+					#Tundra
+					terrain = tundra
+					terrain = tundra_hills
+					terrain = tundra_mountains
+				
+					#Arctic
+					terrain = arctic
+				}
+			}
+			add_province_modifier = { name = homeland_drought duration = 365 }
+		}
+		
+		any_pop = {
+			limit = { type = farmers }
+			consciousness = 1
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		any_pop = { 
+			limit = { culture = russian }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		relation = { who = FRA value = -15 }
+		relation = { who = BUL value = -15 }
+		relation = { who = ROM value = -15 }
+		relation = { who = CZH value = -15 }
+		relation = { who = YUG value = -15 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # The Case of the Trophies
+	id = 9001711
+	title = "The Case of the Trophies"
+	desc = EVT_9001711_DESC
+	picture = "afg_dra_army_training"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1946
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "Judging Marshal Zhukov and other generals."
+		
+		prestige = -250
+		
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				type = officers
+			}
+			reduce_pop = 0.85
+			consciousness = 4
+			ideology = { factor = 0.10 value = populist }
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Don't aim at the Marshal of the Soviet Union."
+		
+		set_country_flag = ussr_generals_not_purged
+		
+		prestige = -150
+		
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				type = officers
+			}
+			reduce_pop = 0.9
+			consciousness = 3
+			ideology = { factor = 0.05 value = populist }
+			ideology = { factor = 0.05 value = nationalist }
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Target only the biggest abuses."
+		
+		set_country_flag = ussr_generals_not_purged
+		
+		prestige = -50
+		
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				type = officers
+			}
+			reduce_pop = 0.95
+			consciousness = 2
+			ideology = { factor = 0.10 value = nationalist }
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+country_event = { # The Fate of Soviet Veterans
+	id = 9001712
+	title = "The Fate of Soviet Veterans"
+	desc = EVT_9001712_DESC
+	picture = "soviet_soldiers"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1946
+		NOT = { year = 1949 }
+		government = proletarian_dictatorship
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 4 }
+	
+	option = {
+		name = "Stop them and stop their benefits."
+		
+		prestige = -250
+		
+		money = 1500000
+		
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				type = soldiers
+			}
+			reduce_pop = 0.90
+			consciousness = 4
+			ideology = { factor = 0.10 value = populist }
+		}
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Just stop their benefits."
+		
+		prestige = -150
+		
+		money = 1500000
+		
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				type = soldiers
+			}
+			consciousness = 3
+			ideology = { factor = 0.05 value = populist }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Do nothing."
+		
+		set_country_flag = ussr_soldiers_glorified
+		
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				type = soldiers
+			}
+			consciousness = 1.5
+			ideology = { factor = 0.05 value = nationalist }
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Glorify them."
+		
+		set_country_flag = ussr_soldiers_glorified
+		
+		prestige = 250
+		
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				type = soldiers
+			}
+			reduce_pop = 1.1
+			consciousness = -3
+			ideology = { factor = 0.05 value = nationalist }
+			ideology = { factor = 0.05 value = socialist }
+			dominant_issue = { value = jingoism factor = 0.05 }
+		}
+		
+		any_pop = {
+			limit = { type = farmers }
+			reduce_pop = 0.95
+			dominant_issue = { value = pro_military factor = 0.05 }
+		}
+		
+		any_pop = {
+			limit = { type = craftsmen }
+			reduce_pop = 0.95
+			dominant_issue = { value = pro_military factor = 0.05 }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Monetary Reform of 1947
+	id = 9001713
+	title = "Monetary Reform of $YEAR$"
+	desc = EVT_9001713_DESC
+	picture = "monetary_reform_1947"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1947
+		NOT = { year = 1952 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = ussr_famine_1946
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "Maintain the System by Card."
+		
+		set_country_flag = ussr_party_hardliner
+		clr_country_flag = ussr_famine_1946
+		
+		money = 100000
+		
+		any_pop = {
+			limit = { type = soldiers }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = {
+			limit = { NOT = { type = soldiers }}
+			ideology = { factor = 0.05 value = liberal }
+			militancy = 2
+		}
+		
+		farmers = { money = -7.5 }
+		labourers = { money = -7.5 }
+		craftsmen = { money = -7.5 }
+		clerks = { money = -7.5 }
+		craftsmen = { money = -7.5 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Stop the Card System but keep control over prices."
+		
+		set_country_flag = ussr_party_malenkovist
+		clr_country_flag = ussr_famine_1946
+		
+		money = 250000
+		
+		any_pop = {
+			limit = { NOT = { type = clergymen } }
+			ideology = { factor = 0.05 value = liberal }
+			militancy = 2
+		}
+		
+		any_pop = {
+			limit = { type = clergymen }
+			militancy = -2
+		}
+		
+		farmers = { money = -15 }
+		labourers = { money = -15 }
+		craftsmen = { money = -15 }
+		clerks = { money = -15 }
+		craftsmen = { money = -15 }
+		
+		ai_chance = { factor = 0.85 }
+	}
+	
+	option = {
+		name = "Introduce a 'floating price' system."
+		
+		set_country_flag = ussr_party_zhdanovist
+		clr_country_flag = ussr_famine_1946
+		
+		money = 500000
+		
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist_social }
+			militancy = 2
+		}
+		
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = liberal }
+			militancy = 3
+		}
+		
+		any_pop = {
+			limit = { strata = rich }
+			militancy = 4
+		}
+		
+		any_pop = {
+			limit = { type = clergymen }
+			militancy = -3
+		}
+		
+		farmers = { money = 7.5 }
+		labourers = { money = 7.5 }
+		craftsmen = { money = 7.5 }
+		clerks = { money = 7.5 }
+		craftsmen = { money = 7.5 }
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+country_event = { # August session of VASKhNIL
+	id = 9001716
+	title = "August session of VASKhNIL"
+	desc = EVT_9001716_DESC
+	picture = "science"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1948
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+	option = {
+		name = "Support the 'Mishurinists' and eliminate the 'Weisman-Morganists'."
+		
+		set_country_flag = ussr_lyssenko_legacy
+		
+		prestige = -250
+		
+		research_points = -750
+		
+		literacy = -0.05
+		
+		any_pop = {
+			limit = { type = clergymen }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = { factor = 0.95 }
+	}
+	
+	option = {
+		name = "Support the 'Weisman-Morganists' and eliminate the 'Mishurinists'."
+		
+		set_country_flag = ussr_biologist_back
+		
+		prestige = 250
+		
+		research_points = 750
+		
+		literacy = 0.05
+		
+		any_pop = {
+			limit = { type = clergymen }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+country_event = { # The Beginnings of Cybernetics
+	id = 9001721
+	title = "The Beginnings of Cybernetics"
+	desc = EVT_9001721_DESC
+	picture = "cybernetics_project"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1950
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "It's a bourgeois science!"
+		
+		research_points = -500
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist_social }
+			consciousness = -2
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Leave them in their space."
+		
+		prestige = 150
+		
+		research_points = 375
+		
+		literacy = 0.01
+		
+		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Allocate more funding for this practice."
+		
+		money = -500000
+		
+		prestige = 250
+		
+		research_points = 750
+		
+		literacy = 0.02
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			consciousness = 2
+		}
+		
+		ai_chance = {
+			factor = 0.05
+			modifier = {
+				factor = 0
+				money = 750000
+			}
+		}
+	}
+}
+
+### ANTI-SEMITISM UNDER STALIN ###
+
+country_event = { # Case of the Jewish AntiFascist Committee
+	id = 9001717
+	title = "Case of the Jewish AntiFascist Committee"
+	desc = EVT_9001717_DESC
+	picture = "jewish_antifascist_committee"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1948
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		
+		AND = {
+			ENG = { has_country_flag = dissolve_the_palestine_mandate }
+			ISR = {
+				exists = yes
+				NOT = {
+					OR = {
+						government = proletarian_dictatorship
+						government = proletarian_dictatorship1
+						government = socialist_democracy
+					}
+					is_sphere_leader_of = RUS
+				}
+			}
+		}
+		
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 4 }
+	
+	option = {
+		name = "Dissolve the Committee and arrest "traitors"."
+		
+		set_country_flag = ussr_case_jac
+		
+		prestige = -200
+		
+		any_pop = { 
+			limit = {
+				AND = {
+					culture = jewish
+					type = clergymen
+				}
+			}
+			pop_type = slaves
+		}
+		
+		any_pop = {
+			limit = {
+				culture = jewish
+				NOT = {
+					AND = {
+						culture = jewish
+						type = clergymen
+					}
+				}
+			}
+			dominant_issue = { value = moralism factor = 0.05 }
+		}
+		
+		any_pop = {
+			limit = { culture = russian }
+			ideology = { factor = 0.05 value = populist }
+			dominant_issue = { value = residency factor = 0.05 }
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Dissolve the Committee and create another more faithful Committee."
+		
+		prestige = -100
+		
+		any_pop = { 
+			limit = {
+				AND = {
+					culture = jewish
+					type = clergymen
+				}
+			}
+			pop_type = slaves
+		}
+		
+		any_pop = {
+			limit = {
+				culture = jewish
+				NOT = {
+					AND = {
+						culture = jewish
+						type = clergymen
+					}
+				}
+			}
+			ideology = { factor = 0.05 value = progressive }
+			dominant_issue = { value = secularized factor = 0.05 }
+		}
+		
+		any_pop = {
+			limit = {
+				NOT = { culture = jewish }
+			}
+			dominant_issue = { value = limited_citizenship factor = 0.05 }
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Do nothing."
+		
+		set_country_flag = ussr_not_case_jac
+		
+		any_pop = {
+			limit = { culture = jewish }
+			ideology = { factor = 0.05 value = nationalist }
+			dominant_issue = { value = secularized factor = 0.05 }
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+country_event = { # Fight against Cosmopolitanism
+	id = 9001718
+	title = "Fight against Cosmopolitanism"
+	desc = EVT_9001718_DESC
+	picture = "nwo2_doctors_plot"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1949
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = ussr_case_jac
+		NOT = { has_country_flag = ussr_not_case_jac }
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "They are not reliable!"
+		
+		set_country_flag = ussr_cosmopolitanism
+		clr_country_flag = ussr_case_jac
+		
+		any_pop = {
+			limit = { culture = russian }
+			ideology = { factor = 0.10 value = populist }
+			militancy = 5
+		}
+		
+		ai_chance = { factor = 0.95 }
+	}
+	
+	option = {
+		name = "Stop this horror!"
+		
+		clr_country_flag = ussr_case_jac
+		
+		any_pop = {
+			limit = { culture = russian }
+			ideology = { factor = 0.05 value = traditionalist }
+			ideology = { factor = 0.05 value = nationalist }
+			militancy = 2.5
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+country_event = { # The Doctor's Plot
+	id = 8014221
+	title = "The Doctor's Plot"
+	desc = EVTDESC8014221
+	picture = "nwo2_doctors_plot"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = RUS
+    	year = 1951 
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship 
+		
+		OR = {
+			has_country_flag = ussr_cosmopolitanism
+			has_country_flag = ussr_purge_jac
+		}
+		NOT = { has_country_flag = ussr_not_case_jac }
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Remove them"
+		
+		clr_country_flag = ussr_cosmopolitanism
+		clr_country_flag = ussr_purge_jac
+		
+		any_pop = { militancy = -3 consciousness = -3 }
+		
+		#Jews get sent to the Gulags
+		any_pop = { 
+			limit = { culture = jewish } 
+			pop_type = slaves
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Do nothing"
+		
+		clr_country_flag = ussr_cosmopolitanism
+		clr_country_flag = ussr_purge_jac
+		
+		any_pop = { militancy = 2 consciousness = 3 }
+		
+		#Lose popularity
+		any_pop = { 
+			limit = {
+				OR = {
+					strata = rich
+					strata = middle
+				}
+				is_culture_group = THIS
+			} 
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Members of the JAC are unhappy
+	id = 9001719
+	title = "Members of the JAC are unhappy"
+	desc = EVT_9001719_DESC
+	picture = "jewish_antifascist_committee"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1950
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = ussr_not_case_jac
+		NOT = { has_country_flag = ussr_case_jac }
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "Admit our mistakes."
+		
+		prestige = -750
+		
+		any_pop = {
+			limit = { culture = russian }
+			ideology = { factor = 0.10 value = liberal }
+			consciousness = 4
+		}
+		
+		any_pop = {
+			limit = {
+				NOT = {
+					AND = {
+						culture = russian
+						culture = jewish
+					}
+				}
+			}
+			ideology = { factor = 0.10 value = nationalist }
+			consciousness = 6 militancy = 5
+		}
+		
+		any_pop = {
+			limit = { culture = jewish }
+			ideology = { factor = 0.10 value = progressive }
+			consciousness = -5 militancy = -5
+		}
+		
+		POL = { any_pop = { limit = { culture = jewish NOT = { strata = rich } } move_pop = 964 } }
+		ROM = { any_pop = { limit = { culture = jewish NOT = { strata = rich } } move_pop = 967 } }
+		
+		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Release additional funds."
+		
+		money = -500000
+		
+		any_pop = {
+			limit = {
+				OR = {
+					culture = jewish
+					type = clergymen
+				}
+			}
+			consciousness = 2 militancy = -2
+		}
+		
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 0
+				money = 750000
+			}
+		}
+	}
+	
+	option = {
+		name = "A small purge is necessary."
+		
+		set_country_flag = ussr_purge_jac
+		
+		prestige = -100
+		
+		any_pop = { 
+			limit = {
+				AND = {
+					culture = jewish
+					type = clergymen
+				}
+			}
+			pop_type = slaves
+		}
+		
+		ai_chance = { factor = 0.85 }
+	}
+}
+
+### SUCCESSION OF STALIN ###
+
+country_event = { # Preparation for Succession
+	id = 9001708
+	title = "Preparation for Succession"
+	desc = EVT_9001708_DESC
+	picture = "RUS_SOV_Zhdanov"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1946
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { days = 4 }
+	
+	option = {
+		name = "Choosing Andrei Zhdanov as Successor."
+		
+		set_country_flag = ussr_zhdanov_successor
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Choosing Georgy Malenkov as Successor."
+		
+		set_country_flag = ussr_malenkov_successor
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Choosing Vasily Stalin as Successor."
+		
+		set_country_flag = ussr_stalin_junior_successor
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = nationalist }
+		}
+		
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { # The Alcohol Problem
+	id = 9001709
+	title = "The Alcohol Problem"
+	desc = EVT_9001709_DESC
+	picture = "ussr_anti_alcohol"
+	
+	fire_only_once = no
+	
+	trigger = {
+		tag = RUS
+		year = 1946
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		
+		AND = {
+			OR = {
+				has_country_flag = ussr_zhdanov_successor
+				has_country_flag = ussr_stalin_junior_successor
+			}
+			NOT = {
+				OR = {
+					has_country_flag = successor_no_more_alcohol
+					has_country_flag = successor_more_alcohol
+				}
+			}
+		}
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "Offer the best medical services in the country."
+		
+		random_list = {
+			80 = { set_country_flag = successor_no_more_alcohol } #Alcoholism Cures
+			20 = { set_country_flag = successor_more_alcohol } #Alcoholism NOT cures
+		}
+		
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "Ask him to stop drinking."
+		
+		random_list = {
+			25 = { set_country_flag = successor_no_more_alcohol } #Alcoholism Cures
+			75 = { set_country_flag = successor_more_alcohol } #Alcoholism NOT cures
+		}
+		
+		ai_chance = { factor = 0 }
+	}
+	
+	option = {
+		name = "Do nothing."
+		
+		set_country_flag = successor_more_alcohol
+		
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { # Zhdanov and the Yugoslavia
+	id = 9001714
+	title = "Zhdanov and the Yugoslavia"
+	desc = EVT_9001714_DESC
+	picture = "nwo2_tito_stalin"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1947
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		
+		has_global_flag = tito_stalin_split
+		has_country_flag = ussr_zhdanov_successor
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { days = 5 }
+	
+	option = {
+		name = "Condemn him and promote Georgy Malenkov."
+		
+		set_country_flag = ussr_zhdanov_vs_malenkov
+		clr_country_flag = ussr_zhdanov_successor
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Criticize Andrei Zhdanov."
+		
+		set_country_flag = ussr_zhdanov_vs_malenkov
+		clr_country_flag = ussr_zhdanov_successor
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Defend Andrei Zhdanov against Georgy Malenkov."
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+country_event = { # The Leningrad Affair
+	id = 9001720
+	title = "The Leningrad Affair"
+	desc = EVT_9001720_DESC
+	picture = "great_purge"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1947
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		
+		OR = {
+			AND = {
+				has_country_flag = ussr_malenkov_successor
+				has_country_flag = ussr_zhdanov_dead
+			}
+			AND = {
+				has_country_flag = ussr_zhdanov_vs_malenkov
+				has_country_flag = successor_no_more_alcohol
+				NOT = { has_country_flag = ussr_zhdanov_dead }
+			}
+		}
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 2 }
+	
+	option = {
+		name = "Let it be..."
+		
+		set_country_flag = ussr_leningrad_affair
+		set_country_flag = ussr_malenkov_successor_win
+		clr_country_flag = ussr_malenkov_successor
+		clr_country_flag = ussr_zhdanov_vs_malenkov
+		clr_country_flag = successor_no_more_alcohol
+		
+		994 = {
+			any_pop = {
+				ideology = { factor = 0.05 value = communist }
+				ideology = { factor = 0.05 value = communist_social }
+				militancy = -3
+			}
+		}
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = -2
+		}
+		
+		ai_chance = { factor = 0.90 }
+	}
+	
+	option = {
+		name = "Eliminate only few rivals."
+		
+		set_country_flag = ussr_leningrad_purge
+		
+		994 = {
+			any_pop = {
+				ideology = { factor = 0.02 value = communist }
+				ideology = { factor = 0.02 value = communist_social }
+				militancy = -1
+			}
+		}
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = -1
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Stop Malenkov and his allies in this scheme."
+		
+		set_country_flag = ussr_leningrad_intact
+		
+		994 = {
+			any_pop = {
+				ideology = { factor = 0.10 value = communist }
+				militancy = 3
+			}
+		}
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = 2
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+country_event = { # The Moscow Affair
+	id = 9001723
+	title = "The Moscow Affair"
+	desc = EVT_9001723_DESC
+	picture = "great_purge"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1950
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		
+		OR = {
+			AND = {
+				has_country_flag = ussr_malenkov_successor
+				has_country_flag = ussr_zhdanov_dead
+				OR = {
+					has_country_flag = ussr_leningrad_purge
+					has_country_flag = ussr_leningrad_intact
+				}
+				NOT = { has_country_flag = ussr_leningrad_affair }
+			}
+			AND = {
+				has_country_flag = ussr_zhdanov_vs_malenkov
+				has_country_flag = successor_no_more_alcohol
+				OR = {
+					has_country_flag = ussr_leningrad_intact
+					has_country_flag = ussr_leningrad_purge
+				}
+				NOT = { has_country_flag = ussr_leningrad_affair }
+			}
+		}
+		NOT = {
+			AND = {
+				has_country_flag = death_of_stalin_flag
+				has_country_flag = ussr_malenkov_successor_win
+			}
+		}
+	}
+	
+	mean_time_to_happen = { months = 2 }
+	
+	option = {
+		name = "Let it be..."
+		
+		set_country_flag = ussr_no_reformists
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = -2 militancy = -2
+		}
+		
+		any_pop = {
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+					has_country_flag = ussr_zhdanov_vs_malenkov
+			}
+		}
+	}
+	
+	option = {
+		name = "Arrest Beria."
+		
+		set_country_flag = ussr_malenkov_purged
+		clr_country_flag = ussr_malenkov_successor
+		
+		any_pop = {
+			limit = { type = soldiers }
+			consciousness = -2 militancy = -2
+		}
+		
+		any_pop = {
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Vasily's New Formation
+	id = 9001726
+	title = "Vasily's New Formation"
+	desc = EVT_9001726_DESC
+	picture = "vasily_stalin_father"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1946
+		NOT = { year = 1951 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = ussr_stalin_junior_successor
+		has_country_flag = successor_no_more_alcohol
+		NOT = {
+			OR = {
+				has_country_flag = ussr_vasily_stalin_military_good
+				has_country_flag = ussr_vasily_stalin_military_bad
+				has_country_flag = ussr_vasily_stalin_kgb_good
+				has_country_flag = ussr_vasily_stalin_kgb_bad
+				has_country_flag = ussr_vasily_stalin_politician_good
+				has_country_flag = ussr_vasily_stalin_politician_bad
+			}
+			AND = {
+				has_country_flag = death_of_stalin_flag
+				has_country_flag = successor_more_alcohol
+			}
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "He will serve the army of the Soviet Union."
+		
+		clr_country_flag = successor_more_alcohol
+		
+		random_list = {
+			75 = { set_country_flag = ussr_vasily_stalin_military_good } #Vasily continue
+			25 = { set_country_flag = ussr_vasily_stalin_military_bad } #Vasily doesn't continue
+		}
+		
+		any_pop = {
+			limit = { type = soldiers }
+			consciousness = 3 militancy = 3
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "He will serve in the NKVD."
+		
+		clr_country_flag = successor_more_alcohol
+		
+		random_list = {
+			50 = { set_country_flag = ussr_vasily_stalin_kgb_good } #Vasily continue
+			50 = { set_country_flag = ussr_vasily_stalin_kgb_bad } #Vasily doesn't continue
+		}
+		
+		any_pop = {
+			limit = { type = officers }
+			consciousness = 3 militancy = 3
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "He will serve as a member of the Party."
+		
+		clr_country_flag = successor_more_alcohol
+		
+		random_list = {
+			25 = { set_country_flag = ussr_vasily_stalin_politician_good } #Vasily continue
+			75 = { set_country_flag = ussr_vasily_stalin_politician_bad } #Vasily doesn't continue
+		}
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = 3 militancy = 3
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Vasily Stalin doesn't stop drinking
+	id = 9001727
+	title = "Vasily Stalin doesn't stop drinking"
+	desc = EVT_9001727_DESC
+	picture = "RUS_SOV_Zhdanov"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1946
+		NOT = { year = 1951 }
+		government = proletarian_dictatorship
+		
+		AND = {
+			has_country_flag = ussr_stalin_junior_successor
+			has_country_flag = successor_more_alcohol
+		}
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { days = 15 }
+	
+	option = {
+		name = "Choosing Andrei Zhdanov as Successor."
+		
+		set_country_flag = ussr_zhdanov_successor
+		clr_country_flag = ussr_stalin_junior_successor
+		clr_country_flag = successor_more_alcohol
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Choosing Georgy Malenkov as Successor."
+		
+		set_country_flag = ussr_malenkov_successor
+		clr_country_flag = ussr_stalin_junior_successor
+		clr_country_flag = successor_more_alcohol
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # The Progress of Vasily Stalin - Bad
+	id = 9001728
+	title = "The Progress of Vasily Stalin"
+	desc = EVT_9001728_DESC
+	picture = "RUS_SOV_Zhdanov"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1946
+		NOT = { year = 1951 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = ussr_stalin_junior_successor
+		OR = {
+			has_country_flag = ussr_vasily_stalin_military_bad
+			has_country_flag = ussr_vasily_stalin_kgb_bad
+			has_country_flag = ussr_vasily_stalin_politician_bad
+		}
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { days = 20 }
+	
+	option = {
+		name = "Choosing Andrei Zhdanov as Successor."
+		
+		set_country_flag = ussr_zhdanov_successor
+		clr_country_flag = ussr_stalin_junior_successor
+		clr_country_flag = successor_more_alcohol
+		clr_country_flag = ussr_vasily_stalin_military_bad
+		clr_country_flag = ussr_vasily_stalin_kgb_bad
+		clr_country_flag = ussr_vasily_stalin_politician_bad
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Choosing Georgy Malenkov as Successor."
+		
+		set_country_flag = ussr_malenkov_successor
+		clr_country_flag = ussr_stalin_junior_successor
+		clr_country_flag = successor_more_alcohol
+		clr_country_flag = ussr_vasily_stalin_military_bad
+		clr_country_flag = ussr_vasily_stalin_kgb_bad
+		clr_country_flag = ussr_vasily_stalin_politician_bad
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		ai_chance = { factor = 0.3 }
+	}
+}
+
+country_event = { # Vasily Stalin appointed new head of the BSSR
+	id = 9001729
+	title = "Vasily Stalin appointed new head of the BSSR"
+	desc = EVT_9001729_DESC
+	picture = "ussr_belarus_parade"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1949
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = ussr_stalin_junior_successor
+		has_country_flag = ussr_vasily_stalin_politician_good
+		NOT = {
+			OR = {
+				has_country_flag = ussr_vasily_stalin_military_good
+				has_country_flag = ussr_vasily_stalin_military_bad
+				has_country_flag = ussr_vasily_stalin_kgb_good
+				has_country_flag = ussr_vasily_stalin_kgb_bad
+				has_country_flag = ussr_vasily_stalin_politician_bad
+			}
+		}
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "We'll see what kind of policy he'll lead..."
+		
+		random_list = {
+			25 = { set_country_flag = ussr_vasily_stalin_politician_stalinist } #Vasily becomes a Stalinist
+			50 = { set_country_flag = ussr_vasily_stalin_politician_conservative } #Vasily becomes a Conservative
+			25 = { set_country_flag = ussr_vasily_stalin_politician_moderate } #Vasily becomes a Moderate
+		}
+		
+		718 = { add_province_modifier = { name = province_morgenthau_plan duration = 1095 } }
+		
+		any_pop = {
+			limit = { culture = byelorussian }
+			consciousness = 2
+		}
+	}
+}
+
+country_event = { # The Policy of Vasily Stalin - Stalinist
+	id = 9001730
+	title = "The Policy of Vasily Stalin"
+	desc = EVT_9001730_DESC
+	picture = "nwo2_tomb_of_stalin"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1951
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = ussr_stalin_junior_successor
+		has_country_flag = ussr_vasily_stalin_politician_good
+		has_country_flag = ussr_vasily_stalin_politician_stalinist
+		NOT = {
+			OR = {
+				has_country_flag = ussr_vasily_stalin_military_good
+				has_country_flag = ussr_vasily_stalin_military_bad
+				has_country_flag = ussr_vasily_stalin_kgb_good
+				has_country_flag = ussr_vasily_stalin_kgb_bad
+				has_country_flag = ussr_vasily_stalin_politician_bad
+			}
+		}
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "The worthy son of his father."
+		
+		clr_country_flag = ussr_vasily_stalin_politician_good
+		
+		718 = { add_province_modifier = { name = may_day duration = 365 } }
+		
+		any_pop = {
+			limit = { culture = byelorussian }
+			consciousness = -2
+			ideology = { factor = 0.05 value = communist }
+		}
+	}
+}
+
+country_event = { # The Policy of Vasily Stalin - Conservative
+	id = 9001731
+	title = "The Policy of Vasily Stalin"
+	desc = EVT_9001731_DESC
+	picture = "communist_crowd"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1951
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = ussr_stalin_junior_successor
+		has_country_flag = ussr_vasily_stalin_politician_good
+		has_country_flag = ussr_vasily_stalin_politician_conservative
+		NOT = {
+			OR = {
+				has_country_flag = ussr_vasily_stalin_military_good
+				has_country_flag = ussr_vasily_stalin_military_bad
+				has_country_flag = ussr_vasily_stalin_kgb_good
+				has_country_flag = ussr_vasily_stalin_kgb_bad
+				has_country_flag = ussr_vasily_stalin_politician_bad
+			}
+		}
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "He joins the majority of the party members."
+		
+		clr_country_flag = ussr_vasily_stalin_politician_good
+		
+		718 = { add_province_modifier = { name = may_day duration = 365 } }
+		
+		any_pop = {
+			limit = { culture = byelorussian }
+			militancy = -2
+			ideology = { factor = 0.05 value = communist }
+		}
+	}
+}
+
+country_event = { # The Policy of Vasily Stalin - Moderate
+	id = 9001732
+	title = "The Policy of Vasily Stalin"
+	desc = EVT_9001732_DESC
+	picture = "communist_cleanup"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1951
+		NOT = { year = 1953 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = ussr_stalin_junior_successor
+		has_country_flag = ussr_vasily_stalin_politician_good
+		has_country_flag = ussr_vasily_stalin_politician_moderate
+		NOT = {
+			OR = {
+				has_country_flag = ussr_vasily_stalin_military_good
+				has_country_flag = ussr_vasily_stalin_military_bad
+				has_country_flag = ussr_vasily_stalin_kgb_good
+				has_country_flag = ussr_vasily_stalin_kgb_bad
+				has_country_flag = ussr_vasily_stalin_politician_bad
+			}
+		}
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "This is an unexpected twist."
+		
+		clr_country_flag = ussr_vasily_stalin_politician_good
+		
+		718 = { add_province_modifier = { name = worker_union duration = 365 } }
+		
+		any_pop = {
+			limit = { culture = byelorussian }
+			consciousness = 1 militancy = 1
+			ideology = { factor = 0.05 value = communist_social }
+		}
+	}
+}
+
+country_event = { # Vasily Stalin goes to the Korean War
+	id = 9001733
+	title = "Vasily Stalin goes to the Korean War"
+	desc = EVT_9001733_DESC
+	picture = "ussr_vasily_go_korea"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1950
+		NOT = { year = 1954 }
+		government = proletarian_dictatorship
+		
+		has_global_flag = korea_war
+		NKO = { war_with = SKO }
+		
+		has_country_flag = ussr_stalin_junior_successor
+		OR = {
+			has_country_flag = ussr_vasily_stalin_military_good
+			has_country_flag = ussr_vasily_stalin_kgb_good
+		}
+		NOT = {
+			OR = {
+				has_country_flag = ussr_vasily_stalin_military_bad
+				has_country_flag = ussr_vasily_stalin_kgb_bad
+				has_country_flag = ussr_vasily_stalin_politician_good
+				has_country_flag = ussr_vasily_stalin_politician_bad
+				has_country_flag = ussr_vasily_stalin_politician_stalinist
+				has_country_flag = ussr_vasily_stalin_politician_conservative
+				has_country_flag = ussr_vasily_stalin_politician_moderate
+			}
+		}
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { days = 10 }
+	
+	option = {
+		name = "Pravda will have some work to do."
+		
+		random_list = {
+			15 = { set_country_flag = ussr_vasily_stalin_dies } #Vasily dies
+			85 = { set_global_flag = ussr_vasily_stalin_war } #Vasily made a name for himself during the war
+		}
+		
+		relation = { who = NKO value = 75 }
+		
+		any_country = {
+			limit = {
+				exists = yes
+				government = proletarian_dictatorship
+				ruling_party_ideology = communist
+				capital_scope = { continent = europe }
+			}
+			relation = { who = THIS value = 50 }
+		}
+		
+		any_pop = {
+			limit = { strata = poor }
+			consciousness = -2 militancy = -2
+			ideology = { factor = 0.05 value = nationalist }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = {
+			limit = { strata = middle }
+			consciousness = 2 militancy = -2
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = -2 militancy = 2
+			ideology = { factor = 0.05 value = populist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+	}
+}
+
+country_event = { # Vasily Stalin is dead!
+	id = 9001734
+	title = "Vasily Stalin is dead!"
+	desc = EVT_9001734_DESC
+	picture = "communist_death"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1951
+		NOT = { year = 1954 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = ussr_stalin_junior_successor
+		has_country_flag = ussr_vasily_stalin_dies
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { days = 20 }
+	
+	option = {
+		name = "This is a tragedy!"
+		
+		clr_global_flag = vasily_stalin_mao_anying_meeting
+		clr_country_flag = ussr_stalin_junior_successor
+		clr_country_flag = ussr_vasily_stalin_dies
+		clr_country_flag = ussr_vasily_stalin_military_good
+		clr_country_flag = ussr_vasily_stalin_kgb_good
+		
+		any_pop = {
+			consciousness = -2 militancy = -2
+		}
+		
+		any_country = {
+			limit = {
+				exists = yes
+				government = proletarian_dictatorship
+				ruling_party_ideology = communist
+			}
+			relation = { who = THIS value = 10 }
+		}
+	}
+}
+
+country_event = { # Vasily Stalin and Mao Anying
+	id = 9001735
+	title = "Vasily Stalin and Mao Anying"
+	desc = EVT_9001735_DESC
+	picture = "nwo2_mao_with_stalin_poster"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1951
+		NOT = { year = 1954 }
+		government = proletarian_dictatorship
+		
+		has_global_flag = korea_war
+		NKO = { war_with = SKO }
+		
+		has_global_flag = ussr_vasily_stalin_war
+		has_global_flag = ccp_mao_anying_war
+		has_country_flag = ussr_stalin_junior_successor
+		OR = {
+			has_country_flag = ussr_vasily_stalin_military_good
+			has_country_flag = ussr_vasily_stalin_kgb_good
+		}
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "The future will tell us how this relationship will evolve."
+		
+		set_global_flag = vasily_stalin_mao_anying_meeting
+		
+		random_country = {
+			limit = { tag = CHI ruling_party_ideology = communist }
+			relation = { who = THIS value = 50 }
+		}
+	}
+}
+
+country_event = { # Vasily Stalin's Operations
+	id = 9001736
+	title = "Vasily Stalin's Operations"
+	desc = EVT_9001736_DESC
+	picture = "operation_tora_tora"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1951
+		NOT = { year = 1954 }
+		government = proletarian_dictatorship
+		
+		has_global_flag = korea_war
+		NKO = { war_with = SKO }
+		
+		has_global_flag = ussr_vasily_stalin_war
+		has_country_flag = ussr_stalin_junior_successor
+		has_country_flag = ussr_vasily_stalin_kgb_good
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "He became a dangerous agent..."
+		
+		badboy = 1
+		
+		any_owned = { 
+			limit = { 
+				SKO = { owns = 1624 }
+				NOT = { controlled_by = NKO }
+				NOT = { controlled_by = RUS }
+				NOT = { controlled_by = CHI }
+				NOT = { controlled_by = REB }
+			}
+			1624 = { add_province_modifier = { name = recent_terrorist_attack duration = 365 } }
+		}
+	}
+}
+
+country_event = { # Vasily Stalin becomes War Hero!
+	id = 9001737
+	title = "Vasily Stalin becomes War Hero!"
+	desc = EVT_9001737_DESC
+	picture = "vasily_stalin_hero"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1951
+		NOT = { year = 1954 }
+		government = proletarian_dictatorship
+		
+		has_global_flag = korea_war
+		NKO = { war_with = SKO }
+		
+		has_global_flag = ussr_vasily_stalin_war
+		has_country_flag = ussr_stalin_junior_successor
+		has_country_flag = ussr_vasily_stalin_military_good
+		NOT = { has_country_flag = death_of_stalin_flag }
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "My son became a hero..."
+		
+		any_pop = {
+			limit = { type = soldiers }
+			consciousness = -2 militancy = -2
+			ideology = { factor = 0.05 value = nationalist }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		any_pop = {
+			limit = { strata = poor }
+			consciousness = -3
+			ideology = { factor = 0.05 value = nationalist }
+			ideology = { factor = 0.05 value = communist_social }
+			dominant_issue = { value = jingoism factor = 0.05 }
+		}
+		any_pop = {
+			limit = { strata = middle }
+			militancy = 2
+			dominant_issue = { value = pacifism factor = 0.05 }
+		}
+		any_pop = {
+			limit = { strata = rich }
+			militancy = 3
+		}
+	}
+}
+
+### STALIN'S SUCCESSION ALTERNATIVE ###
+
+country_event = { # Stalin's Successor - Vasily Stalin
+	id = 9001738
+	title = "Stalin's Successor"
+	desc = EVT_9001738_DESC
+	picture = "succession_of_stalin_vasily_stalin"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1953
+		NOT = { year = 1990 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = ussr_stalin_junior_successor
+		OR  {
+			has_country_flag = ussr_vasily_stalin_military_good
+			has_country_flag = ussr_vasily_stalin_kgb_good
+			has_country_flag = ussr_vasily_stalin_politician_stalinist
+			has_country_flag = ussr_vasily_stalin_politician_conservative
+			has_country_flag = ussr_vasily_stalin_politician_moderate
+		}
+		has_country_flag = death_of_stalin_flag
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "Vasily Stalin becomes the $MONARCHTITLE$."
+		
+		set_country_flag = vasily_stalin
+		clr_country_flag = ussr_stalin_junior_successor
+		clr_country_flag = successor_more_alcohol
+		
+		add_country_modifier = { name = imperious_autocrat duration = 3650 }
+		
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = nationalist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = {
+			dominant_issue = { value = jingoism factor = 0.05 }
+			dominant_issue = { value = planned_economy1 factor = 0.05 }
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Trying to prevent him from taking power."
+		
+		set_country_flag = ???
+		clr_country_flag = ussr_stalin_junior_successor
+		clr_country_flag = successor_more_alcohol
+		
+		???
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Stalin's Successor - Zhdanov
+	id = 9001739
+	title = "Stalin's Successor"
+	desc = EVT_9001739_DESC
+	picture = "RUS_SOV_Zhdanov"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1953
+		NOT = { year = 1990 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = death_of_stalin_flag
+		OR = {
+			AND = {
+				has_country_flag = ussr_zhdanov_successor
+				has_country_flag = successor_no_more_alcohol
+				NOT = { has_country_flag = ussr_zhdanov_dead }
+			}
+			AND = {
+				has_country_flag = ussr_zhdanov_vs_malenkov
+				has_country_flag = successor_no_more_alcohol
+				OR = {
+					has_country_flag = ussr_leningrad_intact
+					has_country_flag = ussr_leningrad_purge
+				}
+				has_country_flag = ussr_malenkov_purged
+				NOT = { has_country_flag = ussr_leningrad_affair }
+			}
+			NOT = { 
+				OR = {
+					has_country_flag = ussr_malenkov_successor
+					has_country_flag = ussr_malenkov_successor_win
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "Andrei Zhdanov becomes the $MONARCHTITLE$."
+		
+		set_country_flag = andrei_zhdanov
+		clr_country_flag = ussr_zhdanov_successor
+		clr_country_flag = successor_no_more_alcohol
+		clr_country_flag = ussr_zhdanov_vs_malenkov
+		clr_country_flag = ussr_leningrad_intact
+		clr_country_flag = ussr_leningrad_purge
+		clr_country_flag = ussr_malenkov_purged
+		
+		add_country_modifier = { name = imperious_autocrat duration = 3650 }
+		
+		relation = { who = CHI value = 25 }
+		relation = { who = YUG value = 75 }
+		relation = { who = USA value = -50 }
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Vyacheslav Molotov becomes the $MONARCHTITLE$."
+		
+		set_country_flag = vyacheslav_molotov
+		clr_country_flag = ussr_zhdanov_successor
+		clr_country_flag = successor_no_more_alcohol
+		clr_country_flag = ussr_zhdanov_vs_malenkov
+		clr_country_flag = ussr_leningrad_intact
+		clr_country_flag = ussr_leningrad_purge
+		clr_country_flag = ussr_malenkov_purged
+		
+		add_country_modifier = { name = expert_diplomat duration = 3650 }
+		relation = { who = CHI value = 50 }
+		relation = { who = YUG value = 125 }
+		relation = { who = USA value = 75 }
+		
+		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Vasily Sokolovsky becomes the $MONARCHTITLE$."
+		
+		set_country_flag = vasily_sokolovsky
+		clr_country_flag = ussr_zhdanov_successor
+		clr_country_flag = successor_no_more_alcohol
+		clr_country_flag = ussr_zhdanov_vs_malenkov
+		clr_country_flag = ussr_leningrad_intact
+		clr_country_flag = ussr_leningrad_purge
+		clr_country_flag = ussr_malenkov_purged
+		
+		any_pop = { militancy = -5 consciousness = -5 }
+		add_country_modifier = { name = military_man duration = 3650 }
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+country_event = { # Stalin's Successor - Zhdanovists
+	id = 9001740
+	title = "Stalin's Successor"
+	desc = EVT_9001740_DESC
+	picture = "succession_of_stalin_zhdanovists"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1953
+		NOT = { year = 1990 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = death_of_stalin_flag
+		has_country_flag = ussr_zhdanov_dead
+		has_country_flag = ussr_malenkov_purged
+		OR = {
+				has_country_flag = ussr_leningrad_purge
+				has_country_flag = ussr_leningrad_intact
+		}
+		NOT = {
+			AND = {
+				has_country_flag = ussr_zhdanov_successor
+				has_country_flag = ussr_malenkov_successor
+				has_country_flag = ussr_malenkov_successor_win
+				has_country_flag = ussr_leningrad_affair
+			}
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "Alexey Kuznetsov becomes the $MONARCHTITLE$."
+		
+		set_country_flag = alexey_kuznetsov
+		clr_country_flag = ussr_zhdanov_dead
+		clr_country_flag = ussr_malenkov_purged
+		clr_country_flag = ussr_leningrad_purge
+		clr_country_flag = ussr_leningrad_intact
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = {
+			limit = { NOT = { strata = middle } }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		any_pop = {
+			limit = { NOT = { strata = poor } }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.85 }
+	}
+	
+	option = {
+		name = "Nikolai Voznesensky becomes the $MONARCHTITLE$."
+		
+		set_country_flag = nikolai_voznesensky
+		clr_country_flag = ussr_zhdanov_dead
+		clr_country_flag = ussr_malenkov_purged
+		clr_country_flag = ussr_leningrad_purge
+		clr_country_flag = ussr_leningrad_intact
+		
+		research_points = 400
+		
+		any_pop = {
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Pyotr Popkov becomes the $MONARCHTITLE$."
+		
+		set_country_flag = pyotr_popkov
+		clr_country_flag = ussr_zhdanov_dead
+		clr_country_flag = ussr_malenkov_purged
+		clr_country_flag = ussr_leningrad_purge
+		clr_country_flag = ussr_leningrad_intact
+		
+		any_pop = {
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.05 value = nationalist }
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Mikhail Rodionov becomes the $MONARCHTITLE$."
+		
+		set_country_flag = Mikhail Rodionov
+		clr_country_flag = ussr_zhdanov_dead
+		clr_country_flag = ussr_malenkov_purged
+		clr_country_flag = ussr_leningrad_purge
+		clr_country_flag = ussr_leningrad_intact
+		
+		any_pop = {
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = nationalist }
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+country_event = { # Stalin's Successor - Zhdanovists and Malenkov
+	id = 9001741
+	title = "Stalin's Successor"
+	desc = EVT_9001741_DESC
+	picture = "succession_of_stalin_zhdanovists_malenkov"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1953
+		NOT = { year = 1990 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = death_of_stalin_flag
+		has_country_flag = ussr_zhdanov_dead
+		has_country_flag = ussr_malenkov_successor
+		OR = {
+				has_country_flag = ussr_leningrad_purge
+				has_country_flag = ussr_leningrad_intact
+		}
+		has_country_flag = ussr_no_reformists
+		NOT = {
+			AND = {
+				has_country_flag = ussr_zhdanov_successor
+				has_country_flag = ussr_malenkov_purged
+				has_country_flag = ussr_malenkov_successor_win
+				has_country_flag = ussr_leningrad_affair
+			}
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "The Zhdanovists become the new leaders of the Soviet Union."
+		
+		set_country_flag = zhdanovists_collective
+		clr_country_flag = ussr_zhdanov_dead
+		clr_country_flag = ussr_malenkov_successor
+		clr_country_flag = ussr_leningrad_purge
+		clr_country_flag = ussr_leningrad_intact
+		clr_country_flag = ussr_no_reformists
+		
+		any_pop = {
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Malenkov and Beria become the new leaders of the Soviet Union."
+		
+		set_country_flag = malenkov_beria_collective
+		clr_country_flag = ussr_zhdanov_dead
+		clr_country_flag = ussr_malenkov_successor
+		clr_country_flag = ussr_leningrad_purge
+		clr_country_flag = ussr_leningrad_intact
+		clr_country_flag = ussr_no_reformists
+		
+		any_pop = {
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.10 value = nationalist }
+			consciousness = 3 militancy = 2
+		}
+		
+		ai_chance = { factor = 0.2 }
+	}
+}
+
+country_event = { # Stalin's Successor - Malenkov and Beria
+	id = 9001742
+	title = "Stalin's Successor"
+	desc = EVT_9001742_DESC
+	picture = "succession_of_stalin_malenkov_beria"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1953
+		NOT = { year = 1990 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = death_of_stalin_flag
+		has_country_flag = ussr_malenkov_successor_win
+		has_country_flag = ussr_leningrad_affair
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "Malenkov and Beria become the new leaders of the Soviet Union."
+		
+		set_country_flag = malenkov_beria_collective
+		clr_country_flag = ussr_malenkov_successor_win
+		clr_country_flag = ussr_leningrad_affair
+		
+		any_pop = {
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.10 value = nationalist }
+			consciousness = 3 militancy = 2
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Vyacheslav Molotov becomes the $MONARCHTITLE$."
+		
+		set_country_flag = vyacheslav_molotov
+		clr_country_flag = ussr_malenkov_successor_win
+		clr_country_flag = ussr_leningrad_affair
+		
+		add_country_modifier = { name = expert_diplomat duration = 3650 }
+		relation = { who = CHI value = 50 }
+		relation = { who = YUG value = 125 }
+		relation = { who = USA value = 75 }
+		
+		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Georgy Zhukov becomes the $MONARCHTITLE$."
+		
+		set_country_flag = georgy_zhukov
+		clr_country_flag = ussr_malenkov_successor_win
+		clr_country_flag = ussr_leningrad_affair
+		
+		any_pop = { militancy = -5 consciousness = -5 }
+		add_country_modifier = { name = military_man duration = 3650 }
+		
+		ai_chance = { factor = 0.05 }
+	}
+}

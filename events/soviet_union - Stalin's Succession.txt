@@ -1344,10 +1344,8 @@ country_event = { # Lyssenko's Legacy
 		year = 1956
 		NOT = { year = 1963 }
 		government = proletarian_dictatorship
-		OR = {
-			has_country_flag = georgy_malenkov
-			has_country_flag = vyacheslav_molotov
-		}
+		
+		has_country_flag = ussr_lyssenko_legacy
 	}
 	
 	mean_time_to_happen = { months = 6 }
@@ -1355,15 +1353,28 @@ country_event = { # Lyssenko's Legacy
 	option = {
 		name = "Let's keep his methods."
 		
+		set_country_flag = 
+		
 		research_points = -500
 		any_pop = { 
 			consciousness = 3 militancy = 2.5 
 		}
 		
-		add_country_modifier = { name = economic_boom duration = 1825 }
+		add_country_modifier = { name = severe_homeland_drought duration = 1825 }
 		
 		
-		ai_chance = { factor = 0.2 }
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = ussr_stalinist_faction
+					has_country_flag = georgy_malenkov
+					has_country_flag = georgy_zhukov
+					has_country_flag = lavrentiy_beria
+				}
+			}
+		}
 	}
 	
 	option = {
@@ -1376,7 +1387,7 @@ country_event = { # Lyssenko's Legacy
 			ideology = { factor = 0.05 value = communist_social } 
 		}
 		
-		ai_chance = { factor = 0.8 }
+		ai_chance = { factor = 0.2 }
 	}
 }
 
@@ -1737,7 +1748,7 @@ country_event = { # Resignation of Malenkov
 	id = 9001234
 	title = "Resignation of Malenkov"
 	desc = EVT_9001234_DESC
-	picture = "minister_resignation"
+	picture = "malenkov_resignation"
 
 	fire_only_once = yes
 	
