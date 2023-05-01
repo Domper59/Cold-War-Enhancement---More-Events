@@ -315,6 +315,14 @@ country_event = { # The Fate of Soviet Veterans
 			ideology = { factor = 0.10 value = populist }
 		}
 		
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+				type = slaves
+			}
+			reduce_pop = 1.10
+		}
+		
 		ai_chance = { factor = 0.7 }
 	}
 	
