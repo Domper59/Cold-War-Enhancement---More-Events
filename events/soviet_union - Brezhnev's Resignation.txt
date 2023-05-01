@@ -1185,8 +1185,6 @@ country_event = { # Diminish the Fight Against Dissenters?
 				has_country_flag = andropov_gorbtachev_together
 			}
 		}
-		
-		ai_chance = { factor = 0.9 }
 	}
 	
 	option = {

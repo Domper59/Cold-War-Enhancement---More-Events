@@ -242,7 +242,7 @@ country_event = { # Unification of Germany
 	trigger = {
 		tag = RUS
 		year = 1954
-		NOT = { year = 1957 }
+		NOT = { year = 1959 }
 		
 		government = proletarian_dictatorship
 		is_vassal = no
@@ -295,7 +295,7 @@ country_event = { # The Conservatives are organizing
 	trigger = {
 		tag = RUS
 		year = 1955
-		NOT = { year = 1958 }
+		NOT = { year = 1960 }
 		
 		government = proletarian_dictatorship
 		is_vassal = no
@@ -351,7 +351,7 @@ country_event = { # New Civil War
 	trigger = {
 		tag = RUS
 		year = 1956
-		NOT = { year = 1959 }
+		NOT = { year = 1961 }
 		
 		government = proletarian_dictatorship
 		is_vassal = no
@@ -364,7 +364,7 @@ country_event = { # New Civil War
 		has_country_flag = ussr_new_civil_war
 	}
 
-	mean_time_to_happen = { months = 5 }
+	mean_time_to_happen = { months = 4 }
 
 	option = {
 		name = "Support Beria."
