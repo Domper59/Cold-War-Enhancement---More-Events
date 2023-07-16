@@ -1022,7 +1022,7 @@ country_event = { # Preparation for Succession
 			ideology = { factor = 0.05 value = communist_social }
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 	
 	option = {
@@ -1036,7 +1036,7 @@ country_event = { # Preparation for Succession
 			ideology = { factor = 0.05 value = socialist }
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 	
 	option = {
@@ -1148,7 +1148,7 @@ country_event = { # Zhdanov and the Yugoslavia
 			ideology = { factor = 0.05 value = communist_social }
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 	
 	option = {
@@ -1163,7 +1163,7 @@ country_event = { # Zhdanov and the Yugoslavia
 			ideology = { factor = 0.05 value = communist_social }
 		}
 		
-		ai_chance = { factor = 0.05 }
+		ai_chance = { factor = 0 }
 	}
 	
 	option = {
@@ -1174,7 +1174,7 @@ country_event = { # Zhdanov and the Yugoslavia
 			ideology = { factor = 0.05 value = communist }
 		}
 		
-		ai_chance = { factor = 0.05 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -1230,7 +1230,7 @@ country_event = { # The Leningrad Affair
 			consciousness = -2
 		}
 		
-		ai_chance = { factor = 0.90 }
+		ai_chance = { factor = 1 }
 	}
 	
 	option = {
@@ -1251,7 +1251,7 @@ country_event = { # The Leningrad Affair
 			consciousness = -1
 		}
 		
-		ai_chance = { factor = 0.05 }
+		ai_chance = { factor = 0 }
 	}
 	
 	option = {
@@ -1271,7 +1271,7 @@ country_event = { # The Leningrad Affair
 			consciousness = 2
 		}
 		
-		ai_chance = { factor = 0.05 }
+		ai_chance = { factor = 0 }
 	}
 }
 
