@@ -145,7 +145,7 @@ country_event = { # Attempted Assassination
 	mean_time_to_happen = { months = 1 }
 
 	option = {
-		name = "What the eff?!"
+		name = "What the fu-?!"
 		random_list = {
 			25 = { country_event = 9001197 } #Brezhnev assassinated!
 			75 = { country_event = 9001198 } #Brezhnev survived!

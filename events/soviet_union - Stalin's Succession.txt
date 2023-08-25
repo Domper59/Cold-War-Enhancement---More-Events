@@ -33,53 +33,11 @@ country_event = { # Liberalization under Beria
 		
 		relation = { who = USA value = 50 }
 		relation = { who = GER value = 75 }
+		relation = { who = JAP value = 50 }
+		relation = { who = FIN value = 50 }
+		relation = { who = POL value = -75 }
 		
 		DDR = { any_pop = { consciousness = 7 militancy = 8 } }
-	}
-}
-
-country_event = { # East German Uprising of 1953 - DDR
-	id = 9001003
-	title = "East German Uprising of $YEAR$"
-	desc = EVT_9001003_DESC
-	picture = "ussr_insurection_berlin_1953"
-  
-	fire_only_once = yes
-
-	trigger = {
-		tag = DDR
-		year = 1953
-		NOT = { year = 1955 }
-		
-		government = proletarian_dictatorship
-		vassal_of = RUS
-		war = no
-		
-		has_global_flag = east_german_uprising_beria_scenario
-	}
-
-	mean_time_to_happen = { days = 10 }
-
-	option = {
-		name = "Ask the Soviets for help!"
-		RUS = { country_event = 9001004 }
-		ai_chance = { factor = 0.8 }
-	}
-	
-	option = {
-		name = "Try to solve the problem on our own."
-		
-		poor_strata = { 
-			consciousness = -3 militancy = -2
-			ideology = { factor = 0.10 value = liberal } 
-		}
-		
-		middle_strata = { 
-			consciousness = -2 militancy = -3
-			ideology = { factor = 0.15 value = liberal } 
-		}
-		
-		ai_chance = { factor = 0.2 }
 	}
 }
 
@@ -107,7 +65,7 @@ country_event = { # East German Uprising of 1953 - RUS
 			}
 		}
 		
-		ai_chance = { factor = 0.6 }
+		ai_chance = { factor = 0.75 }
 	}
 	
 	option = {
@@ -126,7 +84,7 @@ country_event = { # East German Uprising of 1953 - RUS
 			}
 		}
 		
-		ai_chance = { factor = 0.3 }
+		ai_chance = { factor = 0.2 }
 	}
 	
 	option = {
@@ -149,7 +107,7 @@ country_event = { # East German Uprising of 1953 - RUS
 			social_reform = eight_work_hours
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.05 }
 	}
 }
 

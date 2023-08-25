@@ -11,7 +11,7 @@
 ??? = Gathering of the Brothers of the Forest
 ??? = The Brothers of the Forest win - Union
 ??? = The Brothers of the Forest win - Separate
-9001706 = Ukrainian Insurgent Army
+??? = Ukrainian Insurgent Army
 ??? = Operation "West"
 ??? = Amnesty for UIR - 1st
 ??? = Amnesty for UIR
@@ -68,7 +68,6 @@
 
 #BERIA
 9001002 = Liberalization under Beria
-9001003 = East German Uprising of 1953 - DDR
 9001004 = East German Uprising of 1953 - RUS
 9001005 = Liquidation of Beria
 9001006 = Beria is Eliminated
@@ -197,22 +196,50 @@
 
 #NIKOLAI BULGANIN
 9001706 = The Fate of Khrushchev
-9001707 = Economic Reform of $YEAR$
-9001708 = Fixing Sovnarkhozes
-9001709 = Bulganin Economic Reform
-9001710 = Replacement of Zhukov
-9001711 = Reconciliation Policy
-9001712 = Cultural Thraw
-9001713 = Creation of Soviet Market
-9001714 = More Self-Management?
+90017071 = Economic Reform of $YEAR$
+90017081 = Fixing Sovnarkhozes
+90017091 = Bulganin Economic Reform
+90017101 = Replacement of Zhukov
+90017111 = Reconciliation Policy
+90017121 = Cultural Thraw
+90017131 = Creation of Soviet Market
+90017141 = More Self-Management?
 9001715 = New Virgin Lands Campaign
-9001716 = The Fall of Nikolai Bulganin - Communists
-9001717 = The Fall of Nikolai Bulganin - Reformists
-9001718 = Continue the De-Stalinization
-9001719 = Housing Problem
-9001720 = Liberalization of the Economy
-9001721 = More Liberalization
+90017161 = The Fall of Nikolai Bulganin - Communists
+90017171 = The Fall of Nikolai Bulganin - Reformists
+90017181 = Continue the De-Stalinization
+90017191 = Housing Problem
+90017201 = Liberalization of the Economy
+90017211 = More Liberalization
 9001722 = The Death of Nikolai Bulganin
+9001766 = The Death of Nikolai Bulganin - After Conservative Coup
+9001767 = The Death of Nikolai Bulganin - After Reformists Coup
+
+#DMITRI SHEPILOV
+9001743 = Anti-Stalinist Purge
+9001744 = Denounce the excesses of Khrushchev?
+9001745 = Appoint a new Minister of Foreign Affairs
+9001746 = Changing the Minister of Defense ?
+9001747 = Replace Molotov
+9001748 = XXIth Congress of the CPSU
+9001749 = Economic Reform
+9001750 = International Policy
+9001751 = Shepilov's Secret Report
+9001752 = Exporting Reformism
+9001753 = Reforming COMECON
+9001754 = The Kabanov Plan
+9001755 = The Kabanov Plan - for socialist countries
+9001756 = The Kabanov Plan - For other countries
+9001757 = Making the Party more popular
+9001758 = Fighting Corruption
+9001759 = New Agricultural Policy
+9001760 = The Great Economic Shift
+9001761 = Preparing the Soviet Market
+9001762 = The Return of the Great Landowners
+9001763 = Military Budget Cup
+9001764 = Opening of the market
+9001765 = ???
+??? = 
 
 #STALINIST MODEL
 9001695 = The Stalinist Model has reached its limits

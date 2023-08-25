@@ -2,10 +2,14 @@
 
 I. Events for Soviet Union
   * Era of Stalin [100%]
-  Event including the period when Stalin is still alive. Can have big consequences depending on certain choices.
+  Events including the period when Stalin is still alive. Can have big consequences depending on certain choices.
   Possible personalities: Andrei Zhdanov, Georgy Malenkov and Vasily Stalin
   
-    * Beria's reforms
+  * The Stalin Dynasty
+  Events about Vasily Stalin (Stalin's Second Son) coming to power and the possibility of doing something like North Korea.
+  Possible personalities: Vasily Stalin, Alexander Burdonsky, Yevgeny Dzhugashvili [WIP]
+  
+  * Beria's reforms
   Give more events for Beria if he wins the Civil War and its consequences.
   Possible personalities (WIP): Vsevolod Merkulov, Bogdan Kobulov, Sergo Goglidze, Pavlo Meshyk, Vladimir Dekanozov and Lev Vlodzimirsky.
   
