@@ -1116,68 +1116,6 @@ country_event = { # The Alcohol Problem
 	}
 }
 
-country_event = { # Zhdanov and the Yugoslavia
-	id = 9001714
-	title = "Zhdanov and the Yugoslavia"
-	desc = EVT_9001714_DESC
-	picture = "nwo2_tito_stalin"
-	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = RUS
-		year = 1947
-		NOT = { year = 1953 }
-		government = proletarian_dictatorship
-		
-		has_global_flag = tito_stalin_split
-		has_country_flag = ussr_zhdanov_successor
-		NOT = { has_country_flag = death_of_stalin_flag }
-	}
-	
-	mean_time_to_happen = { days = 5 }
-	
-	option = {
-		name = "Condemn him and promote Georgy Malenkov."
-		
-		set_country_flag = ussr_zhdanov_vs_malenkov
-		clr_country_flag = ussr_zhdanov_successor
-		
-		any_pop = {
-			limit = { strata = rich }
-			ideology = { factor = 0.05 value = communist_social }
-		}
-		
-		ai_chance = { factor = 1 }
-	}
-	
-	option = {
-		name = "Criticize Andrei Zhdanov."
-		
-		set_country_flag = ussr_zhdanov_vs_malenkov
-		clr_country_flag = ussr_zhdanov_successor
-		
-		any_pop = {
-			limit = { strata = rich }
-			ideology = { factor = 0.05 value = communist }
-			ideology = { factor = 0.05 value = communist_social }
-		}
-		
-		ai_chance = { factor = 0 }
-	}
-	
-	option = {
-		name = "Defend Andrei Zhdanov against Georgy Malenkov."
-		
-		any_pop = {
-			limit = { strata = rich }
-			ideology = { factor = 0.05 value = communist }
-		}
-		
-		ai_chance = { factor = 0 }
-	}
-}
-
 country_event = { # The Leningrad Affair
 	id = 9001720
 	title = "The Leningrad Affair"
@@ -1189,20 +1127,10 @@ country_event = { # The Leningrad Affair
 	trigger = {
 		tag = RUS
 		year = 1947
-		NOT = { year = 1953 }
+		NOT = { year = 1952 }
 		government = proletarian_dictatorship
 		
-		OR = {
-			AND = {
-				has_country_flag = ussr_malenkov_successor
-				has_country_flag = ussr_zhdanov_dead
-			}
-			AND = {
-				has_country_flag = ussr_zhdanov_vs_malenkov
-				has_country_flag = successor_no_more_alcohol
-				NOT = { has_country_flag = ussr_zhdanov_dead }
-			}
-		}
+		has_country_flag = ussr_malenkov_successor
 		NOT = { has_country_flag = death_of_stalin_flag }
 	}
 	
@@ -1211,11 +1139,7 @@ country_event = { # The Leningrad Affair
 	option = {
 		name = "Let it be..."
 		
-		set_country_flag = ussr_leningrad_affair
-		set_country_flag = ussr_malenkov_successor_win
 		clr_country_flag = ussr_malenkov_successor
-		clr_country_flag = ussr_zhdanov_vs_malenkov
-		clr_country_flag = successor_no_more_alcohol
 		
 		994 = {
 			any_pop = {
@@ -1236,7 +1160,8 @@ country_event = { # The Leningrad Affair
 	option = {
 		name = "Eliminate only few rivals."
 		
-		set_country_flag = ussr_leningrad_purge
+		set_country_flag = ussr_zhdanovists_malenkov
+		clr_country_flag = ussr_malenkov_successor
 		
 		994 = {
 			any_pop = {
@@ -1257,7 +1182,8 @@ country_event = { # The Leningrad Affair
 	option = {
 		name = "Stop Malenkov and his allies in this scheme."
 		
-		set_country_flag = ussr_leningrad_intact
+		set_country_flag = ussr_moscow_affair
+		clr_country_flag = ussr_malenkov_successor
 		
 		994 = {
 			any_pop = {
@@ -1289,32 +1215,8 @@ country_event = { # The Moscow Affair
 		NOT = { year = 1953 }
 		government = proletarian_dictatorship
 		
-		OR = {
-			AND = {
-				has_country_flag = ussr_malenkov_successor
-				has_country_flag = ussr_zhdanov_dead
-				OR = {
-					has_country_flag = ussr_leningrad_purge
-					has_country_flag = ussr_leningrad_intact
-				}
-				NOT = { has_country_flag = ussr_leningrad_affair }
-			}
-			AND = {
-				has_country_flag = ussr_zhdanov_vs_malenkov
-				has_country_flag = successor_no_more_alcohol
-				OR = {
-					has_country_flag = ussr_leningrad_intact
-					has_country_flag = ussr_leningrad_purge
-				}
-				NOT = { has_country_flag = ussr_leningrad_affair }
-			}
-		}
-		NOT = {
-			AND = {
-				has_country_flag = death_of_stalin_flag
-				has_country_flag = ussr_malenkov_successor_win
-			}
-		}
+		has_country_flag = ussr_moscow_affair
+		NOT = { has_country_flag = death_of_stalin_flag }
 	}
 	
 	mean_time_to_happen = { months = 2 }
@@ -1322,7 +1224,8 @@ country_event = { # The Moscow Affair
 	option = {
 		name = "Let it be..."
 		
-		set_country_flag = ussr_no_reformists
+		set_country_flag = ussr_malenkov_beria
+		clr_country_flag = ussr_moscow_affair
 		
 		any_pop = {
 			limit = { strata = rich }
@@ -1346,8 +1249,8 @@ country_event = { # The Moscow Affair
 	option = {
 		name = "Arrest Beria."
 		
-		set_country_flag = ussr_malenkov_purged
-		clr_country_flag = ussr_malenkov_successor
+		set_country_flag = ussr_zhdanovists
+		clr_country_flag = ussr_moscow_affair
 		
 		any_pop = {
 			limit = { type = soldiers }
@@ -1381,12 +1284,10 @@ country_event = { # Vasily's New Formation
 		has_country_flag = successor_no_more_alcohol
 		NOT = {
 			OR = {
-				has_country_flag = ussr_vasily_stalin_military_good
-				has_country_flag = ussr_vasily_stalin_military_bad
-				has_country_flag = ussr_vasily_stalin_kgb_good
-				has_country_flag = ussr_vasily_stalin_kgb_bad
-				has_country_flag = ussr_vasily_stalin_politician_good
-				has_country_flag = ussr_vasily_stalin_politician_bad
+				has_country_flag = ussr_vasily_stalin_military
+				has_country_flag = ussr_vasily_stalin_kgb
+				has_country_flag = ussr_vasily_stalin_politician
+				has_country_flag = ussr_vasily_stalin_fail
 			}
 			AND = {
 				has_country_flag = death_of_stalin_flag
@@ -1400,11 +1301,12 @@ country_event = { # Vasily's New Formation
 	option = {
 		name = "He will serve the army of the Soviet Union."
 		
+		clr_country_flag = ussr_stalin_junior_successor
 		clr_country_flag = successor_more_alcohol
 		
 		random_list = {
-			75 = { set_country_flag = ussr_vasily_stalin_military_good } #Vasily continue
-			25 = { set_country_flag = ussr_vasily_stalin_military_bad } #Vasily doesn't continue
+			75 = { set_country_flag = ussr_vasily_stalin_military } #Vasily continue
+			25 = { set_country_flag = ussr_vasily_stalin_fail } #Vasily doesn't continue
 		}
 		
 		any_pop = {
@@ -1418,11 +1320,12 @@ country_event = { # Vasily's New Formation
 	option = {
 		name = "He will serve in the NKVD."
 		
+		clr_country_flag = ussr_stalin_junior_successor
 		clr_country_flag = successor_more_alcohol
 		
 		random_list = {
-			50 = { set_country_flag = ussr_vasily_stalin_kgb_good } #Vasily continue
-			50 = { set_country_flag = ussr_vasily_stalin_kgb_bad } #Vasily doesn't continue
+			50 = { set_country_flag = ussr_vasily_stalin_kgb } #Vasily continue
+			50 = { set_country_flag = ussr_vasily_stalin_fail } #Vasily doesn't continue
 		}
 		
 		any_pop = {
@@ -1436,11 +1339,12 @@ country_event = { # Vasily's New Formation
 	option = {
 		name = "He will serve as a member of the Party."
 		
+		clr_country_flag = ussr_stalin_junior_successor
 		clr_country_flag = successor_more_alcohol
 		
 		random_list = {
-			25 = { set_country_flag = ussr_vasily_stalin_politician_good } #Vasily continue
-			75 = { set_country_flag = ussr_vasily_stalin_politician_bad } #Vasily doesn't continue
+			25 = { set_country_flag = ussr_vasily_stalin_politician } #Vasily continue
+			75 = { set_country_flag = ussr_vasily_stalin_fail } #Vasily doesn't continue
 		}
 		
 		any_pop = {
@@ -1522,12 +1426,7 @@ country_event = { # The Progress of Vasily Stalin - Bad
 		NOT = { year = 1951 }
 		government = proletarian_dictatorship
 		
-		has_country_flag = ussr_stalin_junior_successor
-		OR = {
-			has_country_flag = ussr_vasily_stalin_military_bad
-			has_country_flag = ussr_vasily_stalin_kgb_bad
-			has_country_flag = ussr_vasily_stalin_politician_bad
-		}
+		has_country_flag = ussr_vasily_stalin_fail
 		NOT = { has_country_flag = death_of_stalin_flag }
 	}
 	
@@ -1537,11 +1436,7 @@ country_event = { # The Progress of Vasily Stalin - Bad
 		name = "Choosing Andrei Zhdanov as Successor."
 		
 		set_country_flag = ussr_zhdanov_successor
-		clr_country_flag = ussr_stalin_junior_successor
-		clr_country_flag = successor_more_alcohol
-		clr_country_flag = ussr_vasily_stalin_military_bad
-		clr_country_flag = ussr_vasily_stalin_kgb_bad
-		clr_country_flag = ussr_vasily_stalin_politician_bad
+		clr_country_flag = ussr_vasily_stalin_fail
 		
 		any_pop = {
 			limit = { strata = rich }
@@ -1556,11 +1451,7 @@ country_event = { # The Progress of Vasily Stalin - Bad
 		name = "Choosing Georgy Malenkov as Successor."
 		
 		set_country_flag = ussr_malenkov_successor
-		clr_country_flag = ussr_stalin_junior_successor
-		clr_country_flag = successor_more_alcohol
-		clr_country_flag = ussr_vasily_stalin_military_bad
-		clr_country_flag = ussr_vasily_stalin_kgb_bad
-		clr_country_flag = ussr_vasily_stalin_politician_bad
+		clr_country_flag = ussr_vasily_stalin_fail
 		
 		any_pop = {
 			limit = { strata = rich }
@@ -1586,15 +1477,12 @@ country_event = { # Vasily Stalin appointed new head of the BSSR
 		NOT = { year = 1953 }
 		government = proletarian_dictatorship
 		
-		has_country_flag = ussr_stalin_junior_successor
-		has_country_flag = ussr_vasily_stalin_politician_good
+		has_country_flag = ussr_vasily_stalin_politician
 		NOT = {
 			OR = {
-				has_country_flag = ussr_vasily_stalin_military_good
-				has_country_flag = ussr_vasily_stalin_military_bad
-				has_country_flag = ussr_vasily_stalin_kgb_good
-				has_country_flag = ussr_vasily_stalin_kgb_bad
-				has_country_flag = ussr_vasily_stalin_politician_bad
+				has_country_flag = ussr_vasily_stalin_military
+				has_country_flag = ussr_vasily_stalin_kgb
+				has_country_flag = ussr_vasily_stalin_fail
 			}
 		}
 		NOT = { has_country_flag = death_of_stalin_flag }
@@ -1604,6 +1492,8 @@ country_event = { # Vasily Stalin appointed new head of the BSSR
 	
 	option = {
 		name = "We'll see what kind of policy he'll lead..."
+		
+		clr_country_flag = ussr_vasily_stalin_politician
 		
 		random_list = {
 			25 = { set_country_flag = ussr_vasily_stalin_politician_stalinist } #Vasily becomes a Stalinist
@@ -1634,16 +1524,13 @@ country_event = { # The Policy of Vasily Stalin - Stalinist
 		NOT = { year = 1953 }
 		government = proletarian_dictatorship
 		
-		has_country_flag = ussr_stalin_junior_successor
-		has_country_flag = ussr_vasily_stalin_politician_good
 		has_country_flag = ussr_vasily_stalin_politician_stalinist
 		NOT = {
 			OR = {
-				has_country_flag = ussr_vasily_stalin_military_good
-				has_country_flag = ussr_vasily_stalin_military_bad
-				has_country_flag = ussr_vasily_stalin_kgb_good
-				has_country_flag = ussr_vasily_stalin_kgb_bad
-				has_country_flag = ussr_vasily_stalin_politician_bad
+				has_country_flag = ussr_vasily_stalin_military
+				has_country_flag = ussr_vasily_stalin_kgb
+				has_country_flag = ussr_vasily_stalin_politician
+				has_country_flag = ussr_vasily_stalin_fail
 			}
 		}
 		NOT = { has_country_flag = death_of_stalin_flag }
@@ -1653,8 +1540,6 @@ country_event = { # The Policy of Vasily Stalin - Stalinist
 	
 	option = {
 		name = "The worthy son of his father."
-		
-		clr_country_flag = ussr_vasily_stalin_politician_good
 		
 		718 = { add_province_modifier = { name = may_day duration = 365 } }
 		
@@ -1680,16 +1565,13 @@ country_event = { # The Policy of Vasily Stalin - Conservative
 		NOT = { year = 1953 }
 		government = proletarian_dictatorship
 		
-		has_country_flag = ussr_stalin_junior_successor
-		has_country_flag = ussr_vasily_stalin_politician_good
 		has_country_flag = ussr_vasily_stalin_politician_conservative
 		NOT = {
 			OR = {
-				has_country_flag = ussr_vasily_stalin_military_good
-				has_country_flag = ussr_vasily_stalin_military_bad
-				has_country_flag = ussr_vasily_stalin_kgb_good
-				has_country_flag = ussr_vasily_stalin_kgb_bad
-				has_country_flag = ussr_vasily_stalin_politician_bad
+				has_country_flag = ussr_vasily_stalin_military
+				has_country_flag = ussr_vasily_stalin_kgb
+				has_country_flag = ussr_vasily_stalin_politician
+				has_country_flag = ussr_vasily_stalin_fail
 			}
 		}
 		NOT = { has_country_flag = death_of_stalin_flag }
@@ -1699,8 +1581,6 @@ country_event = { # The Policy of Vasily Stalin - Conservative
 	
 	option = {
 		name = "He joins the majority of the party members."
-		
-		clr_country_flag = ussr_vasily_stalin_politician_good
 		
 		718 = { add_province_modifier = { name = may_day duration = 365 } }
 		
@@ -1726,16 +1606,13 @@ country_event = { # The Policy of Vasily Stalin - Moderate
 		NOT = { year = 1953 }
 		government = proletarian_dictatorship
 		
-		has_country_flag = ussr_stalin_junior_successor
-		has_country_flag = ussr_vasily_stalin_politician_good
 		has_country_flag = ussr_vasily_stalin_politician_moderate
 		NOT = {
 			OR = {
-				has_country_flag = ussr_vasily_stalin_military_good
-				has_country_flag = ussr_vasily_stalin_military_bad
-				has_country_flag = ussr_vasily_stalin_kgb_good
-				has_country_flag = ussr_vasily_stalin_kgb_bad
-				has_country_flag = ussr_vasily_stalin_politician_bad
+				has_country_flag = ussr_vasily_stalin_military
+				has_country_flag = ussr_vasily_stalin_kgb
+				has_country_flag = ussr_vasily_stalin_politician
+				has_country_flag = ussr_vasily_stalin_fail
 			}
 		}
 		NOT = { has_country_flag = death_of_stalin_flag }
@@ -1745,8 +1622,6 @@ country_event = { # The Policy of Vasily Stalin - Moderate
 	
 	option = {
 		name = "This is an unexpected twist."
-		
-		clr_country_flag = ussr_vasily_stalin_politician_good
 		
 		718 = { add_province_modifier = { name = worker_union duration = 365 } }
 		
@@ -1775,20 +1650,17 @@ country_event = { # Vasily Stalin goes to the Korean War
 		has_global_flag = korea_war
 		NKO = { war_with = SKO }
 		
-		has_country_flag = ussr_stalin_junior_successor
 		OR = {
-			has_country_flag = ussr_vasily_stalin_military_good
-			has_country_flag = ussr_vasily_stalin_kgb_good
+			has_country_flag = ussr_vasily_stalin_military
+			has_country_flag = ussr_vasily_stalin_kgb
 		}
 		NOT = {
 			OR = {
-				has_country_flag = ussr_vasily_stalin_military_bad
-				has_country_flag = ussr_vasily_stalin_kgb_bad
-				has_country_flag = ussr_vasily_stalin_politician_good
-				has_country_flag = ussr_vasily_stalin_politician_bad
+				has_country_flag = ussr_vasily_stalin_politician
 				has_country_flag = ussr_vasily_stalin_politician_stalinist
 				has_country_flag = ussr_vasily_stalin_politician_conservative
 				has_country_flag = ussr_vasily_stalin_politician_moderate
+				has_country_flag = ussr_vasily_stalin_fail
 			}
 		}
 		NOT = { has_country_flag = death_of_stalin_flag }
@@ -1853,7 +1725,8 @@ country_event = { # Vasily Stalin is dead!
 		NOT = { year = 1954 }
 		government = proletarian_dictatorship
 		
-		has_country_flag = ussr_stalin_junior_successor
+		has_country_flag = ussr_vasily_stalin_military
+		has_country_flag = ussr_vasily_stalin_kgb
 		has_country_flag = ussr_vasily_stalin_dies
 		NOT = { has_country_flag = death_of_stalin_flag }
 	}
@@ -1864,10 +1737,9 @@ country_event = { # Vasily Stalin is dead!
 		name = "This is a tragedy!"
 		
 		clr_global_flag = vasily_stalin_mao_anying_meeting
-		clr_country_flag = ussr_stalin_junior_successor
+		clr_country_flag = ussr_vasily_stalin_military
+		clr_country_flag = ussr_vasily_stalin_kgb
 		clr_country_flag = ussr_vasily_stalin_dies
-		clr_country_flag = ussr_vasily_stalin_military_good
-		clr_country_flag = ussr_vasily_stalin_kgb_good
 		
 		any_pop = {
 			consciousness = -2 militancy = -2
@@ -1903,10 +1775,9 @@ country_event = { # Vasily Stalin and Mao Anying
 		
 		has_global_flag = ussr_vasily_stalin_war
 		has_global_flag = ccp_mao_anying_war
-		has_country_flag = ussr_stalin_junior_successor
 		OR = {
-			has_country_flag = ussr_vasily_stalin_military_good
-			has_country_flag = ussr_vasily_stalin_kgb_good
+			has_country_flag = ussr_vasily_stalin_military
+			has_country_flag = ussr_vasily_stalin_kgb
 		}
 		NOT = { has_country_flag = death_of_stalin_flag }
 	}
@@ -1943,8 +1814,7 @@ country_event = { # Vasily Stalin's Operations
 		NKO = { war_with = SKO }
 		
 		has_global_flag = ussr_vasily_stalin_war
-		has_country_flag = ussr_stalin_junior_successor
-		has_country_flag = ussr_vasily_stalin_kgb_good
+		has_country_flag = ussr_vasily_stalin_kgb
 		NOT = { has_country_flag = death_of_stalin_flag }
 	}
 	
@@ -1986,8 +1856,7 @@ country_event = { # Vasily Stalin becomes War Hero!
 		NKO = { war_with = SKO }
 		
 		has_global_flag = ussr_vasily_stalin_war
-		has_country_flag = ussr_stalin_junior_successor
-		has_country_flag = ussr_vasily_stalin_military_good
+		has_country_flag = ussr_vasily_stalin_military
 		NOT = { has_country_flag = death_of_stalin_flag }
 	}
 	
@@ -2037,10 +1906,9 @@ country_event = { # Stalin's Successor - Vasily Stalin
 		NOT = { year = 1990 }
 		government = proletarian_dictatorship
 		
-		has_country_flag = ussr_stalin_junior_successor
 		OR  {
-			has_country_flag = ussr_vasily_stalin_military_good
-			has_country_flag = ussr_vasily_stalin_kgb_good
+			has_country_flag = ussr_vasily_stalin_military
+			has_country_flag = ussr_vasily_stalin_kgb
 			has_country_flag = ussr_vasily_stalin_politician_stalinist
 			has_country_flag = ussr_vasily_stalin_politician_conservative
 			has_country_flag = ussr_vasily_stalin_politician_moderate
@@ -2055,7 +1923,6 @@ country_event = { # Stalin's Successor - Vasily Stalin
 		
 		set_country_flag = vasily_stalin
 		clr_country_flag = ussr_stalin_junior_successor
-		clr_country_flag = successor_more_alcohol
 		
 		add_country_modifier = { name = imperious_autocrat duration = 3650 }
 		
@@ -2101,29 +1968,7 @@ country_event = { # Stalin's Successor - Zhdanov
 		government = proletarian_dictatorship
 		
 		has_country_flag = death_of_stalin_flag
-		OR = {
-			AND = {
-				has_country_flag = ussr_zhdanov_successor
-				has_country_flag = successor_no_more_alcohol
-				NOT = { has_country_flag = ussr_zhdanov_dead }
-			}
-			AND = {
-				has_country_flag = ussr_zhdanov_vs_malenkov
-				has_country_flag = successor_no_more_alcohol
-				OR = {
-					has_country_flag = ussr_leningrad_intact
-					has_country_flag = ussr_leningrad_purge
-				}
-				has_country_flag = ussr_malenkov_purged
-				NOT = { has_country_flag = ussr_leningrad_affair }
-			}
-			NOT = { 
-				OR = {
-					has_country_flag = ussr_malenkov_successor
-					has_country_flag = ussr_malenkov_successor_win
-				}
-			}
-		}
+		has_country_flag = ussr_zhdanov_alive
 	}
 	
 	mean_time_to_happen = { months = 1 }
@@ -2132,12 +1977,7 @@ country_event = { # Stalin's Successor - Zhdanov
 		name = "Andrei Zhdanov becomes the $MONARCHTITLE$."
 		
 		set_country_flag = andrei_zhdanov
-		clr_country_flag = ussr_zhdanov_successor
-		clr_country_flag = successor_no_more_alcohol
-		clr_country_flag = ussr_zhdanov_vs_malenkov
-		clr_country_flag = ussr_leningrad_intact
-		clr_country_flag = ussr_leningrad_purge
-		clr_country_flag = ussr_malenkov_purged
+		clr_country_flag = ussr_zhdanov_alive
 		
 		add_country_modifier = { name = imperious_autocrat duration = 3650 }
 		
@@ -2152,12 +1992,7 @@ country_event = { # Stalin's Successor - Zhdanov
 		name = "Vyacheslav Molotov becomes the $MONARCHTITLE$."
 		
 		set_country_flag = vyacheslav_molotov
-		clr_country_flag = ussr_zhdanov_successor
-		clr_country_flag = successor_no_more_alcohol
-		clr_country_flag = ussr_zhdanov_vs_malenkov
-		clr_country_flag = ussr_leningrad_intact
-		clr_country_flag = ussr_leningrad_purge
-		clr_country_flag = ussr_malenkov_purged
+		clr_country_flag = clr_country_flag = ussr_zhdanov_alive
 		
 		add_country_modifier = { name = expert_diplomat duration = 3650 }
 		relation = { who = CHI value = 50 }
@@ -2171,12 +2006,7 @@ country_event = { # Stalin's Successor - Zhdanov
 		name = "Vasily Sokolovsky becomes the $MONARCHTITLE$."
 		
 		set_country_flag = vasily_sokolovsky
-		clr_country_flag = ussr_zhdanov_successor
-		clr_country_flag = successor_no_more_alcohol
-		clr_country_flag = ussr_zhdanov_vs_malenkov
-		clr_country_flag = ussr_leningrad_intact
-		clr_country_flag = ussr_leningrad_purge
-		clr_country_flag = ussr_malenkov_purged
+		clr_country_flag = clr_country_flag = ussr_zhdanov_alive
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 		add_country_modifier = { name = military_man duration = 3650 }
@@ -2200,20 +2030,7 @@ country_event = { # Stalin's Successor - Zhdanovists
 		government = proletarian_dictatorship
 		
 		has_country_flag = death_of_stalin_flag
-		has_country_flag = ussr_zhdanov_dead
-		has_country_flag = ussr_malenkov_purged
-		OR = {
-				has_country_flag = ussr_leningrad_purge
-				has_country_flag = ussr_leningrad_intact
-		}
-		NOT = {
-			AND = {
-				has_country_flag = ussr_zhdanov_successor
-				has_country_flag = ussr_malenkov_successor
-				has_country_flag = ussr_malenkov_successor_win
-				has_country_flag = ussr_leningrad_affair
-			}
-		}
+		has_country_flag = ussr_zhdanovists
 	}
 	
 	mean_time_to_happen = { months = 1 }
@@ -2222,10 +2039,7 @@ country_event = { # Stalin's Successor - Zhdanovists
 		name = "Alexey Kuznetsov becomes the $MONARCHTITLE$."
 		
 		set_country_flag = alexey_kuznetsov
-		clr_country_flag = ussr_zhdanov_dead
-		clr_country_flag = ussr_malenkov_purged
-		clr_country_flag = ussr_leningrad_purge
-		clr_country_flag = ussr_leningrad_intact
+		clr_country_flag = ussr_zhdanovists
 		
 		any_pop = {
 			limit = { NOT = { strata = rich } }
@@ -2249,10 +2063,7 @@ country_event = { # Stalin's Successor - Zhdanovists
 		name = "Nikolai Voznesensky becomes the $MONARCHTITLE$."
 		
 		set_country_flag = nikolai_voznesensky
-		clr_country_flag = ussr_zhdanov_dead
-		clr_country_flag = ussr_malenkov_purged
-		clr_country_flag = ussr_leningrad_purge
-		clr_country_flag = ussr_leningrad_intact
+		clr_country_flag = ussr_zhdanovists
 		
 		research_points = 400
 		
@@ -2268,10 +2079,7 @@ country_event = { # Stalin's Successor - Zhdanovists
 		name = "Pyotr Popkov becomes the $MONARCHTITLE$."
 		
 		set_country_flag = pyotr_popkov
-		clr_country_flag = ussr_zhdanov_dead
-		clr_country_flag = ussr_malenkov_purged
-		clr_country_flag = ussr_leningrad_purge
-		clr_country_flag = ussr_leningrad_intact
+		clr_country_flag = ussr_zhdanovists
 		
 		any_pop = {
 			ideology = { factor = 0.05 value = communist_social }
@@ -2285,10 +2093,7 @@ country_event = { # Stalin's Successor - Zhdanovists
 		name = "Mikhail Rodionov becomes the $MONARCHTITLE$."
 		
 		set_country_flag = Mikhail Rodionov
-		clr_country_flag = ussr_zhdanov_dead
-		clr_country_flag = ussr_malenkov_purged
-		clr_country_flag = ussr_leningrad_purge
-		clr_country_flag = ussr_leningrad_intact
+		clr_country_flag = ussr_zhdanovists
 		
 		any_pop = {
 			ideology = { factor = 0.05 value = communist }
@@ -2314,21 +2119,7 @@ country_event = { # Stalin's Successor - Zhdanovists and Malenkov
 		government = proletarian_dictatorship
 		
 		has_country_flag = death_of_stalin_flag
-		has_country_flag = ussr_zhdanov_dead
-		has_country_flag = ussr_malenkov_successor
-		OR = {
-				has_country_flag = ussr_leningrad_purge
-				has_country_flag = ussr_leningrad_intact
-		}
-		has_country_flag = ussr_no_reformists
-		NOT = {
-			AND = {
-				has_country_flag = ussr_zhdanov_successor
-				has_country_flag = ussr_malenkov_purged
-				has_country_flag = ussr_malenkov_successor_win
-				has_country_flag = ussr_leningrad_affair
-			}
-		}
+		has_country_flag = ussr_zhdanovists_malenkov
 	}
 	
 	mean_time_to_happen = { months = 1 }
@@ -2337,11 +2128,7 @@ country_event = { # Stalin's Successor - Zhdanovists and Malenkov
 		name = "The Zhdanovists become the new leaders of the Soviet Union."
 		
 		set_country_flag = zhdanovists_collective
-		clr_country_flag = ussr_zhdanov_dead
-		clr_country_flag = ussr_malenkov_successor
-		clr_country_flag = ussr_leningrad_purge
-		clr_country_flag = ussr_leningrad_intact
-		clr_country_flag = ussr_no_reformists
+		clr_country_flag = ussr_zhdanovists_malenkov
 		
 		any_pop = {
 			ideology = { factor = 0.05 value = communist }
@@ -2355,11 +2142,7 @@ country_event = { # Stalin's Successor - Zhdanovists and Malenkov
 		name = "Malenkov and Beria become the new leaders of the Soviet Union."
 		
 		set_country_flag = malenkov_beria_collective
-		clr_country_flag = ussr_zhdanov_dead
-		clr_country_flag = ussr_malenkov_successor
-		clr_country_flag = ussr_leningrad_purge
-		clr_country_flag = ussr_leningrad_intact
-		clr_country_flag = ussr_no_reformists
+		clr_country_flag = ussr_zhdanovists_malenkov
 		
 		any_pop = {
 			ideology = { factor = 0.05 value = communist_social }
@@ -2386,8 +2169,7 @@ country_event = { # Stalin's Successor - Malenkov and Beria
 		government = proletarian_dictatorship
 		
 		has_country_flag = death_of_stalin_flag
-		has_country_flag = ussr_malenkov_successor_win
-		has_country_flag = ussr_leningrad_affair
+		has_country_flag = ussr_malenkov_beria
 	}
 	
 	mean_time_to_happen = { months = 1 }
@@ -2396,8 +2178,7 @@ country_event = { # Stalin's Successor - Malenkov and Beria
 		name = "Malenkov and Beria become the new leaders of the Soviet Union."
 		
 		set_country_flag = malenkov_beria_collective
-		clr_country_flag = ussr_malenkov_successor_win
-		clr_country_flag = ussr_leningrad_affair
+		clr_country_flag = ussr_malenkov_beria
 		
 		any_pop = {
 			ideology = { factor = 0.05 value = communist_social }
@@ -2412,8 +2193,7 @@ country_event = { # Stalin's Successor - Malenkov and Beria
 		name = "Vyacheslav Molotov becomes the $MONARCHTITLE$."
 		
 		set_country_flag = vyacheslav_molotov
-		clr_country_flag = ussr_malenkov_successor_win
-		clr_country_flag = ussr_leningrad_affair
+		clr_country_flag = ussr_malenkov_beria
 		
 		add_country_modifier = { name = expert_diplomat duration = 3650 }
 		relation = { who = CHI value = 50 }
@@ -2427,8 +2207,7 @@ country_event = { # Stalin's Successor - Malenkov and Beria
 		name = "Georgy Zhukov becomes the $MONARCHTITLE$."
 		
 		set_country_flag = georgy_zhukov
-		clr_country_flag = ussr_malenkov_successor_win
-		clr_country_flag = ussr_leningrad_affair
+		clr_country_flag = ussr_malenkov_beria
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 		add_country_modifier = { name = military_man duration = 3650 }

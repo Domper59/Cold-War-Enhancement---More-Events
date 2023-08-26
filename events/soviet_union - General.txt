@@ -84,85 +84,20 @@ country_event = {
 		
 		government = proletarian_dictatorship
 		
-		has_country_flag = death_of_stalin_flag
-		
 		NOT = {
 			OR = {
-				AND = {
-					has_country_flag = ussr_stalin_junior_successor
-					has_country_flag = successor_more_alcohol
-					OR  {
-						has_country_flag = ussr_vasily_stalin_military_good
-						has_country_flag = ussr_vasily_stalin_kgb_good
-						has_country_flag = ussr_vasily_stalin_politician_stalinist
-						has_country_flag = ussr_vasily_stalin_politician_conservative
-						has_country_flag = ussr_vasily_stalin_politician_moderate
-					}
-				}
-				AND = {
-					OR = {
-						AND = {
-							has_country_flag = ussr_zhdanov_successor
-							has_country_flag = successor_no_more_alcohol
-							NOT = { has_country_flag = ussr_zhdanov_dead }
-						}
-						AND = {
-							has_country_flag = ussr_zhdanov_vs_malenkov
-							has_country_flag = successor_no_more_alcohol
-							OR = {
-								has_country_flag = ussr_leningrad_intact
-								has_country_flag = ussr_leningrad_purge
-							}
-							has_country_flag = ussr_malenkov_purged
-							NOT = { has_country_flag = ussr_leningrad_affair }
-						}
-						NOT = { 
-							OR = {
-								has_country_flag = ussr_malenkov_successor
-								has_country_flag = ussr_malenkov_successor_win
-							}
-						}
-					}
-				}
-				AND = {
-					has_country_flag = ussr_zhdanov_dead
-					has_country_flag = ussr_malenkov_purged
-					OR = {
-							has_country_flag = ussr_leningrad_purge
-							has_country_flag = ussr_leningrad_intact
-					}
-					NOT = {
-						AND = {
-							has_country_flag = ussr_zhdanov_successor
-							has_country_flag = ussr_malenkov_successor
-							has_country_flag = ussr_malenkov_successor_win
-							has_country_flag = ussr_leningrad_affair
-						}
-					}
-				}
-				AND = {
-					has_country_flag = ussr_zhdanov_dead
-					has_country_flag = ussr_malenkov_successor
-					OR = {
-							has_country_flag = ussr_leningrad_purge
-							has_country_flag = ussr_leningrad_intact
-					}
-					has_country_flag = ussr_no_reformists
-					NOT = {
-						AND = {
-							has_country_flag = ussr_zhdanov_successor
-							has_country_flag = ussr_malenkov_purged
-							has_country_flag = ussr_malenkov_successor_win
-							has_country_flag = ussr_leningrad_affair
-						}
-					}
-				}
-				AND = {
-					has_country_flag = ussr_malenkov_successor_win
-					has_country_flag = ussr_leningrad_affair
-				}
+				has_country_flag = ussr_vasily_stalin_military
+				has_country_flag = ussr_vasily_stalin_kgb
+				has_country_flag = ussr_vasily_stalin_politician_stalinist
+				has_country_flag = ussr_vasily_stalin_politician_conservative
+				has_country_flag = ussr_vasily_stalin_politician_moderate
+				has_country_flag = ussr_zhdanov_alive
+				has_country_flag = ussr_zhdanov_malenkov
+				has_country_flag = ussr_zhdanovists
+				has_country_flag = ussr_zhdanovists_malenkov
 			}
 		}
+		has_country_flag = death_of_stalin_flag
 	}
 	
 	mean_time_to_happen = { months = 1 }
@@ -172,37 +107,6 @@ country_event = {
 		prestige_factor = 0.02
 		set_country_flag = nikita_khrushchev
 		
-		clr_global_flag = ussr_vasily_stalin_war
-		clr_global_flag = ccp_mao_anying_war
-		clr_country_flag = ussr_party_hardliner
-		clr_country_flag = ussr_party_malenkovist
-		clr_country_flag = ussr_party_zhdanovist
-		clr_country_flag = ussr_generals_not_purged
-		clr_country_flag = ussr_soldiers_glorified
-		clr_country_flag = ussr_zhdanov_successor
-		clr_country_flag = ussr_malenkov_successor
-		clr_country_flag = ussr_stalin_junior_successor
-		clr_country_flag = successor_no_more_alcohol
-		clr_country_flag = successor_more_alcohol
-		clr_country_flag = ussr_zhdanov_vs_malenkov
-		clr_country_flag = ussr_zhdanov_dead
-		clr_country_flag = ussr_malenkov_successor_win
-		clr_country_flag = ussr_leningrad_affair
-		clr_country_flag = ussr_leningrad_purge
-		clr_country_flag = ussr_leningrad_intact
-		clr_country_flag = ussr_malenkov_purged
-		clr_country_flag = ussr_no_reformists
-		clr_country_flag = ussr_vasily_stalin_military_good
-		clr_country_flag = ussr_vasily_stalin_military_bad
-		clr_country_flag = ussr_vasily_stalin_kgb_good
-		clr_country_flag = ussr_vasily_stalin_kgb_bad
-		clr_country_flag = ussr_vasily_stalin_politician_good
-		clr_country_flag = ussr_vasily_stalin_politician_bad
-		clr_country_flag = ussr_vasily_stalin_politician_stalinist
-		clr_country_flag = ussr_vasily_stalin_politician_conservative
-		clr_country_flag = ussr_vasily_stalin_politician_moderate
-		clr_country_flag = ussr_vasily_stalin_dies
-		
 		any_pop = { militancy = -1 consciousness = 5 }
 		add_country_modifier = { name = man_of_the_people duration = 3650 }
 		add_country_modifier = { name = economic_boom duration = 1825 }
@@ -211,44 +115,13 @@ country_event = {
 		political_reform = firewall_publishing
 		political_reform = limited_meetings
 
-		ai_chance = { factor = 0.8 }
+		ai_chance = { factor = 0.85 }
 	}
 
 	option = {
 		name = "The Stalinists take power"
 		
 		set_country_flag = ussr_stalinist_faction
-		
-		clr_global_flag = ussr_vasily_stalin_war
-		clr_global_flag = ccp_mao_anying_war
-		clr_country_flag = ussr_party_hardliner
-		clr_country_flag = ussr_party_malenkovist
-		clr_country_flag = ussr_party_zhdanovist
-		clr_country_flag = ussr_generals_not_purged
-		clr_country_flag = ussr_soldiers_glorified
-		clr_country_flag = ussr_zhdanov_successor
-		clr_country_flag = ussr_malenkov_successor
-		clr_country_flag = ussr_stalin_junior_successor
-		clr_country_flag = successor_no_more_alcohol
-		clr_country_flag = successor_more_alcohol
-		clr_country_flag = ussr_zhdanov_vs_malenkov
-		clr_country_flag = ussr_zhdanov_dead
-		clr_country_flag = ussr_malenkov_successor_win
-		clr_country_flag = ussr_leningrad_affair
-		clr_country_flag = ussr_leningrad_purge
-		clr_country_flag = ussr_leningrad_intact
-		clr_country_flag = ussr_malenkov_purged
-		clr_country_flag = ussr_no_reformists
-		clr_country_flag = ussr_vasily_stalin_military_good
-		clr_country_flag = ussr_vasily_stalin_military_bad
-		clr_country_flag = ussr_vasily_stalin_kgb_good
-		clr_country_flag = ussr_vasily_stalin_kgb_bad
-		clr_country_flag = ussr_vasily_stalin_politician_good
-		clr_country_flag = ussr_vasily_stalin_politician_bad
-		clr_country_flag = ussr_vasily_stalin_politician_stalinist
-		clr_country_flag = ussr_vasily_stalin_politician_conservative
-		clr_country_flag = ussr_vasily_stalin_politician_moderate
-		clr_country_flag = ussr_vasily_stalin_dies
 		
 		any_pop = { militancy = 5 consciousness = -5 }
 		
@@ -258,44 +131,13 @@ country_event = {
 		
 		add_country_modifier = { name = expert_diplomat duration = 3650 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.05 }
 	}
 
 	option = {
 		name = "Lavrentiy Beria becomes the $MONARCHTITLE$"
 		
 		set_country_flag = lavrentiy_beria
-		
-		clr_global_flag = ussr_vasily_stalin_war
-		clr_global_flag = ccp_mao_anying_war
-		clr_country_flag = ussr_party_hardliner
-		clr_country_flag = ussr_party_malenkovist
-		clr_country_flag = ussr_party_zhdanovist
-		clr_country_flag = ussr_generals_not_purged
-		clr_country_flag = ussr_soldiers_glorified
-		clr_country_flag = ussr_zhdanov_successor
-		clr_country_flag = ussr_malenkov_successor
-		clr_country_flag = ussr_stalin_junior_successor
-		clr_country_flag = successor_no_more_alcohol
-		clr_country_flag = successor_more_alcohol
-		clr_country_flag = ussr_zhdanov_vs_malenkov
-		clr_country_flag = ussr_zhdanov_dead
-		clr_country_flag = ussr_malenkov_successor_win
-		clr_country_flag = ussr_leningrad_affair
-		clr_country_flag = ussr_leningrad_purge
-		clr_country_flag = ussr_leningrad_intact
-		clr_country_flag = ussr_malenkov_purged
-		clr_country_flag = ussr_no_reformists
-		clr_country_flag = ussr_vasily_stalin_military_good
-		clr_country_flag = ussr_vasily_stalin_military_bad
-		clr_country_flag = ussr_vasily_stalin_kgb_good
-		clr_country_flag = ussr_vasily_stalin_kgb_bad
-		clr_country_flag = ussr_vasily_stalin_politician_good
-		clr_country_flag = ussr_vasily_stalin_politician_bad
-		clr_country_flag = ussr_vasily_stalin_politician_stalinist
-		clr_country_flag = ussr_vasily_stalin_politician_conservative
-		clr_country_flag = ussr_vasily_stalin_politician_moderate
-		clr_country_flag = ussr_vasily_stalin_dies
 		
 		relation = { who = USA value = 200 }
 		
@@ -341,37 +183,6 @@ country_event = {
 		name = "Georgy Zhukov becomes the $MONARCHTITLE$"
 		
 		set_country_flag = georgy_zhukov
-		
-		clr_global_flag = ussr_vasily_stalin_war
-		clr_global_flag = ccp_mao_anying_war
-		clr_country_flag = ussr_party_hardliner
-		clr_country_flag = ussr_party_malenkovist
-		clr_country_flag = ussr_party_zhdanovist
-		clr_country_flag = ussr_generals_not_purged
-		clr_country_flag = ussr_soldiers_glorified
-		clr_country_flag = ussr_zhdanov_successor
-		clr_country_flag = ussr_malenkov_successor
-		clr_country_flag = ussr_stalin_junior_successor
-		clr_country_flag = successor_no_more_alcohol
-		clr_country_flag = successor_more_alcohol
-		clr_country_flag = ussr_zhdanov_vs_malenkov
-		clr_country_flag = ussr_zhdanov_dead
-		clr_country_flag = ussr_malenkov_successor_win
-		clr_country_flag = ussr_leningrad_affair
-		clr_country_flag = ussr_leningrad_purge
-		clr_country_flag = ussr_leningrad_intact
-		clr_country_flag = ussr_malenkov_purged
-		clr_country_flag = ussr_no_reformists
-		clr_country_flag = ussr_vasily_stalin_military_good
-		clr_country_flag = ussr_vasily_stalin_military_bad
-		clr_country_flag = ussr_vasily_stalin_kgb_good
-		clr_country_flag = ussr_vasily_stalin_kgb_bad
-		clr_country_flag = ussr_vasily_stalin_politician_good
-		clr_country_flag = ussr_vasily_stalin_politician_bad
-		clr_country_flag = ussr_vasily_stalin_politician_stalinist
-		clr_country_flag = ussr_vasily_stalin_politician_conservative
-		clr_country_flag = ussr_vasily_stalin_politician_moderate
-		clr_country_flag = ussr_vasily_stalin_dies
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 		add_country_modifier = { name = military_man duration = 3650 }
@@ -1460,8 +1271,7 @@ country_event = {
 
 ### OGAS Scheme end ####
 
-#Nikita Khrushchev's successor
-country_event = {
+country_event = { #Nikita Khrushchev's successor
   id = 8014233
   title = "The Fall of Nikita Khrushchev"
   desc = EVT_8014233_DESC
@@ -1534,7 +1344,7 @@ country_event = {
 		set_country_flag = leonid_brezhnev
 		set_global_flag = fall_of_nikita_khrushchev
 		
-		ai_chance = { factor = 0.8 }
+		ai_chance = { factor = 0.9 }
 	}
 
 	option = {
@@ -1546,7 +1356,7 @@ country_event = {
 		set_global_flag = fall_of_nikita_khrushchev
 		set_country_flag = alexender_shelepin
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.05 }
 	}
 
 	option = {
@@ -1556,7 +1366,7 @@ country_event = {
 		remove_country_modifier = soviet_stability
 		add_country_modifier = { name = revolution_chaos duration = 1460 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.05 }
 	}
 
 }
@@ -1613,8 +1423,7 @@ country_event = {
 
 }
 
-#Brezhnev's successor
-country_event = {
+country_event = { #Brezhnev's successor
   id = 8014235
   title = "The Death of Leonid Brezhnev"
   desc = EVT_8014235_DESC
@@ -1625,7 +1434,7 @@ country_event = {
 	trigger = {
     	tag = RUS
     	year = 1982 
-		NOT = { year = 1990 }
+		NOT = { year = 1984 }
 		
 		government = proletarian_dictatorship
 		
@@ -1638,7 +1447,7 @@ country_event = {
 	mean_time_to_happen = { months = 10 }
 
 	option = {
-		name = "Select Yuri Andropov (Great Reformist)"
+		name = "Select Yuri Andropov (Reformist)"
 		
 		clr_country_flag = leonid_brezhnev
 		
@@ -1651,11 +1460,11 @@ country_event = {
 		clr_country_flag = yuri_andropov_1
 
 		set_country_flag = yuri_andropov
-		ai_chance = { factor = 0.8 }
+		ai_chance = { factor = 0.9 }
 	}
 
 	option = {
-		name = "Select Andrei Gromyko"
+		name = "Select Andrei Gromyko (Moderate)"
 		
 		clr_country_flag = leonid_brezhnev
 		
@@ -1674,11 +1483,11 @@ country_event = {
 		clr_country_flag = modernization_comecon
 		
 		set_country_flag = andrei_gromyko
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.05 }
 	}
 
 	option = {
-		name = "Select Dmitry Ustinov"
+		name = "Select Dmitry Ustinov (Military Conservative)"
 		
 		clr_country_flag = leonid_brezhnev
 		
@@ -1693,13 +1502,12 @@ country_event = {
 		
 		set_country_flag = dmitry_ustinov
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.05 }
 	}
 
 }
 
-#Andropov's successor
-country_event = {
+country_event = { #Andropov's successor
   id = 8014236
   title = "The Death of Yuri Andropov"
   desc = EVT_8014236_DESC
@@ -1710,17 +1518,17 @@ country_event = {
 	trigger = {
     	tag = RUS
 		year = 1984 
-		NOT = { year = 1990 }
+		NOT = { year = 1986 }
 		
 		government = proletarian_dictatorship
      	
 		has_country_flag = yuri_andropov
 	}
 
-	mean_time_to_happen = { months = 3 }
+	mean_time_to_happen = { months = 2 }
 
 	option = {
-		name = "Select Konstantin Chernenko (Conservator)"
+		name = "Select Konstantin Chernenko (Conservative)"
 		
 		any_pop = { militancy = -3 consciousness = -3 }
 		
@@ -1753,8 +1561,7 @@ country_event = {
 
 }
 
-#Mikhail Gorbachev
-country_event = {
+country_event = { #Mikhail Gorbachev
   id = 8014237
   title = "The Death of Konstantin Chernenko"
   desc = EVT_8014237_DESC
@@ -1765,7 +1572,7 @@ country_event = {
 	trigger = { 
 		tag = RUS
 		year = 1985
-		NOT = { year = 1990 }
+		NOT = { year = 1987 }
 		
 		government = proletarian_dictatorship
 		
@@ -1775,7 +1582,7 @@ country_event = {
 		NOT = { ruling_party_ideology = communist_social }
 	}
 
-	mean_time_to_happen = { months = 3 }
+	mean_time_to_happen = { months = 2 }
 
 	option = {
 		name = "Select Mikhail Gorbachev (Reformist)"
@@ -1814,7 +1621,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Select Viktor Grishin (Conservator)"
+		name = "Select Viktor Grishin (Conservative)"
 		
 		set_country_flag = viktor_grishin
 		
@@ -1901,8 +1708,7 @@ country_event = {
 
 }
 
-#The independence of the Baltic States
-country_event = {
+country_event = { #The independence of the Baltic States
   id = 8014246
   title = "The Baltic Way"
   desc = EVT_8014246_DESC
@@ -1983,8 +1789,7 @@ country_event = {
 
 }
 
-#Independence of the Baltic states - Receiver
-country_event = {
+country_event = { #Independence of the Baltic states - Receiver
   id = 8014247
   title = "The Baltic Way"
   desc = EVT_8014246_DESC
@@ -2009,8 +1814,7 @@ country_event = {
 	}
 }
 
-#August Coup
-country_event = {
+country_event = { #August Coup
 	id = 8014239
 	title = "The August Coup Begins"
 	desc = EVT_8014239_DESC
@@ -2104,8 +1908,7 @@ country_event = {
 
 }
 
-#The Belavezha Accords
-country_event = {
+country_event = { #The Belavezha Accords
 	id = 8014249
 	title = "The Belavezha Accords"
 	desc = EVT_8014249_DESC
@@ -2141,11 +1944,27 @@ country_event = {
 		prestige_factor = -0.10
 		badboy = 15
 
-		#Russian Civil War
+		#Soviet Civil War
 		any_country = {
 			limit = { 
 				exists = no 
-				OR = { tag = UKR tag = BYE tag = GEO tag = AZB tag = ARM tag = TKR tag = MOL tag = UZB tag = KYR tag = TAJ tag = KAZ tag = MOL tag = LIT tag = LAT tag = EST } 
+				OR = {
+					tag = UKR
+					tag = BYE
+					tag = GEO
+					tag = AZB
+					tag = ARM
+					tag = TKR
+					tag = MOL
+					tag = UZB
+					tag = KYR
+					tag = TAJ
+					tag = KAZ
+					tag = MOL
+					tag = LIT
+					tag = LAT
+					tag = EST
+				} 
 				any_core = { owned_by = THIS }
 			} 
 			country_event = 19911
@@ -2189,8 +2008,7 @@ country_event = {
 	
 }
 
-#Fall of USSR
-country_event = {
+country_event = { #Fall of USSR
 	id = 8014271
 	title = "Dissolution of the USSR"
 	desc = EVT_8014271_DESC
@@ -2384,15 +2202,14 @@ country_event = {
 	
 }
 
-#The End of Cominform
-country_event = {
+country_event = { #The End of Cominform
 	id = 8020521
 	title = "End of the Cominform"
 	desc = EVTDESC8020521
 	picture = "Cominform_end"
 	
 	fire_only_once = yes
-
+	
 	trigger = {
 		tag = RUS
 		year = 1956
@@ -2409,7 +2226,7 @@ country_event = {
 		
 		OR = { has_country_flag = lavrentiy_beria has_country_flag = nikita_khrushchev has_country_flag = georgy_zhukov }
 	}
-
+	
 	mean_time_to_happen = { months = 4 }
 	
 	option = {
@@ -2429,8 +2246,6 @@ country_event = {
 			limit = { tag = ITA government = proletarian_dictatorship ruling_party_ideology = communist is_vassal = no has_country_flag = ITA_Secchia }
 			relation = { who = THIS value = -10 }
 			country_event = 8020522
-		}	
-	
+		}
 	}
-
 }

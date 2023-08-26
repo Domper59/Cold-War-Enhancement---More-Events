@@ -327,8 +327,6 @@ country_event = {
 		month = 8
 		NOT = { year = 1950 }
 		
-		has_country_flag = ussr_zhdanov_dead
-		
 		government = proletarian_dictatorship
 		is_vassal = no
 		war = no
@@ -338,10 +336,7 @@ country_event = {
 		owns = 976 #Mariupol, Ukraine
 		
 		AND = {
-			OR = {
-				has_country_flag = ussr_zhdanov_successor
-				has_country_flag = ussr_zhdanov_vs_malenkov
-			}
+			has_country_flag = ussr_zhdanov_successor
 			has_country_flag = successor_more_alcohol
 		}
 		NOT = { has_country_flag = death_of_stalin_flag }
@@ -353,9 +348,7 @@ country_event = {
 		name = "Farewell comrade Zhdanov!"
 		
 		set_country_flag = ussr_malenkov_successor
-		set_country_flag = ussr_zhdanov_dead
 		clr_country_flag = ussr_zhdanov_successor
-		clr_country_flag = ussr_zhdanov_vs_malenkov
 		clr_country_flag = successor_more_alcohol
 		
 		prestige = 5

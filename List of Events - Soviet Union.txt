@@ -39,7 +39,6 @@
 9001711 = The Case of the Trophies
 9001712 = The Fate of Soviet Veterans
 9001713 = Monetary Reform of $YEAR$
-9001714 = Zhdanov and the Yugoslavia
 9001716 = August session of VASKhNIL
 9001717 = Case of the Jewish AntiFascist Committee
 9001718 = Fight against Cosmopolitanism
