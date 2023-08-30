@@ -1992,7 +1992,7 @@ country_event = { # Stalin's Successor - Zhdanov
 		name = "Vyacheslav Molotov becomes the $MONARCHTITLE$."
 		
 		set_country_flag = vyacheslav_molotov
-		clr_country_flag = clr_country_flag = ussr_zhdanov_alive
+		clr_country_flag = ussr_zhdanov_alive
 		
 		add_country_modifier = { name = expert_diplomat duration = 3650 }
 		relation = { who = CHI value = 50 }
@@ -2006,7 +2006,70 @@ country_event = { # Stalin's Successor - Zhdanov
 		name = "Vasily Sokolovsky becomes the $MONARCHTITLE$."
 		
 		set_country_flag = vasily_sokolovsky
-		clr_country_flag = clr_country_flag = ussr_zhdanov_alive
+		clr_country_flag = ussr_zhdanov_alive
+		
+		any_pop = { militancy = -5 consciousness = -5 }
+		add_country_modifier = { name = military_man duration = 3650 }
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+country_event = { # Stalin's Successor - Zhdanov and Malenkov
+	id = 9001714
+	title = "Stalin's Successor"
+	desc = EVT_9001714_DESC
+	picture = "RUS_SOV_Zhdanov"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1953
+		NOT = { year = 1990 }
+		government = proletarian_dictatorship
+		
+		has_country_flag = death_of_stalin_flag
+		has_country_flag = ussr_zhdanov_malenkov
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "Andrei Zhdanov becomes the $MONARCHTITLE$."
+		
+		set_country_flag = andrei_zhdanov
+		clr_country_flag = ussr_zhdanov_malenkov
+		
+		add_country_modifier = { name = imperious_autocrat duration = 3650 }
+		
+		relation = { who = CHI value = 25 }
+		relation = { who = YUG value = 75 }
+		relation = { who = USA value = -50 }
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Malenkov and Beria become the new leaders of the Soviet Union."
+		
+		set_country_flag = malenkov_beria_collective
+		clr_country_flag = ussr_zhdanov_malenkov
+		
+		any_pop = {
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.10 value = nationalist }
+			consciousness = 3 militancy = 2
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Vasily Sokolovsky becomes the $MONARCHTITLE$."
+		
+		set_country_flag = vasily_sokolovsky
+		clr_country_flag = ussr_zhdanov_malenkov
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 		add_country_modifier = { name = military_man duration = 3650 }

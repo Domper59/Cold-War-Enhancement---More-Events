@@ -61,6 +61,7 @@
 9001737 = Vasily Stalin becomes War Hero!
 9001738 = Stalin's Successor - Vasily Stalin
 9001739 = Stalin's Successor - Zhdanov
+9001714 = Stalin's Successor - Zhdanov and Malenkov
 9001740 = Stalin's Successor - Zhdanovists
 9001741 = Stalin's Successor - Zhdanovists and Malenkov
 9001742 = Stalin's Successor - Malenkov and Beria
