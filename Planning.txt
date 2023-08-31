@@ -5,7 +5,7 @@ I. Events for Soviet Union
   Events including the period when Stalin is still alive. Can have big consequences depending on certain choices.
   Possible personalities: Andrei Zhdanov, Georgy Malenkov and Vasily Stalin
   
-  * The Stalin Dynasty
+  * The Red Dynasty
   Events about Vasily Stalin (Stalin's Second Son) coming to power and the possibility of doing something like North Korea.
   Possible personalities: Vasily Stalin, Alexander Burdonsky, Yevgeny Dzhugashvili [WIP]
   
@@ -67,34 +67,120 @@ I. Events for Soviet Union
   Possible personalities: Nikolai Egorychev, Pyotr Demichev, Aleksandra Biryukova and Alexander Yakovlev
   
   * Enhancing the Soviet Elections
-  Enhancing election events if the Soviet Union becomes a Social Democracy
+  Enhancing election events if the Soviet Union becomes a Social Democracy.
   
   * Improved the Military path
   Add some events and possibilities for the military.
   Possible personalities: Vasily Sokolovsky, Rodion Malinovsky, Sergey Biryuzov, Andrei Grechko, Vladislav Achalov, Alexander Lebed, Dmitry Yazov, Yevgeny Shaposhnikov, Mikhail Moiseyev.
   
+
+II. Events for Post-Soviet Russia [WIP]
+  * 
   
-II. Events for Communist China
-  * Events before the Proclamation of the PRC
+  
+  
+III. Events for Communist China [WIP]
+  * Events before the Proclamation of the PRC.
   Some events before the proclamation of the PRC, which can have big consequences later.
   
-  * Mao dies during the Civil War
+  * Mao dies during the Civil War.
   Ideally, a random event that could trigger Mao's death during the Civil War.
   
-  * Early Period of the People's Republic of China
+  * Early Period of the People's Republic of China.
   Some events on the first years of the People's Republic of China.
   Four different endings:
 	- Pro-Soviet people are arrested or do not have enough influence.
-	- Gao Gang is in the government
-	- Wang Ming is in government
-	- The Pro-Soviets take power
+	- Gao Gang is in the government.
+	- Wang Ming is in government.
+	- The Pro-Soviets take power.
   
   * Big Step Forward
   Event on the policy of Big Step Forward and its consequences.
   Possible personalities: Mao Zedong, Liu Shaoqi, Zhou Enlai, Chen Yun and Peng Dehuai.
   
   * The Liu Shaoqi Period
-  Event on Liu Shaoqi's rise to power in China. Risk of triggering the Cultural Revolution.
+  Events on Liu Shaoqi's seizure of power. The Cultural Revolution will be launched, but may be prevented.
+	- Liu Shaoqi prevents the Cultural Revolution.
+	- Mao Zedong launches the Cultural Revolution.
   
   * Cultural Revolution
+  Several events on the Cultural Revolution. Can have big consequences.
+	- Red Guards are no longer controllable.
+	- Mao Zedong succeeds in controlling the Red Guards.
   
+  * The Succession of Mao
+  If Mao Zedong controls the Red Guards, a series of events will be triggered for Mao's Succession.
+	- Lin Biao takes power (peacefully or via the "Lin Biao incident").
+	- The Gang of Four takes over.
+	- Conservative Maoists (Hua Guofeng or Ji Dengkui) take power.
+	- The "Pro-Soviet" (Li Xiannian) take power.
+	- Reformers (Deng Xiaoping) take power.
+  
+  * Lin Biao incident
+  Event that may involve Mao's death.
+	* Lin Biao succeeds in eliminating Mao.
+		- Victory
+		- Pyrrhic Victory
+		- Destabilization
+		- Civil War
+		- Victory for Zhou Enlai
+		- Victory for Gang of Four
+	* Lin Biao fails to eliminate Mao and, depending on the option, attempts to regain power later.
+  
+  * The Era of Li Xiannian
+  A series of events on the rise to power of Orthodox Communists in China.
+  Possible personalities: 
+	- Pro-Soviet : Li Xiannian, Deng Liqun, Liu Yunshan and Li Peng
+	- The Oil Clique : Yu Qiuli, Zeng Qinghong and Zhou Yongkang [WIP]
+  
+  * The Era of Deng Xiaoping
+  A series of events on Deng Xiaoping's rise to power.
+  If the player refuses the historic reforms, a coup d'etat is launched to replace him
+  If this is accepted, the events will end with the Tian'anmen demonstrations, which could have far-reaching consequences.
+	* Deng Xiaoping overthrown by reformists
+	Possible personalities: Ye Jianying, Zhao Ziyang, Hu Yaobang and Chen Yun
+	* Deng Xiaoping is not overthrown
+	Possible personalities: Li Peng, Jiang Zemin, Qiao Shi and Zhao Ziyang
+  
+  * Historical China
+  Some events about China nowadays with the seizure of power by Jiang Zemin.
+  Possible personalities: Hu Jintao, Wen Jiabao, Liu Yunshan, Xi Jinping and Bo Xilai
+  
+  * Military Reformists
+  If Deng Xiaoping is replaced by the military.
+  Possible personalities: Ye Jianying, [WIP]
+  
+  * The Era of Li Peng
+  Some events if Li Peng had become the Paramount leader.
+  Possible personalities: Liu Yunshan, Ma Houzhi, Luo Gan, Huang Hua and Qiao Shi
+  
+  * Liberals and De-communization
+  In case the Liberals come to power, one way or another, under The Era of Deng Xiaoping.
+  Possible personalities: Zhao Ziyang, Hu Yaobang and Qiao Shi
+  
+  
+IV. Event for Communist Greece [WIP]
+  * 
+  
+  
+  
+V. Event for Cypriot Greece [WIP]
+  * 
+  
+  
+  
+VI. Event for Historical Greece [WIP]
+  * 
+  
+  
+  
+VII. Event for Japan [WIP]
+  * American occupation
+  Events during the U.S. occupation of Japan, can have far-reaching consequences. [WIP]
+	- No change of Emperor and constitutional monarchy
+	- Change of Emperor and Constitutional Monarchy
+	- Japan becomes a Republic
+  
+  
+  
+VIII. Event for France [WIP]
