@@ -750,6 +750,7 @@ country_event = {
 		
 		ai_chance = { factor = 0.6 }
 	}
+	
 	option = {
 		name = "Let's invest a little" #Moderate outcome
 		
@@ -777,6 +778,7 @@ country_event = {
 
 		ai_chance = { factor = 0.2 }
 	}
+	
 	option = {
 		name = "That should be enough for this time" #Bad outcome
 		
@@ -804,6 +806,7 @@ country_event = {
 		
 		ai_chance = { factor = 0.1 }
 	}
+	
 	option = {
 		name = "Let's stop this money pit!" #Stop Virgin Lands system
 		
