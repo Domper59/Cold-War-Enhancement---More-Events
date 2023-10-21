@@ -998,6 +998,1479 @@ country_event = { # Retirement of Lazar Kaganovich - Normal
 		
 		set_country_flag = arvid_pelshe
 		clr_country_flag = lazar_kaganovitch
+		
 		add_country_modifier = { name = imperious_autocrat duration = 3650 }
 	}
 }
+
+#NIKOLAI BULGANIN
+
+country_event = { # The Fate of Khrushchev
+	id = 9001706
+	title = "The Fate of Khrushchev"
+	desc = EVT_9001706_DESC
+	picture = "ussr_bulganin_and_khrushchev"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1956
+		NOT = { year = 1967 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Transfer him to a factory."
+		
+		random_list = {
+			50 = { 1031 = { add_province_modifier = { name = rgo_boom duration = 1825 } } } #Khrushchev brings a bonus
+			50 = { 1031 = { add_province_modifier = { name = province_monnet_plan duration = 1825 } } } #Khrushchev brings a malus
+		}
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Keep him as a conselor."
+		
+		set_country_flag = ussr_bulganin_and_khrushchev
+		
+		any_pop = {
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		scaled_consciousness = {
+			factor = 4
+			ideology = communist
+		}
+		
+		ai_chance = { factor = 0.2 }
+	}
+	
+	option = {
+		name = "Exclude him from the party."
+		
+		set_country_flag = ussr_bulganin_no_khrushchev
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		scaled_consciousness = {
+			factor = -4
+			ideology = communist
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Economic Reform of $YEAR$
+	id = 90017071
+	title = "Economic Reform of $YEAR$"
+	desc = EVT_90017071_DESC
+	picture = "apostol_reforms"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1957
+		NOT = { year = 1964 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		
+		NOT = { has_country_modifier = yugoslaveia_economic_boom }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Propose something else."
+		
+		country_event = 90017091
+		
+		ai_chance = { factor = 0.6 }
+	}
+	
+	option = {
+		name = "Making Khrushchev's reforms."
+		
+		set_country_flag = ussr_bulganin_sovnarkhozes
+		
+		money = 1000000
+		
+		steel = 1000
+		fuel = 1000
+		machine_parts = 1000
+		electric_gear = 1000
+		cement = 1000
+		
+		any_pop = {
+			consciousness = 2 militancy = 1
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.05 value = liberal } 
+		}
+		
+		add_country_modifier = { name = yugoslaveia_economic_boom duration = 1825 }
+		
+		ai_chance = { factor = 0.3 }
+	}
+	
+	option = {
+		name = "Don't change anything"
+		
+		set_country_flag = ussr_bulganin_conservative
+		
+		scaled_consciousness = {
+			factor = 4
+			ideology = communist_social
+		}
+		
+		scaled_consciousness = {
+			factor = -4
+			ideology = communist
+		}
+		
+		add_country_modifier = { name = economic_malaise duration = 1825 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Fixing Sovnarkhozes
+	id = 90017081
+	title = "Fixing Sovnarkhozes"
+	desc = EVT_90017081_DESC
+	picture = "ussr_sovnarkhoz"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1957
+		NOT = { year = 1964 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		
+		has_country_modifier = yugoslaveia_economic_boom
+	}
+
+	mean_time_to_happen = { months = 5 }
+
+	option = {
+		name = "Making a division by Republic."
+		
+		any_pop = {
+			limit = { NOT = { culture = russian } }
+			ideology = { factor = 0.05 value = nationalist }
+		}
+		
+		any_pop = {
+			limit = { culture = russian }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			consciousness = 3
+		}
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = -3
+		}
+		
+		ai_chance = { factor = 0.6 }
+	}
+	
+	option = {
+		name = "Make a recentralization."
+		
+		set_country_flag = ussr_bulganin_centralization
+		 
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+			consciousness = -3
+		}
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			consciousness = 2 militancy = 3
+		}
+		
+		remove_country_modifier  = yugoslaveia_economic_boom
+		
+		ai_chance = { factor = 0.3 }
+	}
+	
+	option = {
+		name = "Giving more autonomy to business"
+		
+		set_country_flag = ussr_bulganin_decentralization
+		
+		add_country_modifier = { name = rgo_boom duration = 1825 }
+		
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = socialist }
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		remove_country_modifier  = yugoslaveia_economic_boom
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Bulganin Economic Reform
+	id = 90017091
+	title = "Bulganin Economic Reform"
+	desc = EVT_90017091_DESC
+	picture = "apostol_reforms"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "Gradually introduce the market."
+		
+		set_country_flag = ussr_bulganin_reform_market
+		
+		clothes = 500
+		fuel = 500
+		canned_food = 500
+		automobiles = 500
+		cement = 500
+		
+		any_pop = {
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		add_country_modifier = { name = yugoslaveia_economic_boom duration = 1825 }
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Gradually give more autonomy to the workers."
+		
+		set_country_flag = ussr_bulganin_reform_workers
+		
+		steel = 500
+		fuel = 500
+		machine_parts = 500
+		electric_gear = 500
+		cement = 500
+		
+		any_pop = {
+			ideology = { factor = 0.10 value = communist_social }
+		}
+		
+		add_country_modifier = { name = yugoslaveia_economic_boom duration = 1825 }
+		
+		ai_chance = { factor = 0.2 }
+	}
+}
+
+country_event = { # Replacement of Zhukov
+	id = 90017101
+	title = "Replacement of Zhukov"
+	desc = EVT_90017101_DESC
+	picture = "ussr_zhukov_medals"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1958
+		NOT = { year = 1963 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Select Nikolai Bulganin."
+		
+		prestige = 250
+		
+		add_country_modifier = { name = leadership_chaos duration = 1095 }
+		
+		any_pop = {
+			limit = { type = officers }
+			consciousness = 5
+		}
+		
+		any_pop = {
+			limit = { type = soldiers }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Select Rodion Malinovsky."
+		
+		research_points = 500
+		
+		any_pop = {
+			limit = {
+				AND = {
+					type = officers
+					type = soldiers
+				}
+			}
+			consciousness = -4
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Select Andrei Grechko"
+		
+		badboy = 3
+		
+		any_pop = {
+			limit = { strata = rich }
+			consciousness = -2
+		}
+		
+		any_pop = {
+			limit = {
+				AND = {
+					strata = rich
+					type = officers
+					type = soldiers
+				}
+			}
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Cultural Thraw
+	id = 90017121
+	title = "Cultural Thraw"
+	desc = EVT_90017121_DESC
+	picture = "ussr_khruchtchv_opening"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1959
+		NOT = { year = 1975 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		
+		USA = { is_greater_power = yes government = democracy }
+	}
+
+	mean_time_to_happen = { months = 8 }
+
+	option = {
+		name = "Limit censorship."
+		
+		political_reform = censored_publishing
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = {
+			limit = { type = clergymen }
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		any_pop = {
+			limit = {
+				NOT = {
+					AND = {
+						strata = rich
+						type = clergymen
+					}
+				}
+			}
+			ideology = { factor = 0.05 value = socialist }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "More freedom but no anti-soviet literature."
+		
+		political_reform = responsible_publishing
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = {
+			limit = { type = clergymen }
+			ideology = { factor = 0.05 value = socialist }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		any_pop = {
+			limit = {
+				NOT = {
+					AND = {
+						strata = rich
+						type = clergymen
+					}
+				}
+			}
+			ideology = { factor = 0.05 value = progressive }
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Give freedom of expression."
+		
+		set_country_flag = ussr_bulganin_anti_sovietism
+		
+		political_reform = unregulated_publishing
+		 
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = socialist }
+		}
+		
+		any_pop = {
+			limit = { type = clergymen }
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		any_pop = {
+			limit = {
+				NOT = {
+					AND = {
+						strata = rich
+						type = clergymen
+					}
+				}
+			}
+			ideology = { factor = 0.05 value = liberal }
+			ideology = { factor = 0.05 value = conservative }
+		}
+		
+		scaled_consciousness = {
+			factor = 7
+			ideology = communist
+		}
+		
+		scaled_militancy = {
+			factor = 7
+			ideology = communist
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Creation of Soviet Market
+	id = 90017131
+	title = "Creation of Soviet Market"
+	desc = EVT_90017131_DESC
+	picture = "economic_reorganization"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1961
+		NOT = { year = 1975 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		
+		has_country_flag = ussr_bulganin_reform_market
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Adopt the Planned Economy with Market Element."
+		
+		ruling_party_ideology = communist_social
+		
+		money = 1000000
+		
+		add_country_modifier = { name = small_business duration = 1825 }
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			consciousness = 3
+		}
+		
+		ai_chance = { factor = 0.95 }
+	}
+	
+	option = {
+		name = "Leave it like that."
+		
+		set_country_flag = ussr_bulganin_conservative
+		
+		scaled_militancy = {
+			factor = 7
+			ideology = communist_social
+		}
+		
+		scaled_consciousness = {
+			factor = -5
+			ideology = communist
+		}
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			consciousness = 4
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+country_event = { # More Self-Management?
+	id = 90017141
+	title = "More Self-Management?"
+	desc = EVT_90017141_DESC
+	picture = "yug_boom_eco"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1961
+		NOT = { year = 1975 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		
+		has_country_flag = ussr_bulganin_reform_workers
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Adopt the Planned Economy with Self-Management."
+		
+		ruling_party_ideology = communist_social
+		
+		add_country_modifier = { name = yugoslaveia_economic_boom duration = 1825 }
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			consciousness = 3
+			ideology = { factor = 0.05 value =  communist_social }
+		}
+		
+		ai_chance = { factor = 0.95 }
+	}
+	
+	option = {
+		name = "Leave it like that."
+		
+		set_country_flag = ussr_bulganin_conservative
+		
+		scaled_militancy = {
+			factor = 7
+			ideology = communist_social
+		}
+		
+		scaled_consciousness = {
+			factor = -5
+			ideology = communist
+		}
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			consciousness = 4
+			ideology = { factor = 0.10 value = liberal }
+		}
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+country_event = { # New Virgin Lands Campaign
+	id = 9001715
+	title = "New Virgin Lands Campaign"
+	desc = EVT_9001715_DESC
+	picture = "virgin_land_campaign"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1962
+		NOT = { year = 1975 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Coordinate the Campaign with scientists."
+		
+		research_points = 750
+		
+		prestige = 150
+		
+		any_pop = {
+			limit = { type = farmers }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = {
+			dominant_issue = { value = planned_economy1 factor = 0.075 }
+		}
+		
+		ai_chance = { factor = 0.6 }
+	}
+	
+	option = {
+		name = "Mechanize in mass the Campaign."
+		
+		add_country_modifier = { name = homeland_productive_year duration = 1825 }
+		
+		any_pop = {
+			limit = { type = farmers }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = {
+			dominant_issue = { value = planned_economy1 factor = 0.075 }
+		}
+		
+		ai_chance = { factor = 0.3 }
+	}
+	
+	option = {
+		name = "Strenghtening the Campaign with the Komsomol."
+		
+		add_country_modifier = { name = homeland_productive_year duration = 3650 }
+		
+		prestige = 75
+		
+		any_pop = {
+			limit = {
+				AND = {
+					type = farmers
+					type = craftsmen
+				}
+			}
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = {
+			dominant_issue = { value = planned_economy1 factor = 0.075 }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # The Fall of Nikolai Bulganin - Communists
+	id = 90017161
+	title = "The Fall of Nikolai Bulganin"
+	desc = EVT_90017161_DESC
+	picture = "leader_ussr_bulganin_death"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1964
+		NOT = { year = 1975 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		
+		AND = {
+			has_country_flag = ussr_bulganin_and_khrushchev
+			OR = {
+				has_country_flag = ussr_bulganin_sovnarkhozes
+				has_country_flag = ussr_bulganin_decentralization
+			}
+			has_country_flag = ussr_bulganin_anti_sovietism
+		}
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = "Arvid Pelshe is the next $MONARCHTITLE$."
+		
+		set_country_flag = arvid_pelshe
+		clr_country_flag = nikolai_bulganin
+		
+		ruling_party_ideology = communist
+		
+		add_country_modifier = { name = imperious_autocrat duration = 3650 }
+		
+		political_reform = state_publishing
+		political_reform = ruling_party_opinion
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Mikhail Pervukhin is the next $MONARCHTITLE$."
+		
+		set_country_flag = mikhail_pervukhin
+		clr_country_flag = nikolai_bulganin
+		
+		ruling_party_ideology = communist
+		
+		political_reform = state_publishing
+		political_reform = ruling_party_opinion
+		
+		any_pop = {
+			limit = { type = bureaucrats }
+			consciousness = -3
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = {
+			limit = {
+				AND = {
+					type = labourers
+					type = craftsmen
+					type = artisans
+				}
+			}
+			consciousness = 3
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		any_pop = {
+			limit = { type = farmers }
+			militancy = 3
+			ideology = { factor = 0.05 value = conservative }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Andrei Kirilenko is the next $MONARCHTITLE$."
+		
+		set_country_flag = andrei_kirilenko
+		clr_country_flag = nikolai_bulganin
+		
+		ruling_party_ideology = communist
+		
+		political_reform = state_publishing
+		political_reform = ruling_party_opinion
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Arresting the plotters."
+		
+		set_country_flag = ussr_conservatives_coup
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = {
+			militancy = 3 consciousness = 3
+		
+		}
+		
+		add_country_modifier = { name = revolution_chaos duration = 1460 }
+		
+		remove_country_modifier = soviet_stability
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # The Fall of Nikolai Bulganin - Reformists
+	id = 90017171
+	title = "The Fall of Nikolai Bulganin"
+	desc = EVT_90017171_DESC
+	picture = "leader_ussr_bulganin_death"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1964
+		NOT = { year = 1968 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		
+		OR = {
+			AND = {
+				has_country_flag = ussr_bulganin_conservative
+				has_country_flag = ussr_bulganin_centralization
+			}
+			AND = {
+				has_country_flag = ussr_bulganin_no_khrushchev
+				has_country_flag = ussr_bulganin_conservative
+				has_country_flag = ussr_bulganin_centralization
+			}
+		}
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = "Alexei Kosygin is the next $MONARCHTITLE$."
+		
+		set_country_flag = alexei_kosygin
+		clr_country_flag = nikolai_bulganin
+		
+		any_pop = { ideology = { factor = 0.05 value = communist_social } }
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Nikolai Podgorny is the next $MONARCHTITLE$."
+		
+		set_country_flag = nikolai_podgorny
+		clr_country_flag = nikolai_bulganin
+		
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		ai_chance = { factor = 0.2 }
+	}
+	
+	option = {
+		name = "Arresting the plotters."
+		
+		set_country_flag = ussr_reformists_coup
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		any_pop = {
+			militancy = 3 consciousness = 3
+		
+		}
+		
+		add_country_modifier = { name = revolution_chaos duration = 1460 }
+		
+		remove_country_modifier = soviet_stability
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Continue the De-Stalinization
+	id = 90017181
+	title = "Continue the De-Stalinization"
+	desc = EVT_90017181_DESC
+	picture = "stalinism_legacy"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1966
+		NOT = { year = 1975 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		
+		has_global_flag = de_stalinization
+		has_country_flag = 
+	}
+
+	mean_time_to_happen = { months = 5 }
+
+	option = {
+		name = "Reconsidering certain declaration."
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist }
+		}
+		
+		scaled_consciousness = {
+			factor = -3
+			ideology = communist_social
+		}
+		
+		scaled_militancy = {
+			factor = -3
+			ideology = communist
+		}
+		
+		scaled_consciousness = {
+			factor = 3
+			ideology = communist_social
+		}
+		
+		scaled_militancy = {
+			factor = 3
+			ideology = communist
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Maintain the status quo."
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Accelerate the De-Stalinization."
+		
+		any_pop = {
+			limit = { strata = rich }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = {
+			limit = { NOT = { strata = rich } }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		scaled_consciousness = {
+			factor = 4
+			ideology = communist_social
+		}
+		
+		scaled_militancy = {
+			factor = 4
+			ideology = communist
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # Housing Problem
+	id = 90017191
+	title = "Housing Problem"
+	desc = EVT_90017191_DESC
+	picture = "ussr_khrushchyovka"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1969
+		NOT = { year = 1975 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		has_country_flag = ussr_not_rebuild_moscow
+		
+		OR = {
+			public_housing = no_public_housing
+			public_housing = trinket_public_housing
+		}
+		NOT = {
+			OR = {
+				public_housing = low_public_housing
+				public_housing = acceptable_public_housing
+				public_housing = good_public_housing
+			}
+		}
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Building housing massively."
+		
+		social_reform = low_public_housing
+		
+		any_pop = { consciousness = -2 militancy = -1 }
+		
+		ai_chance = { factor = 0.6 }
+	}
+	
+	option = {
+		name = "Building appropriate housing."
+		
+		social_reform = acceptable_public_housing
+		
+		any_pop = { consciousness = -3 militancy = -2 }
+		
+		ai_chance = { factor = 0.3 }
+	}
+}
+
+country_event = { # Liberalization of the Economy
+	id = 90017201
+	title = "Liberalization of the Economy"
+	desc = EVT_90017201_DESC
+	picture = "open_market"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1972
+		NOT = { year = 1975 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		
+		ruling_party_ideology = communist_social
+		has_country_flag = ussr_bulganin_reform_market
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = "Restoring the NEP."
+		
+		money = 500000
+		
+		add_country_modifier = { name = small_business duration = 2920 }
+		
+		any_pop = { consciousness = 2.5 }
+		
+		ai_chance = { factor = 0.6 }
+	}
+	
+	option = {
+		name = "Adopt Titoism."
+		
+		add_country_modifier = { name = yugoslaveia_economic_boom duration = 2920 }
+		
+		any_pop = {
+			consciousness = -3 militancy = -3
+			ideology = { factor = 0.1 value = communist_social }
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		ai_chance = { factor = 0.3 }
+	}
+}
+
+country_event = { # More Liberalization
+	id = 90017211
+	title = "More Liberalization"
+	desc = EVT_90017211_DESC
+	picture = "open_market"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1972
+		NOT = { year = 1975 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		
+		ruling_party_ideology = communist_social
+		has_country_flag = ussr_bulganin_reform_workers
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = "Adopt the Kosygin Plan."
+		
+		relation = { who = USA value = 25 }
+		
+		any_pop = { consciousness = 2 }
+		
+		add_country_modifier = { name = yugoslaveia_economic_boom duration = 2920 }
+		
+		any_country = {
+			limit = {
+				exists = yes
+				government = proletarian_dictatorship
+				ruling_party_ideology = communist
+				capital_scope = { continent = europe }
+			}
+			any_pop = {
+				consciousness = 1
+				militancy = 1
+				ideology = { factor = 0.05 value = liberal }
+			}
+		}
+		
+		ai_chance = { factor = 0.6 }
+	}
+	
+	option = {
+		name = "Adopt the Liberman Plan."
+		
+		relation = { who = USA value = 50 }
+		
+		remove_country_modifier = soviet_stability
+		remove_country_modifier = economic_boom
+		add_country_modifier = { name = economic_boom duration = 1825 }
+		
+		any_pop = {
+			limit = { location = { is_core = THIS } } 
+			consciousness = 3 militancy = 3
+			literacy = -0.02 
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		any_country = {
+			limit = {
+				exists = yes
+				government = proletarian_dictatorship
+				ruling_party_ideology = communist
+				capital_scope = { continent = europe }
+			}
+			any_pop = {
+				consciousness = 2
+				militancy = 2
+				ideology = { factor = 0.10 value = liberal }
+			}
+		}
+		
+		ai_chance = { factor = 0.3 }
+	}
+}
+
+country_event = { # The Death of Nikolai Bulganin
+	id = 9001722
+	title = "The Death of Nikolai Bulganin"
+	desc = EVT_9001722_DESC
+	picture = "leader_ussr_bulganin_death"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1975
+		NOT = { year = 1977 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		
+		NOT = {
+			OR = {
+				has_country_flag = ussr_conservatives_coup
+				has_country_flag = ussr_reformists_coup
+			}
+		}
+	}
+
+	mean_time_to_happen = { months = 2 }
+	
+	option = {
+		name = "Select Mikhail Pervukhin (Conservative-Moderate)."
+		
+		set_country_flag = mikhail_pervukhin
+		clr_country_flag = nikolai_bulganin
+		
+		ruling_party_ideology = communist
+		
+		any_pop = {
+			limit = { type = bureaucrats }
+			consciousness = -3
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = {
+			limit = {
+				AND = {
+					type = labourers
+					type = craftsmen
+					type = artisans
+				}
+			}
+			consciousness = 3
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		any_pop = {
+			limit = { type = farmers }
+			militancy = 3
+			ideology = { factor = 0.05 value = conservative }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+	option = {
+		name = "Select Nuritdin Mukhitdinov (Moderate)."
+		
+		set_country_flag = nuritdin_mukhitdinov
+		clr_country_flag = nikolai_bulganin
+		
+		ruling_party_ideology = communist_social
+		
+		any_pop = {
+			limit = {
+				has_pop_religion = sunni
+			}
+			consciousness = -2 militancy = -2
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.05 value = progressive }
+			
+		}
+		
+		any_pop = {
+			limit = {
+				AND = {
+					has_pop_religion = orthodox
+					NOT = { culture = russian }
+				}
+			}
+			consciousness = 2 militancy = 2
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		any_pop = {
+			limit = {
+				AND = {
+					has_pop_religion = orthodox
+					culture = russian 
+				}
+			}
+			consciousness = 3 militancy = 3
+			ideology = { factor = 0.05 value = nationalist }
+		}
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Select Alexei Kosygin (Reformist)."
+		
+		set_country_flag = alexei_kosygin
+		clr_country_flag = nikolai_bulganin
+		
+		ruling_party_ideology = communist_social
+		
+		any_pop = { consciousness = -2 militancy = -2 }
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # The Death of Nikolai Bulganin - After Conservative Coup
+	id = 9001766
+	title = "The Death of Nikolai Bulganin"
+	desc = EVT_9001766_DESC
+	picture = "leader_ussr_bulganin_death"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1975
+		NOT = { year = 1977 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		
+		has_country_flag = ussr_conservatives_coup
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Select Nuritdin Mukhitdinov (Moderate)."
+		
+		set_country_flag = nuritdin_mukhitdinov
+		clr_country_flag = nikolai_bulganin
+		clr_country_flag = ussr_conservatives_coup
+		
+		ruling_party_ideology = communist_social
+		
+		any_pop = {
+			limit = {
+				has_pop_religion = sunni
+			}
+			consciousness = -2 militancy = -2
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		
+		any_pop = {
+			limit = {
+				AND = {
+					has_pop_religion = orthodox
+					NOT = { culture = russian }
+				}
+			}
+			consciousness = 2 militancy = 2
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		any_pop = {
+			limit = {
+				AND = {
+					has_pop_religion = orthodox
+					culture = russian 
+				}
+			}
+			consciousness = 3 militancy = 3
+			ideology = { factor = 0.05 value = nationalist }
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Select Alexei Kosygin (Reformist)."
+		
+		set_country_flag = alexei_kosygin
+		clr_country_flag = nikolai_bulganin
+		clr_country_flag = ussr_conservatives_coup
+		
+		ruling_party_ideology = communist_social
+		
+		any_pop = { consciousness = -2 militancy = -2 }
+		any_pop = {
+			limit = { strata = middle }
+			ideology = { factor = 0.05 value = progressive }
+		}
+		any_pop = {
+			limit = { strata = poor }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+country_event = { # The Death of Nikolai Bulganin - After Reformists Coup
+	id = 9001767
+	title = "The Death of Nikolai Bulganin"
+	desc = EVT_9001767_DESC
+	picture = "leader_ussr_bulganin_death"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1975
+		NOT = { year = 1977 }
+		government = proletarian_dictatorship
+		has_country_flag = nikolai_bulganin
+		
+		has_country_flag = ussr_reformists_coup
+	}
+
+	mean_time_to_happen = { months = 2 }
+	
+	option = {
+		name = "Select Mikhail Pervukhin (Conservative-Moderate)."
+		
+		set_country_flag = mikhail_pervukhin
+		clr_country_flag = nikolai_bulganin
+		clr_country_flag = ussr_reformists_coup
+		
+		ruling_party_ideology = communist
+		
+		any_pop = {
+			limit = { type = bureaucrats }
+			consciousness = -3
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		any_pop = {
+			limit = {
+				AND = {
+					type = labourers
+					type = craftsmen
+					type = artisans
+				}
+				consciousness = 3
+				ideology = { factor = 0.05 value = progressive }
+			}
+		}
+		
+		any_pop = {
+			limit = { type = farmers }
+			militancy = 3
+			ideology = { factor = 0.05 value = conservative }
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Select Nuritdin Mukhitdinov (Moderate)."
+		
+		set_country_flag = nuritdin_mukhitdinov
+		clr_country_flag = nikolai_bulganin
+		clr_country_flag = ussr_reformists_coup
+		
+		ruling_party_ideology = communist_social
+		
+		any_pop = {
+			limit = {
+				has_pop_religion = sunni
+			}
+			consciousness = -2 militancy = -2
+			ideology = { factor = 0.05 value = communist_social }
+			ideology = { factor = 0.05 value = progressive }
+			
+		}
+		
+		any_pop = {
+			limit = {
+				AND = {
+					has_pop_religion = orthodox
+					NOT = { culture = russian }
+				}
+			}
+			consciousness = 2 militancy = 2
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		any_pop = {
+			limit = {
+				AND = {
+					has_pop_religion = orthodox
+					culture = russian 
+				}
+			}
+			consciousness = 3 militancy = 3
+			ideology = { factor = 0.05 value = nationalist }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+# DMITRI SHEPILOV

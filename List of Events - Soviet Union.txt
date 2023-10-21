@@ -200,7 +200,6 @@
 90017081 = Fixing Sovnarkhozes
 90017091 = Bulganin Economic Reform
 90017101 = Replacement of Zhukov
-90017111 = Reconciliation Policy
 90017121 = Cultural Thraw
 90017131 = Creation of Soviet Market
 90017141 = More Self-Management?
