@@ -17,7 +17,7 @@ I. Events for Soviet Union
   Give the player the possibility to make a Baria-Malenkov alliance and its consequences.
   Possible personalities: Vsevolod Merkulov, Sergei Kruglov, WIP
   
-  * Anti-Party Group [~33%]
+  * Anti-Party Group [~66%]
   Events around the Anti-Party Group and its consequences.
   Possible personalities: Vyacheslav Molotov, Lazar Kaganovitch, Georgy Malenkov, Nikolai Bulganin and Dmitri Shepilov.
   
@@ -44,8 +44,8 @@ I. Events for Soviet Union
   Events in which the Brezhnevists continue to reign.
   Possible personalities:
     * After Viktor Grishin : Oleg Shenin, Sergey Alexandrov, Viktor Tyulkin and Gennady Zyuganov.
-    * After Dinmukhamed Kunaev : Pyotr Demichev, Oleg Shenin and Viktor Tyulkin.
-	* After Vladimir Scherbitsky : Vladimir Tikhonov and Gennady Zyuganov.
+    * After Dinmukhamed Kunaev : Pyotr Demichev, Oleg Shenin (Ivan Polozkov?) and Viktor Tyulkin.
+	* After Vladimir Scherbitsky : Ivan Polozkov ,Vladimir Tikhonov and Gennady Zyuganov.
   
   * Gorbachev's assassination in 1990
   Event that could cause the death of Gorbachev via his assassination attempt during the parade of the October Revolution in 1990.
