@@ -10,27 +10,33 @@ country_event = { # Application of the Army
 	
 	option = {
 		name = "Order the army to set up roadblocks!"
+		
 		any_pop = { consciousness = 1 militancy = 1 }
 		country_event = 9001130
 		set_country_flag = august_coup_unaware_army
+		
 		ai_chance = { factor = 0.8 }
 	}
 	
 	option = {
 		name = "Focus on Moscow and Leningrad."
+		
 		badboy = 1
 		any_pop = { consciousness = 1.5 militancy = 2 }
 		country_event = 9001130
 		set_country_flag = august_coup_focused_army
+		
 		ai_chance = { factor = 0.1 }
 	}
 	
 	option = {
 		name = "Send loyalist troops to major cities."
+		
 		badboy = 2
 		any_pop = { consciousness = 2 militancy = 3 }
 		country_event = 9001130
 		set_country_flag = august_coup_efficient_army
+		
 		ai_chance = { factor = 0.1 }
 	}
 }
@@ -45,26 +51,32 @@ country_event = { # The Fate of Yeltsin
 	
 	option = {
 		name = "Do nothing."
+		
 		any_pop = { consciousness = 4 militancy = 3 }
 		country_event = 9001131
 		set_country_flag = august_coup_free_yeltsin
+		
 		ai_chance = { factor = 0.8 }
 	}
 	
 	option = {
 		name = "Isolate him."
+		
 		any_pop = { consciousness = -3 militancy = -2 }
 		country_event = 9001131
 		set_country_flag = august_coup_yeltsin_alone
+		
 		ai_chance = { factor = 0.1 }
 	}
 	
 	option = {
 		name = "Kill him!"
+		
 		badboy = 3
 		any_pop = { consciousness = 3 militancy = 4 }
 		country_event = 9001131
 		set_country_flag = august_coup_yeltsin_dead
+		
 		ai_chance = { factor = 0.1 }
 	}
 }
@@ -79,28 +91,31 @@ country_event = { # Using the Media
 	
 	option = {
 		name = "Ask to remain calm and follow instructions."
+		
 		any_pop = { consciousness = -2 militancy = -2 }
 		country_event = 9001132
 		set_country_flag = august_coup_media_used
 		
 		political_reform = censored_publishing
 		
-		ai_chance = { factor = 0.8 }
+		ai_chance = { factor = 0.1 }
 	}
 	
 	option = {
 		name = "Do nothing and broadcast 'Swan Lake'."
+		
 		any_pop = { consciousness = 2 militancy = 1 }
 		country_event = 9001132
 		set_country_flag = august_coup_media_not_used
 		
-		political_reform = unregulated_publishing
+		political_reform = state_publishing
 		
-		ai_chance = { factor = 0.2 }
+		ai_chance = { factor = 0.9 }
 	}
 	
 	option = {
 		name = "Training and equipping popular militias."
+		
 		any_pop = { consciousness = -2 militancy = -2 }
 		country_event = 9001132
 		set_country_flag = august_coup_neo_stalinists
@@ -121,6 +136,7 @@ country_event = { # The Commitee's Position
 	
 	option = {
 		name = "Perestroika was a mistake."
+		
 		badboy = 1
 		any_pop = { consciousness = 2 militancy = 1 }
 		country_event = 9001133
@@ -145,6 +161,7 @@ country_event = { # The Commitee's Position
 	
 	option = {
 		name = "Establish our own Market Socialism."
+		
 		country_event = 9001133
 		set_country_flag = gennady_yanayev
 		
@@ -167,6 +184,7 @@ country_event = { # The Commitee's Position
 	
 	option = {
 		name = "Follow the Chinese model."
+		
 		country_event = 9001133
 		set_country_flag = boris_pugo
 		
@@ -195,6 +213,7 @@ country_event = { # The Commitee's Position
 	
 	option = {
 		name = "Perestroika but without its excesses."
+		
 		badboy = -1
 		country_event = 9001133
 		set_country_flag = valentin_pavlov
@@ -233,30 +252,36 @@ country_event = { # The House of Soviets
 	
 	option = {
 		name = "Dissipate the people!"
+		
 		political_reform = no_meetings
 		badboy = 2
 		any_pop = { consciousness = 3 militancy = 2 }
 		country_event = 9001134
 		set_country_flag = august_coup_soviet_nope
-		ai_chance = { factor = 0.8 }
-	}
-	
-	option = {
-		name = "Isolate the building."
-		political_reform = limited_meetings
-		any_pop = { consciousness = 1.5 militancy = 1.5 }
-		country_event = 9001134
-		set_country_flag = august_coup_soviet_isolated
+		
 		ai_chance = { factor = 0.1 }
 	}
 	
 	option = {
+		name = "Isolate the building."
+		
+		political_reform = limited_meetings
+		any_pop = { consciousness = 1.5 militancy = 1.5 }
+		country_event = 9001134
+		set_country_flag = august_coup_soviet_isolated
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
 		name = "Let's negotiate."
+		
 		political_reform = free_meetings
 		badboy = -1
 		any_pop = { consciousness = -2 militancy = -1 }
 		country_event = 9001134
 		set_country_flag = august_coup_soviet_deal
+		
 		ai_chance = { factor = 0.1 }
 	}
 }
@@ -271,28 +296,34 @@ country_event = { # The Fate of Gorbatchev
 	
 	option = {
 		name = "Do nothing."
+		
 		badboy = -1
 		any_pop = { consciousness = -2 militancy = -1 }
 		set_global_flag = august_coup_event_chain_fired
 		set_country_flag = august_coup_gorbatchev_nope
+		
 		ai_chance = { factor = 0.5 }
 	}
 	
 	option = {
 		name = "Forcing him to legitimise us."
+		
 		random_list = {
 			35 = { country_event = 9001135 } #Gorbatchev gives us legitimacy
 			65 = { country_event = 9001136 } #Gorbachev doesn't give us legitimacy
 		}
+		
 		ai_chance = { factor = 0.4 }
 	}
 	
 	option = {
 		name = "Kill him!"
+		
 		badboy = 4
 		any_pop = { consciousness = 3 militancy = 2 }
 		set_global_flag = august_coup_event_chain_fired
 		set_country_flag = august_coup_gorbatchev_dead
+		
 		ai_chance = { factor = 0.1 }
 	}
 }
@@ -324,6 +355,7 @@ country_event = { # Gorbachev doesn't give us legitimacy
 	
 	option = {
 		name = "Damn it!"
+		
 		set_global_flag = august_coup_event_chain_fired
 		set_country_flag = august_coup_gorbatchev_not_legit
 	}
@@ -381,6 +413,7 @@ country_event = { # August Coup - Fail
 	
 	option = {
 		name = "The Soviet Union will soon collapse..."
+		
 		prestige_factor = -0.05
 		
 		#Pave the way for the dissolution event
@@ -398,6 +431,7 @@ country_event = { # August Coup - Fail
 		clr_country_flag = august_coup_yeltsin_dead
 		clr_country_flag = august_coup_media_not_used
 		clr_country_flag = august_coup_media_used
+		clr_country_flag = august_coup_neo_stalinists
 		clr_country_flag = august_coup_soviet_deal
 		clr_country_flag = august_coup_soviet_isolated
 		clr_country_flag = august_coup_soviet_nope
@@ -690,6 +724,7 @@ country_event = { # Valentin Pavlov
 	
 	option = {
 		name = "Democratise the Soviet Union!"
+		
 		badboy = -5
 		
 		ruling_party_ideology = communist_social
@@ -724,6 +759,7 @@ country_event = { # Return of the Great Purges
 	
 	option = {
 		name = "The 'Democrats' camp no longer exists!"
+		
 		badboy = 5
 		
 		add_country_modifier = { name = soviet_stability duration = 3650 }

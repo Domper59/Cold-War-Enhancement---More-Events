@@ -679,7 +679,7 @@ country_event = { # Case of the Jewish AntiFascist Committee
 	mean_time_to_happen = { months = 4 }
 	
 	option = {
-		name = "Dissolve the Committee and arrest "traitors"."
+		name = "Dissolve the Committee and arrest 'traitors'."
 		
 		set_country_flag = ussr_case_jac
 		
@@ -1943,11 +1943,9 @@ country_event = { # Stalin's Successor - Vasily Stalin
 	option = {
 		name = "Trying to prevent him from taking power."
 		
-		set_country_flag = ???
+		set_country_flag = ussr_march_on_moscow
 		clr_country_flag = ussr_stalin_junior_successor
 		clr_country_flag = successor_more_alcohol
-		
-		???
 		
 		ai_chance = { factor = 0.1 }
 	}

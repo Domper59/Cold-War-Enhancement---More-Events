@@ -890,9 +890,17 @@ country_event = { # Khrushchyovka
 		tag = RUS
 		year = 1960
 		NOT = { year = 1963 }
+		
 		government = proletarian_dictatorship
+		
 		has_country_flag = nikita_khrushchev
 		has_country_flag = ussr_not_rebuild_moscow
+		
+		OR = {
+			public_housing = no_public_housing
+			public_housing = trinket_public_housing
+			public_housing = low_public_housing
+		}
 	}
 
 	mean_time_to_happen = { months = 4 }
